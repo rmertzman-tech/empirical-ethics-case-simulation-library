@@ -44,7 +44,41 @@
   <section id="cases" class="section card">
     <h2>Empirical Case Modules</h2>
     <p>Each case now has a direct teaching role and an explicit bridge back to the Capability Lab.</p>
-    <div id="caseGrid" class="case-grid"></div>
+    <div id="caseGrid" class="case-grid">
+<article class="case-card static-fallback-card">
+  <div class="small-label">Institutional design / public mission route</div>
+  <h3>Higher Education IPS</h3>
+  <p><strong>Chapters:</strong> Chapter 11 · Chapter 5 extension · Capstone</p>
+  <p><strong>Best use:</strong> Use when students need to see their own institution through public data, mission, access, cost, and structural incentives.</p>
+  <p><strong>Simulation:</strong> IPS teaching simulation with SPC / University of Phoenix parameter contrast.</p>
+  <div class="actions"><a class="button primary" href="../cases/higher-education-ips.html">Open case</a></div>
+</article>
+<article class="case-card static-fallback-card">
+  <div class="small-label">Evidence policy / systemic warning route</div>
+  <h3>The 2008 Financial Crisis</h3>
+  <p><strong>Chapters:</strong> Chapter 3 · Chapter 12 · Capstone</p>
+  <p><strong>Best use:</strong> Use when students need to understand signal failure, rating normalization, systemic risk, and T1 vs T2 recovery.</p>
+  <p><strong>Simulation:</strong> Timeline and live coherence-map simulation with T1/T2 repair controls.</p>
+  <div class="actions"><a class="button primary" href="../cases/2008-financial-crisis.html">Open case</a></div>
+</article>
+<article class="case-card static-fallback-card">
+  <div class="small-label">Justice / moral commons / captive-population route</div>
+  <h3>GEO Group Florida</h3>
+  <p><strong>Chapters:</strong> Chapter 5 · Chapter 7 · Chapter 10 · Capstone</p>
+  <p><strong>Best use:</strong> Use when students need to examine the gap between formal legality, public safety claims, captive populations, and actual capability.</p>
+  <p><strong>Simulation:</strong> Repair simulator with BioBond, Public Benefit Corporation governance, and Maathai pathway controls.</p>
+  <div class="actions"><a class="button primary" href="../cases/geo-florida-prison.html">Open case</a></div>
+</article>
+<article class="case-card static-fallback-card">
+  <div class="small-label">Care / public vulnerability / T1-T2 repair route</div>
+  <h3>Florida Nursing Homes and the Visible Parasite</h3>
+  <p><strong>Chapters:</strong> Chapter 12 · Chapter 13 · Chapter 15 · Capstone</p>
+  <p><strong>Best use:</strong> Use when students need to see how a care institution can measure quality while still absorbing care capacity through ownership and staffing structure.</p>
+  <p><strong>Simulation:</strong> Visible Parasite repair simulator, SAGE scenario, and T1/T2 intervention classifier.</p>
+  <div class="actions"><a class="button primary" href="../cases/florida-nursing-homes-visible-parasite.html">Open case</a></div>
+</article>
+</div>
+<p class="fallback-note">Direct case cards are present as a Phase J fallback. JavaScript enhances this dashboard when available.</p>
     <h3>Generated classroom move</h3>
     <pre id="classMoveOutput">Choose “Build class move” on any case card.</pre>
   </section>
@@ -56,7 +90,40 @@
         <thead>
           <tr><th>Case</th><th>Chapters</th><th>Core Question</th><th>Concept Threads</th><th>Simulation</th><th>Open</th></tr>
         </thead>
-        <tbody id="matrixBody"></tbody>
+        <tbody id="matrixBody">
+<tr>
+<td><strong>Higher Ed IPS</strong></td>
+<td>Chapter 11 · Chapter 5 extension · Capstone</td>
+<td>Where does a public college sit in the wider structural spectrum, and what does that reveal about mission, debt, access, and repair?</td>
+<td>IPS, public mission, exit option, student debt, FHRI_max, mission alignment</td>
+<td>IPS teaching simulation with SPC / University of Phoenix parameter contrast.</td>
+<td><a class="button" href="../cases/higher-education-ips.html">Open</a></td>
+</tr>
+<tr>
+<td><strong>2008 Financial Crisis</strong></td>
+<td>Chapter 3 · Chapter 12 · Capstone</td>
+<td>How can a financial system preserve operational continuity while replacing the ethical function of its warning and signal channels?</td>
+<td>P-SAGE, Triadic Overwrite, evidence policy, T1/T2, systemic risk, rating normalization</td>
+<td>Timeline and live coherence-map simulation with T1/T2 repair controls.</td>
+<td><a class="button" href="../cases/2008-financial-crisis.html">Open</a></td>
+</tr>
+<tr>
+<td><strong>GEO Florida</strong></td>
+<td>Chapter 5 · Chapter 7 · Chapter 10 · Capstone</td>
+<td>What would it take to move a captive-population institution from extraction architecture toward moral-commons repair?</td>
+<td>justice, capabilities, moral commons, BioBond, Maathai pathway, captive population</td>
+<td>Repair simulator with BioBond, Public Benefit Corporation governance, and Maathai pathway controls.</td>
+<td><a class="button" href="../cases/geo-florida-prison.html">Open</a></td>
+</tr>
+<tr>
+<td><strong>Nursing Homes</strong></td>
+<td>Chapter 12 · Chapter 13 · Chapter 15 · Capstone</td>
+<td>How can a care institution formally organized around resident protection shift risk, cost, and vulnerability onto residents, workers, families, and public systems?</td>
+<td>care ethics, Visible Parasite, FHRI_max, T1/T2, HHVBP, ownership opacity, SAGE</td>
+<td>Visible Parasite repair simulator, SAGE scenario, and T1/T2 intervention classifier.</td>
+<td><a class="button" href="../cases/florida-nursing-homes-visible-parasite.html">Open</a></td>
+</tr>
+</tbody>
       </table>
     </div>
   </section>
@@ -64,19 +131,83 @@
   <section id="chapter-router" class="section card">
     <h2>Chapter Router</h2>
     <p>Select a chapter route to see how the Capability Lab and EECSL should work together without making the class formulaic.</p>
-    <select id="chapterSelect"></select>
-    <div id="chapterOutput" style="margin-top:12px"></div>
+    <select id="chapterSelect">
+<option>Chapter 1 — Ethical Perception, Complexity, and the Need for Models</option>
+<option>Chapter 3 — Evidence Policy, Warning, and Ethical Lenses</option>
+<option>Chapter 4 — Systems, Emergence, and Responsibility</option>
+<option>Chapter 5 — Social Contract, Justice, and the Moral Commons</option>
+<option>Chapter 12 — Systems, Governance, Care, and Institutional Risk</option>
+<option>Capstone — Comparative Structural Ethics</option>
+</select>
+    <div id="chapterOutput" style="margin-top:12px"><div class="workspace"><h3>Chapter 5 — Social Contract, Justice, and the Moral Commons</h3><p><strong>Capability Lab:</strong> Use the civic coordination route with Repair preset.</p><p><strong>EECSL:</strong> Use GEO Florida and Higher Education IPS to connect Rawls, Nussbaum, functional equivalence, John Hope Franklin, and Maathai-style shared task coordination.</p></div></div>
   </section>
 
   <section id="concepts" class="section card">
     <h2>Concept Threads Across Cases</h2>
-    <div id="conceptGrid" class="concept-grid"></div>
+    <div id="conceptGrid" class="concept-grid">
+<article class="concept-card static-fallback-card">
+  <strong>Structural Ceiling / FHRI_max</strong>
+  <p>When does agent capacity get absorbed by institutional structure?</p>
+  <p class="footer-note"><b>Cases:</b> All four cases</p>
+</article>
+<article class="concept-card static-fallback-card">
+  <strong>P-SAGE / Triadic Overwrite</strong>
+  <p>When do signs remain operational while their ethical meaning is replaced?</p>
+  <p class="footer-note"><b>Cases:</b> 2008 Financial Crisis, GEO Florida, Nursing Homes</p>
+</article>
+<article class="concept-card static-fallback-card">
+  <strong>T1 vs T2 Repair</strong>
+  <p>Does the intervention change the access condition or merely improve behavior inside the same ceiling?</p>
+  <p class="footer-note"><b>Cases:</b> 2008 Financial Crisis, GEO Florida, Nursing Homes</p>
+</article>
+<article class="concept-card static-fallback-card">
+  <strong>Functional Equivalence / Moral Commons</strong>
+  <p>Can different PRFs support the same shared task for different authentic reasons?</p>
+  <p class="footer-note"><b>Cases:</b> GEO Florida, Higher Education IPS, Nursing Homes</p>
+</article>
+<article class="concept-card static-fallback-card">
+  <strong>Evidence Governance</strong>
+  <p>Which claims are data, computed outputs, interpretations, teaching prompts, or hypotheses?</p>
+  <p class="footer-note"><b>Cases:</b> All EECSL cases</p>
+</article>
+</div>
   </section>
 
   <section id="toolbelt" class="section card">
     <h2>Active Analysis Toolbelt</h2>
     <p>This is the recommended button sequence after a public simulation run.</p>
-    <div id="toolGrid" class="tool-grid"></div>
+    <div id="toolGrid" class="tool-grid">
+<article class="tool-card static-fallback-card">
+  <strong>Open Simulation</strong>
+  <p>Run the public classroom demonstration first.</p>
+  <p class="footer-note"><b>Output:</b> Initial pattern, failure, or repair signature.</p>
+</article>
+<article class="tool-card static-fallback-card">
+  <strong>Ethical Lens Audit</strong>
+  <p>Ask what the system forms, respects, produces, distributes, exploits, and hears.</p>
+  <p class="footer-note"><b>Output:</b> Lens-specific ethical questions.</p>
+</article>
+<article class="tool-card static-fallback-card">
+  <strong>Hidden Costs</strong>
+  <p>Identify who bears load, credibility burden, care burden, risk, delay, or loss.</p>
+  <p class="footer-note"><b>Output:</b> Hidden-cost inventory.</p>
+</article>
+<article class="tool-card static-fallback-card">
+  <strong>Repair Builder</strong>
+  <p>Separate T1 structural repairs from T2 agent/process improvements.</p>
+  <p class="footer-note"><b>Output:</b> Repair proposal with claim type.</p>
+</article>
+<article class="tool-card static-fallback-card">
+  <strong>Open EECSL Case</strong>
+  <p>Move from classroom simulation to empirical case study.</p>
+  <p class="footer-note"><b>Output:</b> Evidence-governed case module.</p>
+</article>
+<article class="tool-card static-fallback-card">
+  <strong>Navigator Bridge</strong>
+  <p>Move from public case to private student application without exposing private data.</p>
+  <p class="footer-note"><b>Output:</b> Private reflection route.</p>
+</article>
+</div>
   </section>
 </main>
 
