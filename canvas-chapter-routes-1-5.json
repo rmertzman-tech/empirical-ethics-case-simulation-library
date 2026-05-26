@@ -1,0 +1,181 @@
+[
+  {
+    "id": "chapter-1",
+    "chapter": "Chapter 1",
+    "title": "Ethical Perception, Complexity, and the Need for Models",
+    "primary_tool": "Capability Lab Schelling emergence simulation",
+    "primary_link": "https://rmertzman-tech.github.io/capability-lab-public-studio/",
+    "secondary_case": "Light EECSL preview only",
+    "secondary_link": "https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/",
+    "purpose": "Introduce students to layered emergence, complexity, and the idea that ethical outcomes may exceed individual intentions.",
+    "minimal_route": [
+      "Open the Capability Lab.",
+      "Run the Schelling emergence demonstration.",
+      "Ask students what the pattern shows that individual intention alone does not explain.",
+      "Close with the distinction between blame, responsibility, and system architecture."
+    ],
+    "full_route": [
+      "Run the Traditional Schelling preset.",
+      "Run an expanded Capability Lab version with repair or shared-space conditions.",
+      "Compare what changes when the system includes more than local preference.",
+      "Use the glossary to clarify simulation output versus moral conclusion."
+    ],
+    "public_prompts": [
+      "What did the simulation make visible that an ordinary debate about individual choices might hide?",
+      "How can a large-scale pattern emerge even when no single agent intends the whole pattern?",
+      "What would count as a fair intervention in this system?"
+    ],
+    "private_prompts": [
+      "Suggested private exploration: Where have you seen a difference between what people intended and what a system produced?",
+      "Suggested private exploration: How does recognizing emergence change how you assign responsibility?"
+    ],
+    "instructor_notes": [
+      "Do not overload Chapter 1 with every EECSL case.",
+      "Use Schelling as the key doorway into complexity, not as a full theory of social life.",
+      "Emphasize that simulation results invite inquiry; they do not automatically settle ethical judgment."
+    ]
+  },
+  {
+    "id": "chapter-2",
+    "chapter": "Chapter 2",
+    "title": "Ethical Attention, PRF, and the Structure of Moral Perception",
+    "primary_tool": "Glossary + Ethical Lens framing",
+    "primary_link": "https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/methods/key-terms-glossary.html",
+    "secondary_case": "Optional Cross-Case Dashboard preview",
+    "secondary_link": "https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/teaching/cross-case-integration.html",
+    "purpose": "Help students see that ethical perception is structured by attention, assumptions, values, language, and interpretive frames.",
+    "minimal_route": [
+      "Open the Key Terms Glossary.",
+      "Review PRF-adjacent terms, evidence-governance distinctions, and Teaching FHRI caution language.",
+      "Ask students to distinguish source facts, model outputs, interpretations, and private applications."
+    ],
+    "full_route": [
+      "Open the Cross-Case Dashboard.",
+      "Choose one case card and ask what different observers might notice first.",
+      "Introduce the public/private boundary: public case analysis is not private confession.",
+      "Use a short lens audit as a discussion exercise."
+    ],
+    "public_prompts": [
+      "What does an ethical lens help us notice that we might otherwise ignore?",
+      "Why should a public case page distinguish evidence, model output, interpretation, and teaching prompt?",
+      "How can two students view the same case differently without either being careless?"
+    ],
+    "private_prompts": [
+      "Suggested private exploration: What kinds of ethical details do you usually notice first?",
+      "Suggested private exploration: What kinds of ethical details might you tend to overlook?"
+    ],
+    "instructor_notes": [
+      "Keep student PRF work private unless students freely choose to share.",
+      "Use Chapter 2 to stabilize vocabulary before later simulations become more complex.",
+      "Avoid turning private prompts into required disclosure."
+    ]
+  },
+  {
+    "id": "chapter-3",
+    "chapter": "Chapter 3",
+    "title": "Evidence Policy, Warning, and Ethical Lenses",
+    "primary_tool": "Capability Lab Challenger / Boisjoly run mode",
+    "primary_link": "https://rmertzman-tech.github.io/capability-lab-public-studio/",
+    "secondary_case": "2008 Financial Crisis",
+    "secondary_link": "https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/cases/2008-financial-crisis.html",
+    "purpose": "Show how warning signals can be suppressed, normalized, overwritten, or institutionally ignored under pressure.",
+    "minimal_route": [
+      "Run the Challenger classroom mode.",
+      "Ask what happened to the warning signal.",
+      "Use one ethical lens question: whose knowledge could be heard?",
+      "Close with the difference between private courage and institutional warning capacity."
+    ],
+    "full_route": [
+      "Run Challenger first.",
+      "Open the 2008 Financial Crisis EECSL case.",
+      "Compare engineering warning suppression with financial rating normalization.",
+      "Apply the evidence-governance distinction: fact, model output, interpretation, hypothesis."
+    ],
+    "public_prompts": [
+      "What makes a warning institutionally hearable or dismissible?",
+      "Why is warning not simply a matter of individual courage?",
+      "How does the 2008 case extend the Challenger pattern to a larger institutional system?"
+    ],
+    "private_prompts": [
+      "Suggested private exploration: Have you ever seen a warning ignored in a group or institution? What made it hard to hear?",
+      "Suggested private exploration: What would make it easier for you to speak or listen responsibly under pressure?"
+    ],
+    "instructor_notes": [
+      "Keep the Challenger story central; use 2008 as an extension, not a replacement.",
+      "Emphasize evidence-channel integrity and professional responsibility.",
+      "Avoid suggesting that students must disclose personal whistleblowing experiences."
+    ]
+  },
+  {
+    "id": "chapter-4",
+    "chapter": "Chapter 4",
+    "title": "Systems, Emergence, SAGE, and Responsibility",
+    "primary_tool": "Schelling + Coordination Under Heat",
+    "primary_link": "https://rmertzman-tech.github.io/capability-lab-public-studio/",
+    "secondary_case": "Higher Education IPS or 2008 Financial Crisis",
+    "secondary_link": "https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/teaching/cross-case-integration.html",
+    "purpose": "Help students understand responsibility in systems where outcomes emerge from feedback, incentives, thresholds, and institutional design.",
+    "minimal_route": [
+      "Run a short Schelling demonstration.",
+      "Run one coordination-under-heat preset.",
+      "Ask what changed when heat, voice, trust, or repair changed.",
+      "Connect the result to SAGE: seeing, analyzing, generating, engaging."
+    ],
+    "full_route": [
+      "Run Schelling Traditional versus Emergent Complexity view.",
+      "Run Coordination Under Heat using a stress or repair preset.",
+      "Open the Cross-Case Dashboard.",
+      "Ask students to identify one T1 repair and one T2 repair possibility."
+    ],
+    "public_prompts": [
+      "When does responsibility belong partly to system architecture?",
+      "What changes when coordination is technically successful but ethically unhealthy?",
+      "How does SAGE help avoid jumping from first impression to final judgment?"
+    ],
+    "private_prompts": [
+      "Suggested private exploration: Where in your life do systems make good action easier or harder?",
+      "Suggested private exploration: How might SAGE help you slow down before judging a complex situation?"
+    ],
+    "instructor_notes": [
+      "Use Chapter 4 to connect critical thinking to systems thinking.",
+      "Make sure students do not equate coordination with goodness.",
+      "Use T1/T2 repair language carefully and point to the glossary."
+    ]
+  },
+  {
+    "id": "chapter-5",
+    "chapter": "Chapter 5",
+    "title": "Social Contract, Justice, and the Moral Commons",
+    "primary_tool": "Civic coordination route with Repair preset",
+    "primary_link": "https://rmertzman-tech.github.io/capability-lab-public-studio/",
+    "secondary_case": "GEO Florida + Higher Education IPS",
+    "secondary_link": "https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/cases/geo-florida-prison.html",
+    "purpose": "Connect Rawls, Nussbaum, John Hope Franklin, functional equivalence, Maathai-style shared task coordination, and the moral commons.",
+    "minimal_route": [
+      "Introduce formal rights versus actual capabilities.",
+      "Use the civic coordination Repair preset.",
+      "Ask how different PRFs can support the same shared task for different authentic reasons.",
+      "Connect to John Hope Franklin as the emotional anchor."
+    ],
+    "full_route": [
+      "Run civic coordination with Repair preset.",
+      "Open GEO Florida as the empirical justice case.",
+      "Use Higher Education IPS as a rights-to-capabilities extension.",
+      "Ask students to distinguish Rawlsian fairness, Nussbaum capabilities, and functional equivalence."
+    ],
+    "public_prompts": [
+      "What is the difference between having a formal right and having the actual capability to use it?",
+      "How can different communities cooperate without sharing the same worldview?",
+      "What does the moral commons require if justice is more than formal permission?"
+    ],
+    "private_prompts": [
+      "Suggested private exploration: Where have you seen a gap between formal opportunity and actual capability?",
+      "Suggested private exploration: What shared task could different communities support for different authentic reasons?"
+    ],
+    "instructor_notes": [
+      "Treat care ethics as one framework among the chapter's tools, not the organizing center.",
+      "Keep Father Hanna out of Chapter 5 and reserve that case for later Smithian sympathy work.",
+      "Use Maathai / Green Belt as the secondary functional-equivalence case."
+    ]
+  }
+]
