@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Key Terms Glossary</title>
+<style>
+:root{--ink:#1f2933;--muted:#5f6b7a;--accent:#345d4e;--gold:#8b6b3d;--line:#d9e2dc;--card:#fff;--shadow:0 12px 30px rgba(31,41,51,.08)}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fbfcfb;line-height:1.58}
+header{background:linear-gradient(135deg,#20382f,#345d4e);color:#fff;padding:38px 20px}
+.header-inner,main{max-width:1120px;margin:0 auto}
+main{padding:24px 18px 84px}
+h1{font-size:clamp(2rem,4vw,3.6rem);line-height:1.05;margin:.3rem 0}
+h2{color:var(--accent)}
+.kicker{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;font-weight:900;opacity:.88}
+.subtitle{max-width:920px;font-size:1.05rem;opacity:.94}
+.card,.hero{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow);margin:16px 0}
+.hero{border:2px solid var(--accent);background:linear-gradient(180deg,#fff,#f4faf6)}
+.button{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:8px 12px;font-weight:850;display:inline-block;text-decoration:none;margin:3px}
+.button.primary{border-color:var(--accent);background:#eef7f1;color:var(--accent)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.notice{border-left:5px solid var(--accent);background:#f8fbf8;border-radius:14px;padding:12px;margin:12px 0}
+.warn{border-left-color:#b5792d;background:#fffaf1}
+.danger{border-left-color:#8b3a3a;background:#fff6f6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
+.term{border:1px solid var(--line);border-radius:18px;background:#fff;padding:15px}
+.term h3{margin-top:0;color:var(--accent)}
+.term .tag{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:900}
+table{width:100%;border-collapse:collapse;background:#fff}
+th,td{border-top:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+th{color:var(--accent);background:#f8fbf8}
+code,pre{background:#f4f7f4;border:1px solid var(--line);border-radius:10px;padding:2px 5px}
+pre{padding:14px;overflow:auto;white-space:pre-wrap}
+.footer-note{color:var(--muted);font-size:.92rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="kicker">Empirical Ethics Case Simulation Library · Phase K.1</div>
+    <h1>Key Terms Glossary</h1>
+    <p class="subtitle">Clarifying FHRI, Teaching FHRI, IPS, T1/T2 repair, and other EECSL terms.</p>
+    <div class="actions">
+      <a class="button" href="../index.html">Library Hub</a>
+      <a class="button" href="../teaching/classroom-bookmarks.html">Classroom Bookmarks</a>
+      <a class="button" href="../teaching/cross-case-integration.html">Cross-Case Dashboard</a>
+      <a class="button primary" href="https://rmertzman-tech.github.io/capability-lab-public-studio/">Capability Lab</a>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="hero">
+  <h2>Why this glossary matters</h2>
+  <p>The EECSL and Capability Lab use several technical teaching terms. This glossary keeps those terms from becoming mysterious, overclaimed, or confused with validated empirical measurements.</p>
+  <div class="notice">
+    <strong>Most important clarification:</strong>
+    <p><strong>Teaching FHRI</strong> is a classroom simulation proxy inspired by the broader <strong>FHRI</strong> idea. It helps students reason about agency-supporting conditions, but it is not a stand-alone empirical audit score.</p>
+  </div>
+</section>
+
+<section class="card">
+  <h2>FHRI / Teaching FHRI distinction</h2>
+  
+<table>
+<thead><tr><th>Term</th><th>Status</th><th>What it can do</th><th>What it should not do</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>FHRI</strong></td>
+<td>Broader conceptual / methodological construct</td>
+<td>Names the target idea: preserving and restoring functional health, resilience, agency, and repair conditions.</td>
+<td>Should not be treated as a single settled measurement unless the relevant empirical method is specified.</td>
+</tr>
+<tr>
+<td><strong>Teaching FHRI</strong></td>
+<td>Classroom proxy</td>
+<td>Helps students compare simulation configurations and ask better ethical questions.</td>
+<td>Should not be presented as a validated real-world score, audit, diagnosis, or final moral verdict.</td>
+</tr>
+<tr>
+<td><strong>FHRI_max</strong></td>
+<td>Structural ceiling concept</td>
+<td>Shows how institutional architecture can limit the maximum reachable functioning even when agents try to do well.</td>
+<td>Should not be used to blame individual agents for system-level ceilings.</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+
+<section class="card">
+  <h2>Glossary of key terms</h2>
+  <div class="grid"><article class="term">
+  <div class="tag">Core project concept</div>
+  <h3>FHRI</h3>
+  <p>FHRI means Functional Health Resilience Index in this teaching project. It names the broader idea that ethical systems can be evaluated partly by how well they preserve or restore the functional conditions that allow persons, workers, residents, students, or communities to act coherently over time.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Use FHRI as a reminder that ethics is not only about stated values or formal rights; it is also about whether people retain the capability conditions needed to think, speak, coordinate, recover, and act.</p>
+</article>
+<article class="term">
+  <div class="tag">Classroom simulation proxy</div>
+  <h3>Teaching FHRI</h3>
+  <p>A Teaching FHRI is a simplified classroom score or dashboard output used inside the EECSL and Capability Lab. It is a pedagogical proxy, not a validated clinical, legal, financial, or institutional audit metric.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Use it to compare patterns inside a simulation: which configuration better supports agency, resilience, repair, and ethical coordination?</p>
+</article>
+<article class="term">
+  <div class="tag">Important distinction</div>
+  <h3>How Teaching FHRI relates to FHRI</h3>
+  <p>Teaching FHRI belongs to the same conceptual family as FHRI, but it is not the full formal or empirical FHRI. It translates the FHRI idea into an accessible classroom model using normalized sliders, weights, and interpretive outputs. It should be read as a teaching signal, not as a real-world measurement claim unless a separate empirical methodology and validation process has been supplied.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Tell students: the score helps us ask better questions; it does not settle the case by itself.</p>
+</article>
+<article class="term">
+  <div class="tag">Structural ceiling</div>
+  <h3>FHRI_max</h3>
+  <p>FHRI_max refers to the maximum level of functional health, resilience, or repair that appears reachable under the current institutional structure. A person may work hard inside a system and still remain below flourishing because the system itself sets a ceiling.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Use this to distinguish individual effort from structural access conditions.</p>
+</article>
+<article class="term">
+  <div class="tag">Classroom simulation proxy</div>
+  <h3>Teaching IPS</h3>
+  <p>Teaching IPS is a classroom version of an Institutional Parasite Score. It helps students see when a system may absorb public value, care capacity, credibility, trust, or agency while continuing to appear formally legitimate.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Use it as a warning light, not as a final accusation.</p>
+</article>
+<article class="term">
+  <div class="tag">Structural ethics concept</div>
+  <h3>Institutional Parasite Score / IPS</h3>
+  <p>IPS names a broader interpretive framework for analyzing whether an institution extracts more capability, trust, labor, risk, or public value than it restores. A full IPS would require clear variables, data sources, weighting, and verification.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Ask: who benefits, who bears the risk, who loses voice, and what repair conditions exist?</p>
+</article>
+<article class="term">
+  <div class="tag">Structural repair</div>
+  <h3>T1 Repair</h3>
+  <p>T1 repair changes the access conditions of a system. It modifies incentives, power, governance, voice protection, ownership structures, accountability, or resource flows so that people can actually exercise agency.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Use T1 when the problem is not just bad behavior inside the system but the architecture of the system itself.</p>
+</article>
+<article class="term">
+  <div class="tag">Operational repair</div>
+  <h3>T2 Repair</h3>
+  <p>T2 repair improves performance inside the existing structure. It may include training, better communication, compliance routines, professional norms, or procedural improvements.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> T2 is useful, but it may not be enough if the structural ceiling remains unchanged.</p>
+</article>
+<article class="term">
+  <div class="tag">Public simulation layer</div>
+  <h3>Capability Lab</h3>
+  <p>The Capability Lab is the public classroom simulation space. It lets students run shared simulations without exposing private journal content or personal Navigator work.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Use it first for live demonstration, then move to EECSL for empirical case analysis.</p>
+</article>
+<article class="term">
+  <div class="tag">Public empirical case library</div>
+  <h3>EECSL</h3>
+  <p>EECSL means Empirical Ethics Case Simulation Library. It is the public case-study atlas for evidence-governed simulations and teaching cases.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Use EECSL after a public simulation to examine a real or evidence-supported institutional pattern.</p>
+</article>
+<article class="term">
+  <div class="tag">Private student application layer</div>
+  <h3>Navigator</h3>
+  <p>The Navigator is the private application and reflection layer. It is where students may connect public cases to their own PRF, life experience, and ethical development without making that material public.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Keep private reflection out of public case pages.</p>
+</article>
+<article class="term">
+  <div class="tag">Evidence governance</div>
+  <h3>Public claim vs. simulation output</h3>
+  <p>A public claim is a statement about the world that needs evidence. A simulation output is a result generated by model assumptions. The two should not be confused.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Ask students to label each statement: source fact, model output, interpretation, teaching prompt, or hypothesis.</p>
+</article>
+<article class="term">
+  <div class="tag">Coordination across PRFs</div>
+  <h3>Functional Equivalence</h3>
+  <p>Functional equivalence occurs when different agents or communities can support the same practical task for different authentic reasons. They do not need identical worldviews to cooperate ethically.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Use this especially in Chapter 5 when moving from social contract theory to the moral commons.</p>
+</article>
+<article class="term">
+  <div class="tag">Shared capability infrastructure</div>
+  <h3>Moral Commons</h3>
+  <p>The moral commons is the shared field of conditions that makes ethical agency possible: voice, trust, safety, evidence, repair, access, and accountability.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Ask who protects the commons, who uses it, who depletes it, and how it can be repaired.</p>
+</article>
+<article class="term">
+  <div class="tag">Institutional extraction pattern</div>
+  <h3>Visible Parasite</h3>
+  <p>A visible parasite is a publicly inspectable pattern where a system appears to serve care, education, justice, or public welfare while siphoning away the conditions that make those purposes real.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Use the term carefully: it names a structural pattern to be investigated, not a shortcut for blaming individuals.</p>
+</article>
+<article class="term">
+  <div class="tag">Evidence and signs</div>
+  <h3>P-SAGE</h3>
+  <p>P-SAGE extends the SAGE logic toward perception, signs, governance, and ethical interpretation. It helps students ask how signals are produced, filtered, normalized, ignored, or repaired.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Use it in warning, financial crisis, nursing home, and governance cases.</p>
+</article>
+<article class="term">
+  <div class="tag">Signal corruption</div>
+  <h3>Triadic Overwrite</h3>
+  <p>Triadic overwrite occurs when a sign continues to function operationally while its ethical meaning is replaced or hollowed out. The label remains, but the warning, care, or accountability function is weakened.</p>
+  <p class="footer-note"><strong>Classroom use:</strong> Ask: what sign is still present, what meaning has been overwritten, and who benefits from the overwrite?</p>
+</article></div>
+</section>
+
+<section class="card">
+  <h2>Suggested classroom language</h2>
+  <pre>When the simulation displays a Teaching FHRI or FHRI_max value, read it as a structured teaching signal. It summarizes assumptions inside this model so we can ask better questions about agency, repair, and institutional pressure. It is not a final measurement of the real institution unless we separately define the empirical data, weights, calibration method, and verification process.</pre>
+</section>
+
+</main>
+</body>
+</html>
