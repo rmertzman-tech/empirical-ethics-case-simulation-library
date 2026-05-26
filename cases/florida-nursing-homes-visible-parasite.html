@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Florida Nursing Homes and the Visible Parasite — EECSL</title>
+<style>
+:root{--ink:#1f2933;--muted:#5f6b7a;--accent:#345d4e;--accent2:#8b6b3d;--good:#2f6b4f;--warn:#b5792d;--danger:#8b3a3a;--blue:#326e9f;--soft:#f4f7f4;--soft2:#f7f1e7;--line:#d9e2dc;--card:#fff;--shadow:0 12px 30px rgba(31,41,51,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fbfcfb;line-height:1.55}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header{background:radial-gradient(circle at top left,rgba(255,255,255,.13),transparent 30rem),linear-gradient(135deg,#20382f,#345d4e);color:#fff;padding:36px 20px}
+.header-inner{max-width:1180px;margin:0 auto}.kicker{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;font-weight:900;opacity:.88}
+h1{font-size:clamp(2rem,4.2vw,3.8rem);line-height:1.03;margin:.35rem 0}.subtitle{max-width:960px;font-size:1.05rem;opacity:.94}
+nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}.nav-inner{max-width:1180px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;padding:10px 18px}
+.nav-link,.button{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:8px 12px;font-weight:850;display:inline-block;cursor:pointer}.button.primary,.nav-link.active{border-color:var(--accent);background:#eef7f1;color:var(--accent)}.button.warn{border-color:var(--warn);background:#fffaf1;color:var(--warn)}
+main{max-width:1180px;margin:0 auto;padding:24px 18px 84px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.s12{grid-column:span 12}.s8{grid-column:span 8}.s6{grid-column:span 6}.s4{grid-column:span 4}.s3{grid-column:span 3}@media(max-width:900px){.s8,.s6,.s4,.s3{grid-column:span 12}}
+.card,.hero{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow)}.hero{border:2px solid var(--accent);background:linear-gradient(180deg,#fff,#f4faf6)}.card h2,.card h3{margin-top:0}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.pill{border:1px solid var(--line);border-radius:999px;padding:5px 9px;background:var(--soft);font-size:.82rem;color:var(--muted);font-weight:850}.pill.gold{background:var(--soft2)}
+.notice{border-left:5px solid var(--accent);background:#f8fbf8;border-radius:14px;padding:12px;margin:12px 0}.notice.warn{border-left-color:var(--warn);background:#fffaf1}.notice.danger{border-left-color:var(--danger);background:#fff6f6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tab-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;font-weight:850;cursor:pointer}.tab-btn.active{border-color:var(--accent);background:#eef7f1;color:var(--accent)}.tab-panel{display:none}.tab-panel.active{display:block}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px;margin-top:10px}.metric{border:1px solid var(--line);border-radius:16px;background:#fff;padding:12px}.metric strong{display:block;font-size:1.4rem}.bar{height:10px;background:#e6ece5;border-radius:999px;overflow:hidden;margin-top:7px}.bar span{display:block;height:100%;background:var(--accent)}.bar.good span{background:var(--good)}.bar.warn span{background:var(--warn)}.bar.danger span{background:var(--danger)}.bar.blue span{background:var(--blue)}
+.sim-grid{display:grid;grid-template-columns:minmax(310px,1.15fr) minmax(285px,.85fr);gap:14px}@media(max-width:900px){.sim-grid{grid-template-columns:1fr}}
+.slider-row{display:grid;grid-template-columns:190px 1fr 58px;gap:10px;align-items:center;margin:11px 0}input[type=range]{width:100%}.toggle-row{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:9px;margin:8px 0;background:#fff}
+.output{border:1px solid var(--line);border-radius:18px;background:#fbfcfb;padding:14px;margin-top:12px}.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:10px}.tool-box{border:1px solid var(--line);border-radius:16px;background:#fff;padding:12px}.tool-box strong{display:block;margin-bottom:4px}
+.table{width:100%;border-collapse:collapse}.table th,.table td{border-top:1px solid var(--line);padding:9px;text-align:left;vertical-align:top}.table th{color:var(--accent)}
+.facility-map{display:grid;grid-template-columns:repeat(14,1fr);gap:4px;border:1px solid var(--line);background:#fff;border-radius:18px;padding:10px}.node{aspect-ratio:1/1;border-radius:4px;background:#8b3a3a}.node.mid{background:#b5792d}.node.good{background:#2f6b4f}.node.blue{background:#326e9f}.node.hidden{opacity:.22}
+.scale-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.scale-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:14px}.scale-card strong{color:var(--accent);display:block}
+.sage-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.sage-step{border:1px solid var(--line);border-radius:18px;background:#fff;padding:14px}.letter{width:42px;height:42px;border-radius:999px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.3rem;margin-bottom:8px}
+.spectrum{display:flex;flex-direction:column;gap:8px}.row{display:grid;grid-template-columns:240px 1fr 76px;gap:10px;align-items:center;border:1px solid var(--line);border-radius:14px;background:#fff;padding:10px}.row-name strong{display:block}.track{height:14px;background:#e8eee9;border-radius:999px;overflow:hidden}.track span{display:block;height:100%;background:var(--accent)}.track.collapse span{background:var(--danger)}.track.mid span{background:var(--warn)}.track.good span{background:var(--good)}
+pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;max-height:330px;overflow:auto}.footer-note{color:var(--muted);font-size:.92rem}.formula{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;overflow:auto}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="kicker">Empirical Ethics Case Simulation Library · Phase G Migrated Case</div>
+    <h1>Florida Nursing Homes and the Visible Parasite</h1>
+    <p class="subtitle"><strong>Public Care, Structural Risk, and National Benchmark Evidence.</strong> A care ethics, governance, and structural repair case module for teaching FHRI_max, hidden ownership architecture, HHVBP as a T2 trap, SAGE analysis, and T1/T2 intervention design.</p>
+    <div class="actions">
+      <a class="button" href="../index.html">Back to Library Hub</a>
+      <a class="button primary" href="#case-tabs">Open case tools</a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-link" href="#overview">Overview</a>
+    <a class="nav-link" href="#case-tabs">Tools</a>
+    <a class="nav-link" href="#simulation">Simulation</a>
+    <a class="nav-link" href="#evidence">Evidence</a>
+    <a class="nav-link" href="#navigator">Navigator</a>
+  </div>
+</nav>
+
+<main>
+  <section id="overview" class="hero">
+    <div class="kicker">Chapter 12/15 · Care · Governance · Capstone</div>
+    <h2>When the parasite becomes visible, ethics changes.</h2>
+    <div class="pill-row">
+      <span class="pill">FHRI_max</span><span class="pill">Visible Parasite</span><span class="pill">T1/T2</span><span class="pill">SAGE</span><span class="pill">HHVBP</span><span class="pill">Ownership opacity</span><span class="pill">True Solvency</span>
+    </div>
+    <p><strong>Core public question:</strong> How can a care institution formally organized around resident protection become structurally capable of shifting risk, cost, and vulnerability onto residents, workers, families, and public systems?</p>
+    <p><strong>Teaching purpose:</strong> Students learn to distinguish agent-level effort from structural ceilings, identify when accurate measurement becomes a weak T2 intervention, and design T1 repairs that make hidden extraction architecture visible and enforceable.</p>
+    <div class="notice">
+      <strong>Responsibility caution:</strong>
+      <p>This case should not blame nurses, aides, families, residents, or individual regulators. It examines ownership, capital, staffing, incentive, and information structures that can absorb care capacity before it reaches vulnerable people.</p>
+    </div>
+  </section>
+
+  <section class="grid" style="margin-top:16px">
+    <div class="card s8">
+      <h2>Case Snapshot</h2>
+      <p>The source app frames PE-acquired nursing homes as a visible-parasite case: the nurse still documents, the facility still reports, and the quality program still measures, but the institutional purpose can be overwritten by debt-service and extraction architecture.</p>
+      <div class="metric-grid">
+        <div class="metric"><span class="pill">ε extraction</span><strong>0.636</strong><div class="bar danger"><span style="width:63.6%"></span></div></div>
+        <div class="metric"><span class="pill">μ misalignment</span><strong>0.820</strong><div class="bar danger"><span style="width:82%"></span></div></div>
+        <div class="metric"><span class="pill">FHRI_max</span><strong>13.6 / 14.3</strong><div class="bar danger"><span style="width:14.3%"></span></div></div>
+        <div class="metric"><span class="pill">PE vs non-profit gap</span><strong>41.5</strong><div class="bar warn"><span style="width:41.5%"></span></div></div>
+      </div>
+    </div>
+    <div class="card s4">
+      <h2>Claim Governance</h2>
+      <div class="pill-row"><span class="pill">Source-app values</span><span class="pill">Public data</span><span class="pill">Computed output</span><span class="pill">Interpretive claim</span><span class="pill">Verification queue</span></div>
+      <div class="notice warn"><strong>Important:</strong><p>The source app reports both 14.3 and 13.6 for PE nursing-home FHRI_max in different panels. This migration preserves both and flags the discrepancy for source verification.</p></div>
+    </div>
+  </section>
+
+  <section id="case-tabs" class="card" style="margin-top:16px">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="measurement">Measurement</button>
+      <button class="tab-btn" data-tab="simulation">Repair Simulator</button>
+      <button class="tab-btn" data-tab="scales">Scales</button>
+      <button class="tab-btn" data-tab="sage">SAGE Scenario</button>
+      <button class="tab-btn" data-tab="t1t2">T1/T2 Classifier</button>
+      <button class="tab-btn" data-tab="ips">IPS Profile</button>
+      <button class="tab-btn" data-tab="teaching">Teaching / Journal</button>
+      <button class="tab-btn" data-tab="evidence">Evidence Status</button>
+      <button class="tab-btn" data-tab="navigator">Navigator Bridge</button>
+      <button class="tab-btn" data-tab="export">Export</button>
+    </div>
+
+    <div id="tab-measurement" class="tab-panel active">
+      <h2>The Measurement That Changes Everything</h2>
+      <p>Five parameters combine into a structural ceiling. A high-capacity nurse, aide, director, or regulator may care deeply and act competently, but the structure can absorb most of that capacity before it reaches the resident.</p>
+      <div id="profileCards" class="tool-grid"></div>
+      <h3>PE / Non-profit structural contrast</h3>
+      <div id="spectrum" class="spectrum"></div>
+    </div>
+
+    <div id="tab-simulation" class="tab-panel">
+      <h2 id="simulation">Visible Parasite Repair Simulator</h2>
+      <p>Load the PE-acquired nursing-home profile, then test whether the response is a T2 improvement inside the ceiling or a T1 intervention that changes the ceiling itself.</p>
+      <div class="sim-grid">
+        <div>
+          <p><strong>Active profile:</strong> <span id="activeProfile"></span></p>
+          <div id="facilityMap" class="facility-map"></div>
+          <p class="footer-note">Red = absorbed care capacity. Amber = unstable care floor. Green = restored care capacity. Blue = low-IPS alternative visibility. Faded cells = harms hidden by ownership opacity.</p>
+          <div id="metrics" class="metric-grid"></div>
+          <div id="resultBox"></div>
+        </div>
+        <div>
+          <h3>Load Profile</h3>
+          <div class="actions"><button class="button" onclick="loadProfile('pe-nursing')">PE nursing home</button><button class="button" onclick="loadProfile('hhvbp')">HHVBP T2</button><button class="button" onclick="loadProfile('nonprofit')">Non-profit alternative</button></div>
+          <h3>IPS Parameters</h3>
+          <div id="paramControls"></div>
+          <h3>Repair Controls</h3>
+          <div id="repairControls"></div>
+          <div class="actions">
+            <button class="button primary" id="runBtn">Run repair simulation</button>
+            <button class="button" id="resetPE">Reset PE profile</button>
+            <button class="button" id="exportBtn">Export summary</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-scales" class="tab-panel">
+      <h2>Scale-Free Ethical Obligations</h2>
+      <p>The case is not only about one facility. It shows how institutional parasitism can operate across individual, family, community, economic, governance, and civilizational scales.</p>
+      <div id="scaleGrid" class="scale-grid"></div>
+    </div>
+
+    <div id="tab-sage" class="tab-panel">
+      <h2>SAGE Scenario: Maria and Mrs. Rodriguez</h2>
+      <div class="notice">
+        <strong>Scenario:</strong>
+        <p>Maria, RN, works at a PE-acquired nursing home in Florida. She has 14 residents on her shift. The facility’s FHRI_max is very low. Mrs. Rodriguez needs about 30 more minutes of mobility work to prevent a pressure ulcer. Maria has about 8 minutes. She has filed incident reports about staffing ratios. They were logged but not acted on. Tonight she finds a pressure ulcer beginning on Mrs. Rodriguez’s heel.</p>
+      </div>
+      <div id="sageGrid" class="sage-grid"></div>
+    </div>
+
+    <div id="tab-t1t2" class="tab-panel">
+      <h2>T1/T2 Intervention Classifier</h2>
+      <p>Understanding which type an action is determines whether it can close the coordination gap.</p>
+      <div class="tool-grid">
+        <div class="tool-box"><strong>Type 1 — Structural</strong><p>Changes ε, φ, ρ, σ, or μ directly. Raises FHRI_max. Durable because structural coordination capacity actually changes.</p></div>
+        <div class="tool-box"><strong>Type 2 — Agent / Process</strong><p>Improves agents, incentives, or processes inside unchanged structural parameters. Valuable, but cannot exceed FHRI_max.</p></div>
+      </div>
+      <h3>Known classification examples</h3>
+      <table class="table"><thead><tr><th>Intervention</th><th>Type</th><th>Effect</th></tr></thead><tbody id="interventionRows"></tbody></table>
+      <h3>Classify an intervention</h3>
+      <textarea id="classifyInput" style="width:100%;min-height:90px;border:1px solid var(--line);border-radius:14px;padding:12px;font:inherit" placeholder="Describe an ethical action, policy proposal, or personal decision..."></textarea>
+      <div class="actions"><button class="button primary" id="classifyBtn">Classify</button><button class="button" id="exampleBtn">Show example</button></div>
+      <div id="classifyOutput"></div>
+    </div>
+
+    <div id="tab-ips" class="tab-panel">
+      <h2>IPS Profile</h2>
+      <p>The source app gives the PE-acquired nursing-home profile as ε=.636, φ=.520, ρ=.700, σ=.620, μ=.820, with agent capacity 82 and a very low FHRI_max.</p>
+      <div id="formulaBox"></div>
+      <table class="table">
+        <thead><tr><th>Parameter</th><th>Source-app value</th><th>Teaching interpretation</th></tr></thead>
+        <tbody>
+          <tr><td>ε Extraction</td><td>0.636</td><td>Debt-service, management, ownership, and real-estate channels sit between care revenue and care floor.</td></tr>
+          <tr><td>φ Physical entropy</td><td>0.520</td><td>Resident harm, staff burnout, care delays, pressure ulcers, and biological stress.</td></tr>
+          <tr><td>ρ Regulatory burden</td><td>0.700</td><td>High measurement activity that may not reach the ownership channel determining staffing and capital allocation.</td></tr>
+          <tr><td>σ Morphic residue</td><td>0.620</td><td>Normalization of understaffing, documentation without repair, and deviance absorbed as routine operation.</td></tr>
+          <tr><td>μ Incentive misalignment</td><td>0.820</td><td>Payment and quality incentives too small or misrouted to change structural behavior.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tab-teaching" class="tab-panel">
+      <h2>Teaching and Journal Prompts</h2>
+      <div class="tool-grid" id="journalQuestions"></div>
+    </div>
+
+    <div id="tab-evidence" class="tab-panel">
+      <h2 id="evidence">Evidence Status</h2>
+      <table class="table"><tbody id="evidenceStatus"></tbody></table>
+      <div class="notice warn"><strong>Source verification queue:</strong><p>Before reviewer-facing empirical use, reconcile the FHRI discrepancy, verify all numerical claims, and cite CMS, HHVBP, ownership, staffing, mortality, and PE-acquisition sources precisely.</p></div>
+    </div>
+
+    <div id="tab-navigator" class="tab-panel">
+      <h2 id="navigator">Navigator Bridge</h2>
+      <div class="notice"><strong>Privacy boundary:</strong><p>Do not enter private health, family, employment, legal, or care details here. Use the Navigator or private notes for personal application.</p></div>
+      <div class="tool-box">
+        <strong>Private bridge prompt</strong>
+        <p>Use this public care case privately. Identify one institution where care, service, or safety is promised. What structural parameter might prevent that promise from becoming actual capability, and what T1 action would make the hidden structure visible?</p>
+        <button class="button primary" id="copyNavigatorBtn">Copy Navigator prompt</button> <span id="copyStatus" class="footer-note"></span>
+      </div>
+    </div>
+
+    <div id="tab-export" class="tab-panel">
+      <h2>Export Summary</h2>
+      <button class="button primary" onclick="exportSummary()">Generate export summary</button>
+      <pre id="exportBox">No export generated yet.</pre>
+    </div>
+  </section>
+
+  
+<section class="card" style="margin-top:16px">
+  <div class="kicker">Phase H Bridge</div>
+  <h2>Use this case with the Capability Lab</h2>
+  <p>Run the public classroom simulation first, then use this empirical case module for evidence-governed analysis and repair design.</p>
+  <div class="actions">
+    <a class="button" href="../teaching/cross-case-integration.html">Cross-Case Dashboard</a>
+    <a class="button" href="../teaching/capability-lab-links.html">Capability Lab Links</a>
+    <a class="button primary" href="https://rmertzman-tech.github.io/capability-lab-public-studio/">Open Capability Lab</a>
+  </div>
+</section>
+
+  <p class="footer-note">Phase G migration note: this page migrates the Florida Nursing Homes / Visible Parasite case into the EECSL shell with measurement, repair simulation, scale obligations, SAGE scenario, T1/T2 classifier, IPS profile, evidence governance, and Navigator bridge.</p>
+</main>
+
+<script>
+const DATA = {
+  "slug": "florida-nursing-homes-visible-parasite",
+  "title": "Florida Nursing Homes and the Visible Parasite",
+  "subtitle": "Public Care, Structural Risk, and National Benchmark Evidence",
+  "chapter": "Chapter 12/15 \u00b7 Care Ethics \u00b7 Governance \u00b7 Capstone case",
+  "status": "Phase G migrated case",
+  "sourceUrl": "https://rmertzman-tech.github.io/Three-Scenario-Sims/chapter15-visible-parasite-app.html",
+  "coreQuestion": "How can a care institution formally organized around resident protection become structurally capable of shifting risk, cost, and vulnerability onto residents, workers, families, and public systems?",
+  "profiles": [
+    {
+      "id": "pe-nursing",
+      "name": "PE-Acquired Nursing Home",
+      "fhri": 13.6,
+      "displayFhri": "13.6 / 14.3",
+      "tier": "Visible parasite / structural ceiling failure",
+      "epsilon": 0.636,
+      "phi": 0.52,
+      "rho": 0.7,
+      "sigma": 0.62,
+      "mu": 0.82,
+      "careMinutesLost": 33,
+      "mortality": 11,
+      "note": "The source app uses FHRI_max 14.3 in the opening T4 configuration and 13.6 in the scale/action panels. This migration preserves both and flags the discrepancy for source verification."
+    },
+    {
+      "id": "nonprofit",
+      "name": "Non-Profit Nursing Home Alternative",
+      "fhri": 55.1,
+      "displayFhri": "55.1",
+      "tier": "Care-supporting alternative",
+      "epsilon": 0.0,
+      "phi": 0.36,
+      "rho": 0.41,
+      "sigma": 0.33,
+      "mu": 0.37,
+      "careMinutesLost": 0,
+      "mortality": 0,
+      "note": "Source-app comparison: ownership type change from for-profit/PE toward non-profit is presented as a T1 structural intervention with a 41.5-point FHRI_max gain."
+    },
+    {
+      "id": "hhvbp",
+      "name": "HHVBP T2 Incentive Program",
+      "fhri": 18.5,
+      "displayFhri": "T2-limited",
+      "tier": "Accurate measurement / weak consequence",
+      "epsilon": 0.6,
+      "phi": 0.5,
+      "rho": 0.73,
+      "sigma": 0.61,
+      "mu": 0.78,
+      "careMinutesLost": 30,
+      "mortality": 9,
+      "note": "The source app frames HHVBP as accurate measurement with average payment adjustment too small to alter structural parameters."
+    },
+    {
+      "id": "ownership-disclosure",
+      "name": "Ownership Disclosure + Staffing Floor",
+      "fhri": 36.8,
+      "displayFhri": "repair pathway",
+      "tier": "Partial T1 repair",
+      "epsilon": 0.36,
+      "phi": 0.41,
+      "rho": 0.5,
+      "sigma": 0.46,
+      "mu": 0.54,
+      "careMinutesLost": 15,
+      "mortality": 5,
+      "note": "A repair pathway profile representing ownership transparency plus staffing-floor requirements."
+    },
+    {
+      "id": "biobond",
+      "name": "BioBond / True Solvency Accounting",
+      "fhri": 48.2,
+      "displayFhri": "repair pathway",
+      "tier": "Capital-conditioned repair",
+      "epsilon": 0.22,
+      "phi": 0.37,
+      "rho": 0.47,
+      "sigma": 0.41,
+      "mu": 0.42,
+      "careMinutesLost": 8,
+      "mortality": 3,
+      "note": "A repair pathway profile where capital cost and balance-sheet liability are tied to FHRI_max degradation."
+    }
+  ],
+  "scaleObligations": [
+    {
+      "scale": "Individual",
+      "title": "Accurate perception",
+      "summary": "Name the structural ceiling correctly. Moral injury is not personal failure when high-FHRI agents encounter a low-FHRI_max ceiling."
+    },
+    {
+      "scale": "Family",
+      "title": "Read the structural parameters",
+      "summary": "Ownership opacity is camouflage. Star-rating trajectory, staffing HPRD, deficiency citations, and ownership changes become ethically relevant information."
+    },
+    {
+      "scale": "Community",
+      "title": "Build visibility and alternatives",
+      "summary": "Community organizations can track FHRI_max, train families to read public data, and build low-IPS alternatives."
+    },
+    {
+      "scale": "Economic Entities",
+      "title": "True solvency accounting",
+      "summary": "Profitability that depends on lowering FHRI_max should be treated as liability-shifting, not genuine solvency."
+    },
+    {
+      "scale": "Governance",
+      "title": "T1 regulatory instruments",
+      "summary": "Ownership disclosure, staffing floors, compensation-structure requirements, and FHRI_max floors address structural parameters directly."
+    },
+    {
+      "scale": "Civilization",
+      "title": "Scale-free structural immunity",
+      "summary": "The same architecture appears across domains: intercept the channel, consume the flow, preserve operation, replace the goal."
+    }
+  ],
+  "sageSteps": [
+    {
+      "letter": "S",
+      "name": "Situation",
+      "question": "What is structurally happening?",
+      "answer": "Maria's shift is understaffed, and the ownership structure may ensure that understaffing persists regardless of local scheduling fixes."
+    },
+    {
+      "letter": "A",
+      "name": "Affected",
+      "question": "Who bears the consequences?",
+      "answer": "Mrs. Rodriguez, Maria, the family, frontline staff, the community, and the extraction architecture that externalizes harm."
+    },
+    {
+      "letter": "G",
+      "name": "Grounds",
+      "question": "What do ethical traditions say?",
+      "answer": "Care ethics sees dependency harm; justice asks whether formal rights become actual capabilities; consequentialism weighs measured mortality and care loss; duty/virtue protect truth-telling."
+    },
+    {
+      "letter": "E",
+      "name": "Evaluate",
+      "question": "What action is indicated at each level?",
+      "answer": "Document, report, inform family, and connect available T2 actions to the need for T1 structural repair."
+    }
+  ],
+  "interventions": [
+    {
+      "name": "HHVBP payment adjustment",
+      "type": "T2",
+      "effect": "Correct measurement, but financial signal too small to change ownership-determined staffing ratios."
+    },
+    {
+      "name": "Professional ethics training",
+      "type": "T2",
+      "effect": "Raises agent capacity inside the ceiling but cannot raise FHRI_max by itself."
+    },
+    {
+      "name": "Ownership type change: for-profit to non-profit",
+      "type": "T1",
+      "effect": "Changes \u03b5 directly and raises the structural ceiling in the source-app example."
+    },
+    {
+      "name": "BioBond financial instrument",
+      "type": "T1",
+      "effect": "Conditions capital cost on FHRI_max improvement trajectory."
+    },
+    {
+      "name": "Beneficial ownership disclosure mandate",
+      "type": "T1",
+      "effect": "Makes \u03b5 computable by revealing the entity controlling debt and budget decisions."
+    },
+    {
+      "name": "Staffing mandate / care-floor requirement",
+      "type": "T1",
+      "effect": "Directly constrains the care capacity channel rather than merely measuring downstream quality."
+    }
+  ],
+  "journalQuestions": [
+    "Describe a real institution in your life without technical language. What does it feel like to operate inside it? Where do you feel a structural ceiling?",
+    "Apply the IPS lens. Which parameter seems highest in that institution \u2014 \u03b5 extraction, \u03c6 physical entropy, \u03c1 regulatory burden, \u03c3 normalized deviance, or \u03bc incentive misalignment? What evidence points to it?",
+    "Boisjoly filed repeated warnings. Maria files incident reports. Have you ever seen an institution absorb clear knowledge without acting? What happened?",
+    "Given your current structural position, which leverage levels can you actually reach? What is your honest T1/T2 inventory?",
+    "The parasite is visible. Visibility is not victory, but visibility is the precondition for immunity. Name one specific structural action \u2014 T1 if possible \u2014 that could be taken in the next six months."
+  ],
+  "evidenceStatus": {
+    "Public source app": "The original Three-Scenario-Sims Visible Parasite / nursing-home page, migrated into the EECSL case shell.",
+    "Case domain": "Private-equity acquired nursing homes, home-health incentive programs, ownership opacity, staffing, care-floor degradation, family information asymmetry, and regulatory T1/T2 repair.",
+    "Directly stated source-app values": "\u03b5=.636, \u03c6=.520, \u03c1=.700, \u03c3=.620, \u03bc=.820; agent capacity 82.0; FHRI_max 14.3 in the opening T4 configuration; PE-acquired nursing home FHRI_max 13.6 in later panels; non-profit alternative 55.1; 33 fewer minutes of daily care; 11% increased mortality; HHVBP 12,239 agencies, +0.30% average payment adjustment, 27.7% penalized, 44% in penalty zone, 7% at full benchmark, approximately $1,500/year typical adjustment.",
+    "Data-source categories named or implied in source app": "CMS public datasets, HHVBP performance data, ownership records, staffing HPRD, deficiency citations, PE-acquisition research, and public benchmark data.",
+    "Computed model output": "FHRI_max, absorbed care-capacity gap, PE/non-profit gap, T1/T2 classification, scale-free signature, and repair leverage.",
+    "Interpretive model claim": "Visible Parasite, Triadic Hack, ownership opacity as camouflage, T2 trap, True Solvency Accounting, capability-based structural obligation, and Maathai-style low-IPS alternative building.",
+    "Verification needed": "Resolve 13.6 vs 14.3 FHRI_max discrepancy; verify numerical claims against CMS/peer-reviewed sources; distinguish national data, Florida data, source-app computed values, and classroom teaching proxies."
+  }
+};
+
+const state = {
+  tab: "measurement",
+  profileId: "pe-nursing",
+  params: { epsilon:0.636, phi:0.520, rho:0.700, sigma:0.620, mu:0.820 },
+  repair: { hhvbp:false, ownership:false, staffing:false, biobond:false, nonprofit:false },
+  lastResult: null
+};
+
+function esc(x){return String(x??"").replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#039;'}[m]));}
+function clamp(v,min=0,max=1){return Math.max(min,Math.min(max,Number(v)||0));}
+function profile(id){return DATA.profiles.find(p=>p.id===id)||DATA.profiles[0];}
+
+function showTab(tab){
+  state.tab=tab;
+  document.querySelectorAll(".tab-btn").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));
+  document.querySelectorAll(".tab-panel").forEach(p=>p.classList.toggle("active",p.id==="tab-"+tab));
+}
+
+function loadProfile(id){
+  const p=profile(id);
+  state.profileId=id;
+  state.params={epsilon:p.epsilon,phi:p.phi,rho:p.rho,sigma:p.sigma,mu:p.mu};
+  state.repair={hhvbp:false,ownership:false,staffing:false,biobond:false,nonprofit:false};
+  if(id==="hhvbp") state.repair.hhvbp=true;
+  if(id==="ownership-disclosure") { state.repair.ownership=true; state.repair.staffing=true; }
+  if(id==="biobond") state.repair.biobond=true;
+  if(id==="nonprofit") state.repair.nonprofit=true;
+  state.lastResult=null;
+  renderAll();
+  showTab("simulation");
+}
+
+function compute(){
+  let p={...state.params};
+  if(state.repair.hhvbp) {
+    p.mu=Math.max(0,p.mu-0.03);
+    p.rho=Math.min(1,p.rho+0.03);
+  }
+  if(state.repair.ownership) {
+    p.epsilon=Math.max(0,p.epsilon-0.18);
+    p.sigma=Math.max(0,p.sigma-0.08);
+  }
+  if(state.repair.staffing) {
+    p.phi=Math.max(0,p.phi-0.16);
+    p.mu=Math.max(0,p.mu-0.06);
+  }
+  if(state.repair.biobond) {
+    p.epsilon=Math.max(0,p.epsilon-0.18);
+    p.mu=Math.max(0,p.mu-0.18);
+    p.sigma=Math.max(0,p.sigma-0.08);
+  }
+  if(state.repair.nonprofit) {
+    p.epsilon=Math.max(0,p.epsilon-0.42);
+    p.mu=Math.max(0,p.mu-0.22);
+    p.sigma=Math.max(0,p.sigma-0.14);
+    p.phi=Math.max(0,p.phi-0.10);
+  }
+
+  const rq = clamp(1 - (0.42*p.epsilon + 0.26*p.rho + 0.32*p.mu));
+  const ee = clamp(0.34*p.phi + 0.26*p.sigma + 0.26*p.epsilon + 0.10*p.mu);
+  const fhri = Math.max(0, Math.min(100, 100*(1-ee)*rq));
+  const absorbed = Math.max(0, 82 - fhri);
+  const careFloor = clamp(1 - (0.40*p.phi + 0.28*p.epsilon + 0.18*p.sigma + 0.14*p.mu));
+  const visibleParasite = clamp(0.38*p.epsilon + 0.24*p.mu + 0.18*p.sigma + 0.12*p.phi + 0.08*p.rho);
+  const repairLeverage = clamp(0.32*(1-p.epsilon)+0.26*(1-p.mu)+0.20*(1-p.phi)+0.14*(1-p.sigma)+0.08*(1-p.rho));
+  let label="Visible parasite / structural ceiling failure";
+  if(fhri>=55) label="Care-supporting structural alternative";
+  else if(fhri>=35) label="Partial T1 repair pathway";
+  else if(state.repair.hhvbp && !state.repair.ownership && !state.repair.staffing && !state.repair.biobond) label="T2 measurement trap";
+  else if(fhri<20) label="Structural ceiling absorbs care capacity";
+  return {p,rq,ee,fhri,absorbed,careFloor,visibleParasite,repairLeverage,label};
+}
+
+function metric(label,value,kind=""){
+  const v=Math.round(value*10)/10;
+  const width=Math.max(0,Math.min(100,v));
+  return `<div class="metric"><span class="pill">${esc(label)}</span><strong>${v}</strong><div class="bar ${kind}"><span style="width:${width}%"></span></div></div>`;
+}
+
+function renderProfiles(){
+  document.getElementById("profileCards").innerHTML=DATA.profiles.map(p=>`<div class="tool-box">
+    <span class="pill">${esc(p.tier)}</span>
+    <h3>${esc(p.name)}</h3>
+    <div class="metric"><span class="pill">FHRI_max</span><strong>${esc(p.displayFhri)}</strong><div class="bar ${p.fhri<20?"danger":p.fhri<50?"warn":"good"}"><span style="width:${Math.max(3,p.fhri)}%"></span></div></div>
+    <p class="footer-note">${esc(p.note)}</p>
+    <button class="button" data-profile="${esc(p.id)}">Load profile</button>
+  </div>`).join("");
+  document.querySelectorAll("[data-profile]").forEach(btn=>btn.addEventListener("click",()=>loadProfile(btn.dataset.profile)));
+}
+
+function renderSpectrum(){
+  document.getElementById("spectrum").innerHTML=DATA.profiles.map(p=>{
+    const cls=p.fhri<20?"collapse":p.fhri<50?"mid":"good";
+    return `<div class="row"><div class="row-name"><strong>${esc(p.name)}</strong><span class="footer-note">${esc(p.tier)}</span></div><div class="track ${cls}"><span style="width:${Math.max(3,p.fhri)}%"></span></div><strong>${esc(p.displayFhri)}</strong></div>`;
+  }).join("");
+}
+
+function sliderRow(id,label){
+  const v=state.params[id];
+  return `<div class="slider-row"><label for="${id}">${esc(label)}</label><input id="${id}" type="range" min="0" max="1" step="0.01" value="${v}" data-param="${id}"><strong>${Number(v).toFixed(2)}</strong></div>`;
+}
+
+function renderControls(){
+  document.getElementById("activeProfile").textContent=profile(state.profileId).name;
+  const labels={epsilon:"ε Extraction",phi:"φ Physical entropy",rho:"ρ Regulatory burden",sigma:"σ Morphic residue",mu:"μ Incentive misalignment"};
+  document.getElementById("paramControls").innerHTML=Object.keys(labels).map(id=>sliderRow(id,labels[id])).join("");
+  document.querySelectorAll("[data-param]").forEach(inp=>inp.addEventListener("input",e=>{state.params[e.target.dataset.param]=clamp(e.target.value);state.lastResult=null;renderAll(false);}));
+
+  document.getElementById("repairControls").innerHTML=[
+    ["hhvbp","HHVBP-style payment adjustment","T2: improves measurement/incentive but does not directly alter ownership or staffing architecture."],
+    ["ownership","Beneficial ownership disclosure","T1: makes ε computable by revealing who controls debt and budget decisions."],
+    ["staffing","Staffing floor / care floor","T1: directly protects resident care time and reduces φ."],
+    ["biobond","BioBond / true solvency accounting","T1: ties capital cost or liability to FHRI_max degradation."],
+    ["nonprofit","Non-profit conversion / alternative","T1: changes ownership type and lowers extraction pressure."]
+  ].map(([id,label,note])=>`<label class="toggle-row"><span><strong>${label}</strong><br><span class="footer-note">${note}</span></span><input type="checkbox" data-repair="${id}" ${state.repair[id]?"checked":""}></label>`).join("");
+  document.querySelectorAll("[data-repair]").forEach(inp=>inp.addEventListener("change",e=>{state.repair[e.target.dataset.repair]=e.target.checked;state.lastResult=null;renderAll(false);}));
+}
+
+function renderOutput(){
+  const r=compute();
+  document.getElementById("metrics").innerHTML=[
+    metric("FHRI teaching output",r.fhri,r.fhri<20?"danger":r.fhri<50?"warn":"good"),
+    metric("Care floor",r.careFloor*100,r.careFloor>.55?"good":"warn"),
+    metric("Visible-parasite signal",r.visibleParasite*100,r.visibleParasite>.55?"danger":"warn"),
+    metric("Repair leverage",r.repairLeverage*100,r.repairLeverage>.55?"good":"warn"),
+    metric("Absorbed from agent capacity 82",r.absorbed,r.absorbed>55?"danger":"warn")
+  ].join("");
+  document.getElementById("resultBox").innerHTML=`<div class="output"><h3>${esc(r.label)}</h3><p><strong>RQ_ceiling:</strong> ${r.rq.toFixed(3)} · <strong>EE_floor:</strong> ${r.ee.toFixed(3)} · <strong>FHRI teaching output:</strong> ${r.fhri.toFixed(1)} · <strong>Absorbed:</strong> ${r.absorbed.toFixed(1)} points from a high-capacity agent.</p><p class="footer-note">The source app reports PE nursing-home FHRI_max as 14.3 in one opening configuration and 13.6 in later panels; this simulator is a classroom model until the exact formula and source data are reconciled.</p></div>`;
+}
+
+function renderFacilityMap(){
+  const r=compute();
+  const count=14*8;
+  let cells="";
+  for(let i=0;i<count;i++){
+    const wave=Math.abs((Math.sin(i*19.91 + Math.round(r.visibleParasite*100)*27.17)*7777)%1);
+    let cls="";
+    if(wave > 0.94-r.repairLeverage*.42) cls=" good";
+    else if(wave > 0.78-r.fhri/220) cls=" mid";
+    else if(wave < 0.05 + r.visibleParasite*.08) cls=" hidden";
+    if(state.repair.nonprofit && wave>0.52 && wave<0.64) cls=" blue";
+    cells += `<div class="node${cls}"></div>`;
+  }
+  document.getElementById("facilityMap").innerHTML=cells;
+}
+
+function renderFormula(){
+  const r=compute();
+  document.getElementById("formulaBox").innerHTML=`<div class="formula">
+RQ_ceiling = 1 − (0.42×ε + 0.26×ρ + 0.32×μ)
+EE_floor   = 0.34×φ + 0.26×σ + 0.26×ε + 0.10×μ
+FHRI       = 100 × (1−EE_floor) × RQ_ceiling
+
+Current teaching run:
+RQ_ceiling = ${r.rq.toFixed(3)}
+EE_floor   = ${r.ee.toFixed(3)}
+FHRI       = ${r.fhri.toFixed(1)}
+</div>`;
+}
+
+function renderScales(){
+  document.getElementById("scaleGrid").innerHTML=DATA.scaleObligations.map(s=>`<div class="scale-card"><span class="pill">${esc(s.scale)}</span><strong>${esc(s.title)}</strong><p>${esc(s.summary)}</p></div>`).join("");
+}
+
+function renderSAGE(){
+  document.getElementById("sageGrid").innerHTML=DATA.sageSteps.map(s=>`<div class="sage-step"><div class="letter">${esc(s.letter)}</div><strong>${esc(s.name)} — ${esc(s.question)}</strong><p>${esc(s.answer)}</p></div>`).join("");
+}
+
+function renderInterventions(){
+  document.getElementById("interventionRows").innerHTML=DATA.interventions.map(i=>`<tr><td><strong>${esc(i.name)}</strong></td><td><span class="pill">${esc(i.type)}</span></td><td>${esc(i.effect)}</td></tr>`).join("");
+}
+
+function classifyText(){
+  const text=(document.getElementById("classifyInput").value||"").toLowerCase();
+  let type="T2";
+  let explanation="This appears to improve agents, incentives, or processes within unchanged structural parameters.";
+  if(/ownership|staffing|biobond|capital|disclosure|non-profit|nonprofit|mandate|floor|liability|solvency|debt|real estate|reit/.test(text)){
+    type="T1";
+    explanation="This appears to change ε, φ, ρ, σ, or μ directly, or makes the structural parameter visible and enforceable.";
+  }
+  document.getElementById("classifyOutput").innerHTML=`<div class="output"><h3>${type} intervention</h3><p>${esc(explanation)}</p><p class="footer-note">This is a teaching classifier, not a legal or policy determination.</p></div>`;
+}
+
+function renderEvidence(){
+  document.getElementById("evidenceStatus").innerHTML=Object.entries(DATA.evidenceStatus).map(([k,v])=>`<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td></tr>`).join("");
+}
+
+function renderJournal(){
+  document.getElementById("journalQuestions").innerHTML=DATA.journalQuestions.map((q,i)=>`<div class="tool-box"><strong>Q${i+1}</strong><p>${esc(q)}</p></div>`).join("");
+}
+
+function runSimulation(){
+  state.lastResult=compute();
+  renderAll(false);
+  showTab("simulation");
+}
+
+function resetPE(){
+  loadProfile("pe-nursing");
+}
+
+function exportSummary(){
+  const r=compute();
+  const text=[
+    "EECSL — Florida Nursing Homes and the Visible Parasite Case Summary",
+    "Case: Florida Nursing Homes and the Visible Parasite — Public Care, Structural Risk, and National Benchmark Evidence",
+    "Active profile: "+profile(state.profileId).name,
+    "",
+    "Parameters:",
+    ...Object.entries(state.params).map(([k,v])=>"- "+k+": "+Number(v).toFixed(2)),
+    "",
+    "Repair controls:",
+    ...Object.entries(state.repair).map(([k,v])=>"- "+k+": "+(v?"on":"off")),
+    "",
+    "Computed teaching output:",
+    "- RQ_ceiling: "+r.rq.toFixed(3),
+    "- EE_floor: "+r.ee.toFixed(3),
+    "- FHRI teaching output: "+r.fhri.toFixed(1),
+    "- Care floor: "+(r.careFloor*100).toFixed(1),
+    "- Visible-parasite signal: "+(r.visibleParasite*100).toFixed(1),
+    "- Repair leverage: "+(r.repairLeverage*100).toFixed(1),
+    "- Label: "+r.label,
+    "",
+    "Claim governance reminder:",
+    "Separate source-app values, public data, computed teaching output, interpretive IPS/P-SAGE claims, and reviewer-verified empirical claims.",
+    "",
+    "Navigator bridge:",
+    "Use this public care case privately: identify one institution where care, service, or safety is promised. What structural parameter might prevent that promise from becoming actual capability?"
+  ].join("\n");
+  document.getElementById("exportBox").textContent=text;
+  showTab("export");
+}
+
+function copyNavigator(){
+  const text="Private Navigator bridge: use this public care case privately. Identify one institution where care, service, or safety is promised. What structural parameter might prevent that promise from becoming actual capability, and what T1 action would make the hidden structure visible?";
+  navigator.clipboard.writeText(text).then(()=>document.getElementById("copyStatus").textContent="Copied.").catch(()=>document.getElementById("copyStatus").textContent="Select and copy manually.");
+}
+
+function renderAll(){
+  renderProfiles(); renderSpectrum(); renderControls(); renderOutput(); renderFacilityMap(); renderFormula(); renderScales(); renderSAGE(); renderInterventions(); renderEvidence(); renderJournal();
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+  renderAll();
+  document.querySelectorAll(".tab-btn").forEach(btn=>btn.addEventListener("click",()=>showTab(btn.dataset.tab)));
+  document.getElementById("runBtn").addEventListener("click",runSimulation);
+  document.getElementById("resetPE").addEventListener("click",resetPE);
+  document.getElementById("exportBtn").addEventListener("click",exportSummary);
+  document.getElementById("copyNavigatorBtn").addEventListener("click",copyNavigator);
+  document.getElementById("classifyBtn").addEventListener("click",classifyText);
+  document.getElementById("exampleBtn").addEventListener("click",()=>{document.getElementById("classifyInput").value="Beneficial ownership disclosure mandate with enforceable staffing floor"; classifyText();});
+});
+</script>
+</body>
+</html>

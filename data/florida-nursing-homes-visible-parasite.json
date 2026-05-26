@@ -1,0 +1,192 @@
+{
+  "slug": "florida-nursing-homes-visible-parasite",
+  "title": "Florida Nursing Homes and the Visible Parasite",
+  "subtitle": "Public Care, Structural Risk, and National Benchmark Evidence",
+  "chapter": "Chapter 12/15 \u00b7 Care Ethics \u00b7 Governance \u00b7 Capstone case",
+  "status": "Phase G migrated case",
+  "sourceUrl": "https://rmertzman-tech.github.io/Three-Scenario-Sims/chapter15-visible-parasite-app.html",
+  "coreQuestion": "How can a care institution formally organized around resident protection become structurally capable of shifting risk, cost, and vulnerability onto residents, workers, families, and public systems?",
+  "profiles": [
+    {
+      "id": "pe-nursing",
+      "name": "PE-Acquired Nursing Home",
+      "fhri": 13.6,
+      "displayFhri": "13.6 / 14.3",
+      "tier": "Visible parasite / structural ceiling failure",
+      "epsilon": 0.636,
+      "phi": 0.52,
+      "rho": 0.7,
+      "sigma": 0.62,
+      "mu": 0.82,
+      "careMinutesLost": 33,
+      "mortality": 11,
+      "note": "The source app uses FHRI_max 14.3 in the opening T4 configuration and 13.6 in the scale/action panels. This migration preserves both and flags the discrepancy for source verification."
+    },
+    {
+      "id": "nonprofit",
+      "name": "Non-Profit Nursing Home Alternative",
+      "fhri": 55.1,
+      "displayFhri": "55.1",
+      "tier": "Care-supporting alternative",
+      "epsilon": 0.0,
+      "phi": 0.36,
+      "rho": 0.41,
+      "sigma": 0.33,
+      "mu": 0.37,
+      "careMinutesLost": 0,
+      "mortality": 0,
+      "note": "Source-app comparison: ownership type change from for-profit/PE toward non-profit is presented as a T1 structural intervention with a 41.5-point FHRI_max gain."
+    },
+    {
+      "id": "hhvbp",
+      "name": "HHVBP T2 Incentive Program",
+      "fhri": 18.5,
+      "displayFhri": "T2-limited",
+      "tier": "Accurate measurement / weak consequence",
+      "epsilon": 0.6,
+      "phi": 0.5,
+      "rho": 0.73,
+      "sigma": 0.61,
+      "mu": 0.78,
+      "careMinutesLost": 30,
+      "mortality": 9,
+      "note": "The source app frames HHVBP as accurate measurement with average payment adjustment too small to alter structural parameters."
+    },
+    {
+      "id": "ownership-disclosure",
+      "name": "Ownership Disclosure + Staffing Floor",
+      "fhri": 36.8,
+      "displayFhri": "repair pathway",
+      "tier": "Partial T1 repair",
+      "epsilon": 0.36,
+      "phi": 0.41,
+      "rho": 0.5,
+      "sigma": 0.46,
+      "mu": 0.54,
+      "careMinutesLost": 15,
+      "mortality": 5,
+      "note": "A repair pathway profile representing ownership transparency plus staffing-floor requirements."
+    },
+    {
+      "id": "biobond",
+      "name": "BioBond / True Solvency Accounting",
+      "fhri": 48.2,
+      "displayFhri": "repair pathway",
+      "tier": "Capital-conditioned repair",
+      "epsilon": 0.22,
+      "phi": 0.37,
+      "rho": 0.47,
+      "sigma": 0.41,
+      "mu": 0.42,
+      "careMinutesLost": 8,
+      "mortality": 3,
+      "note": "A repair pathway profile where capital cost and balance-sheet liability are tied to FHRI_max degradation."
+    }
+  ],
+  "scaleObligations": [
+    {
+      "scale": "Individual",
+      "title": "Accurate perception",
+      "summary": "Name the structural ceiling correctly. Moral injury is not personal failure when high-FHRI agents encounter a low-FHRI_max ceiling."
+    },
+    {
+      "scale": "Family",
+      "title": "Read the structural parameters",
+      "summary": "Ownership opacity is camouflage. Star-rating trajectory, staffing HPRD, deficiency citations, and ownership changes become ethically relevant information."
+    },
+    {
+      "scale": "Community",
+      "title": "Build visibility and alternatives",
+      "summary": "Community organizations can track FHRI_max, train families to read public data, and build low-IPS alternatives."
+    },
+    {
+      "scale": "Economic Entities",
+      "title": "True solvency accounting",
+      "summary": "Profitability that depends on lowering FHRI_max should be treated as liability-shifting, not genuine solvency."
+    },
+    {
+      "scale": "Governance",
+      "title": "T1 regulatory instruments",
+      "summary": "Ownership disclosure, staffing floors, compensation-structure requirements, and FHRI_max floors address structural parameters directly."
+    },
+    {
+      "scale": "Civilization",
+      "title": "Scale-free structural immunity",
+      "summary": "The same architecture appears across domains: intercept the channel, consume the flow, preserve operation, replace the goal."
+    }
+  ],
+  "sageSteps": [
+    {
+      "letter": "S",
+      "name": "Situation",
+      "question": "What is structurally happening?",
+      "answer": "Maria's shift is understaffed, and the ownership structure may ensure that understaffing persists regardless of local scheduling fixes."
+    },
+    {
+      "letter": "A",
+      "name": "Affected",
+      "question": "Who bears the consequences?",
+      "answer": "Mrs. Rodriguez, Maria, the family, frontline staff, the community, and the extraction architecture that externalizes harm."
+    },
+    {
+      "letter": "G",
+      "name": "Grounds",
+      "question": "What do ethical traditions say?",
+      "answer": "Care ethics sees dependency harm; justice asks whether formal rights become actual capabilities; consequentialism weighs measured mortality and care loss; duty/virtue protect truth-telling."
+    },
+    {
+      "letter": "E",
+      "name": "Evaluate",
+      "question": "What action is indicated at each level?",
+      "answer": "Document, report, inform family, and connect available T2 actions to the need for T1 structural repair."
+    }
+  ],
+  "interventions": [
+    {
+      "name": "HHVBP payment adjustment",
+      "type": "T2",
+      "effect": "Correct measurement, but financial signal too small to change ownership-determined staffing ratios."
+    },
+    {
+      "name": "Professional ethics training",
+      "type": "T2",
+      "effect": "Raises agent capacity inside the ceiling but cannot raise FHRI_max by itself."
+    },
+    {
+      "name": "Ownership type change: for-profit to non-profit",
+      "type": "T1",
+      "effect": "Changes \u03b5 directly and raises the structural ceiling in the source-app example."
+    },
+    {
+      "name": "BioBond financial instrument",
+      "type": "T1",
+      "effect": "Conditions capital cost on FHRI_max improvement trajectory."
+    },
+    {
+      "name": "Beneficial ownership disclosure mandate",
+      "type": "T1",
+      "effect": "Makes \u03b5 computable by revealing the entity controlling debt and budget decisions."
+    },
+    {
+      "name": "Staffing mandate / care-floor requirement",
+      "type": "T1",
+      "effect": "Directly constrains the care capacity channel rather than merely measuring downstream quality."
+    }
+  ],
+  "journalQuestions": [
+    "Describe a real institution in your life without technical language. What does it feel like to operate inside it? Where do you feel a structural ceiling?",
+    "Apply the IPS lens. Which parameter seems highest in that institution \u2014 \u03b5 extraction, \u03c6 physical entropy, \u03c1 regulatory burden, \u03c3 normalized deviance, or \u03bc incentive misalignment? What evidence points to it?",
+    "Boisjoly filed repeated warnings. Maria files incident reports. Have you ever seen an institution absorb clear knowledge without acting? What happened?",
+    "Given your current structural position, which leverage levels can you actually reach? What is your honest T1/T2 inventory?",
+    "The parasite is visible. Visibility is not victory, but visibility is the precondition for immunity. Name one specific structural action \u2014 T1 if possible \u2014 that could be taken in the next six months."
+  ],
+  "evidenceStatus": {
+    "Public source app": "The original Three-Scenario-Sims Visible Parasite / nursing-home page, migrated into the EECSL case shell.",
+    "Case domain": "Private-equity acquired nursing homes, home-health incentive programs, ownership opacity, staffing, care-floor degradation, family information asymmetry, and regulatory T1/T2 repair.",
+    "Directly stated source-app values": "\u03b5=.636, \u03c6=.520, \u03c1=.700, \u03c3=.620, \u03bc=.820; agent capacity 82.0; FHRI_max 14.3 in the opening T4 configuration; PE-acquired nursing home FHRI_max 13.6 in later panels; non-profit alternative 55.1; 33 fewer minutes of daily care; 11% increased mortality; HHVBP 12,239 agencies, +0.30% average payment adjustment, 27.7% penalized, 44% in penalty zone, 7% at full benchmark, approximately $1,500/year typical adjustment.",
+    "Data-source categories named or implied in source app": "CMS public datasets, HHVBP performance data, ownership records, staffing HPRD, deficiency citations, PE-acquisition research, and public benchmark data.",
+    "Computed model output": "FHRI_max, absorbed care-capacity gap, PE/non-profit gap, T1/T2 classification, scale-free signature, and repair leverage.",
+    "Interpretive model claim": "Visible Parasite, Triadic Hack, ownership opacity as camouflage, T2 trap, True Solvency Accounting, capability-based structural obligation, and Maathai-style low-IPS alternative building.",
+    "Verification needed": "Resolve 13.6 vs 14.3 FHRI_max discrepancy; verify numerical claims against CMS/peer-reviewed sources; distinguish national data, Florida data, source-app computed values, and classroom teaching proxies."
+  }
+}

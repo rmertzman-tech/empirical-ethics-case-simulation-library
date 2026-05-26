@@ -1,0 +1,110 @@
+{
+  "slug": "2008-financial-crisis",
+  "title": "The 2008 Financial Crisis",
+  "subtitle": "Evidence Policy and Systemic Moral Failure",
+  "chapter": "Chapter 12 \u00b7 Governance \u00b7 Financial Systems Case Study",
+  "status": "Phase E migrated case",
+  "sourceUrl": "https://rmertzman-tech.github.io/Three-Scenario-Sims/chapter12-2008-financial-crisis-app.html",
+  "coreQuestion": "How can a financial system preserve operational continuity while replacing the ethical function of its warning and signal channels?",
+  "eras": [
+    {
+      "id": "pre",
+      "label": "1995\u20131998",
+      "title": "Pre-deregulation stability",
+      "tag": "Mortgage = creditworthiness assessment",
+      "params": {
+        "epsilon": 0.12,
+        "sigma": 0.2,
+        "mu": 0.15,
+        "phi": 0.1,
+        "rho": 0.18
+      },
+      "description": "Commercial banking and credit-risk assessment remain more closely coupled. The source app presents this as a period of high coherence before the access condition changes."
+    },
+    {
+      "id": "access",
+      "label": "1999\u20132003",
+      "title": "Glass-Steagall repealed",
+      "tag": "P-adic access condition opens",
+      "params": {
+        "epsilon": 0.28,
+        "sigma": 0.32,
+        "mu": 0.35,
+        "phi": 0.18,
+        "rho": 0.28
+      },
+      "description": "Investment-banking architecture moves inside the credit-risk channel. The signal pathway remains operational, but the meaning of mortgage origination begins to shift."
+    },
+    {
+      "id": "surge",
+      "label": "2004\u20132006",
+      "title": "Leverage surge and \u03c3 build",
+      "tag": "Normalization under rating capture",
+      "params": {
+        "epsilon": 0.55,
+        "sigma": 0.6,
+        "mu": 0.68,
+        "phi": 0.34,
+        "rho": 0.46
+      },
+      "description": "AAA ratings, CDO growth, and originate-to-distribute incentives create the conditions for signal normalization and risk externalization."
+    },
+    {
+      "id": "crash",
+      "label": "2007\u20132008",
+      "title": "Crash \u2014 \u03c6 cascade",
+      "tag": "Substrate consequence becomes visible",
+      "params": {
+        "epsilon": 0.71,
+        "sigma": 0.78,
+        "mu": 0.84,
+        "phi": 0.68,
+        "rho": 0.62
+      },
+      "description": "The source app\u2019s peak-crisis IPS profile: \u03b5=.71, \u03c6=.68, \u03c1=.62, \u03c3=.78, \u03bc=.84, producing FHRI_max = 11.2 by the stated formula."
+    },
+    {
+      "id": "t2",
+      "label": "2009\u20132012",
+      "title": "T2 response",
+      "tag": "Liquidity restored, access condition preserved",
+      "params": {
+        "epsilon": 0.52,
+        "sigma": 0.62,
+        "mu": 0.61,
+        "phi": 0.46,
+        "rho": 0.7
+      },
+      "description": "TARP, QE, and compliance expansion restore financial-system operation while household \u03c6 remains less directly repaired. The source app identifies this as a T2 recovery pattern."
+    },
+    {
+      "id": "t1",
+      "label": "T1 counterfactual",
+      "title": "Glass-Steagall equivalent",
+      "tag": "Access condition structurally changed",
+      "params": {
+        "epsilon": 0.32,
+        "sigma": 0.34,
+        "mu": 0.38,
+        "phi": 0.3,
+        "rho": 0.44
+      },
+      "description": "A counterfactual structural repair: separation of consumer-credit origination from securitization/trading, rating-agency restructuring, and originate-to-hold requirements."
+    }
+  ],
+  "journalQuestions": [
+    "Before this analysis, would you have attributed the 2008 crisis to greed, deregulation, or the market? How does the formally derived responsible party \u2014 the ownership architecture that achieved P-adic proximity \u2014 change where your moral concern settles?",
+    "The \u03c3 accumulation in rating agencies is presented as formally parallel to Challenger O-ring normalization. Identify a \u03c3 accumulation pattern in an institution you know. What anomaly is being normalized?",
+    "The T2 recovery made the financial system whole before households and communities fully recovered. Who had P-adic proximity to the policy cluster at the moment recovery decisions were made?",
+    "Design one T1 intervention for financial governance. What access condition would it change, and how would you know that it was not merely another T2 compliance layer?",
+    "Using P-SAGE, predict what a future crisis might look like. Which channel could be accessed, through which instrument, and which Interpretant could be replaced?"
+  ],
+  "evidenceStatus": {
+    "Public source app": "The original Three-Scenario-Sims financial-crisis page, migrated into the EECSL case shell.",
+    "Case period": "1999\u20132010 arc, with a 1995\u20131998 pre-deregulation baseline and later recurrence discussion.",
+    "Directly stated source-app values": "Peak-crisis parameters \u03b5=.71, \u03c6=.68, \u03c1=.62, \u03c3=.78, \u03bc=.84; FHRI_max = 11.2; TARP $700B; Dodd-Frank 2,300 pages; household wealth loss $19.2T; 9.3M foreclosures between 2008 and 2012.",
+    "Computed model output": "RQ_ceiling, EE_floor, FHRI_max, coherence, \u03c6 load, and visual cascade state.",
+    "Interpretive model claim": "Triadic Overwrite, P-adic access, rating-agency \u03c3 accumulation, T1/T2 distinction, and Interpretant replacement.",
+    "Verification needed": "Verify all numerical claims against primary or authoritative secondary sources before reviewer-facing empirical use; preserve source-app values as teaching-model claims until then."
+  }
+}

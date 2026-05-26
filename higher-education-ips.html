@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Higher Education IPS — EECSL</title>
+<style>
+:root{
+  --ink:#1f2933;--muted:#5f6b7a;--accent:#345d4e;--accent2:#8b6b3d;--good:#2f6b4f;--warn:#b5792d;--danger:#8b3a3a;--soft:#f4f7f4;--line:#d9e2dc;--card:#fff;--shadow:0 12px 30px rgba(31,41,51,.08);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fbfcfb;line-height:1.55}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header{background:radial-gradient(circle at top left,rgba(255,255,255,.12),transparent 30rem),linear-gradient(135deg,#20382f,#345d4e);color:#fff;padding:36px 20px}
+.header-inner{max-width:1180px;margin:0 auto}.kicker{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;font-weight:900;opacity:.88}
+h1{font-size:clamp(2rem,4.2vw,3.8rem);line-height:1.03;margin:.35rem 0}.subtitle{max-width:920px;font-size:1.05rem;opacity:.94}
+nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}.nav-inner{max-width:1180px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;padding:10px 18px}
+.nav-link,.button{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:8px 12px;font-weight:850;display:inline-block;cursor:pointer}
+.button.primary,.nav-link.active{border-color:var(--accent);background:#eef7f1;color:var(--accent)}.button.warn{border-color:var(--warn);background:#fffaf1;color:var(--warn)}
+main{max-width:1180px;margin:0 auto;padding:24px 18px 84px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.s12{grid-column:span 12}.s8{grid-column:span 8}.s6{grid-column:span 6}.s4{grid-column:span 4}.s3{grid-column:span 3}@media(max-width:900px){.s8,.s6,.s4,.s3{grid-column:span 12}}
+.card,.hero{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow)}.hero{border:2px solid var(--accent);background:linear-gradient(180deg,#fff,#f4faf6)}
+.card h2,.card h3{margin-top:0}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.pill{border:1px solid var(--line);border-radius:999px;padding:5px 9px;background:var(--soft);font-size:.82rem;color:var(--muted);font-weight:850}.pill.gold{background:#f7f1e7}
+.notice{border-left:5px solid var(--accent);background:#f8fbf8;border-radius:14px;padding:12px;margin:12px 0}.notice.warn{border-left-color:var(--warn);background:#fffaf1}.notice.danger{border-left-color:var(--danger);background:#fff6f6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tab-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;font-weight:850;cursor:pointer}.tab-btn.active{border-color:var(--accent);background:#eef7f1;color:var(--accent)}.tab-panel{display:none}.tab-panel.active{display:block}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-top:10px}.metric{border:1px solid var(--line);border-radius:16px;background:#fff;padding:12px}.metric strong{display:block;font-size:1.4rem}.bar{height:10px;background:#e6ece5;border-radius:999px;overflow:hidden;margin-top:7px}.bar span{display:block;height:100%;background:var(--accent)}.bar.good span{background:var(--good)}.bar.warn span{background:var(--warn)}.bar.danger span{background:var(--danger)}
+.spectrum{display:flex;flex-direction:column;gap:8px}.row{display:grid;grid-template-columns:220px 1fr 64px;gap:10px;align-items:center;border:1px solid var(--line);border-radius:14px;background:#fff;padding:10px}.row-name strong{display:block}.track{height:14px;background:#e8eee9;border-radius:999px;overflow:hidden}.track span{display:block;height:100%;background:var(--accent)}.track.high span{background:var(--warn)}.track.captive span{background:var(--danger)}
+.compare-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px}.compare-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:14px}.score{font-size:2.1rem;font-weight:900;color:var(--accent)}
+.table{width:100%;border-collapse:collapse}.table th,.table td{border-top:1px solid var(--line);padding:9px;text-align:left;vertical-align:top}.table th{color:var(--accent)}
+.slider-row{display:grid;grid-template-columns:190px 1fr 56px;gap:10px;align-items:center;margin:11px 0}input[type=range]{width:100%}
+.output{border:1px solid var(--line);border-radius:18px;background:#fbfcfb;padding:14px;margin-top:12px}.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:10px}.tool-box{border:1px solid var(--line);border-radius:16px;background:#fff;padding:12px}.tool-box strong{display:block;margin-bottom:4px}
+pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;max-height:330px;overflow:auto}.footer-note{color:var(--muted);font-size:.92rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="kicker">Empirical Ethics Case Simulation Library · Phase D Migrated Case</div>
+    <h1>Higher Education IPS</h1>
+    <p class="subtitle"><strong>The Telescope on Your Own Institution.</strong> IPS analysis of higher education using public College Scorecard and IPEDS-linked evidence claims to ask where Saint Petersburg College sits in the wider structural spectrum.</p>
+    <div class="actions">
+      <a class="button" href="../index.html">Back to Library Hub</a>
+      <a class="button primary" href="#case-tabs">Open case tools</a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-link" href="#overview">Overview</a>
+    <a class="nav-link" href="#case-tabs">Tools</a>
+    <a class="nav-link" href="#evidence">Evidence</a>
+    <a class="nav-link" href="#navigator">Navigator</a>
+  </div>
+</nav>
+
+<main>
+  <section id="overview" class="hero">
+    <div class="kicker">Chapter 11 · Economics · Higher Education Case Study</div>
+    <h2>The Telescope on Your Own Institution</h2>
+    <div class="pill-row">
+      <span class="pill">IPS</span><span class="pill">P-SAGE</span><span class="pill">College Scorecard</span><span class="pill">IPEDS</span><span class="pill">SPC</span><span class="pill">Exit-option modulator</span>
+    </div>
+    <p><strong>Core question:</strong> Where does Saint Petersburg College sit in the full structural spectrum, and what does the scale-free law reveal about institutional mission, debt, access, extraction, and repair?</p>
+    <p><strong>Teaching purpose:</strong> Students learn to distinguish direct public data, computed model outputs, structural interpretation, and governance questions while looking at an institution close enough to matter.</p>
+    <div class="notice">
+      <strong>Public / private boundary:</strong>
+      <p>This is a public empirical case. Students should not enter private financial, educational, or family details into this page. Private application belongs in the Navigator or course notebook.</p>
+    </div>
+  </section>
+
+  <section class="grid" style="margin-top:16px">
+    <div class="card s8">
+      <h2>Case Snapshot</h2>
+      <p>The source app reports SPC FHRI_max = <strong>58.6</strong>, University of Florida = <strong>59.0</strong>, Miami Dade College = <strong>50.5</strong>, and a high-extraction higher-education cluster around <strong>26.9–32.5</strong>. It also compares higher education to captive-population sectors with lower FHRI_max values.</p>
+      <div class="metric-grid">
+        <div class="metric"><span class="pill">SPC FHRI_max</span><strong>58.6</strong><div class="bar warn"><span style="width:58.6%"></span></div></div>
+        <div class="metric"><span class="pill">UF FHRI_max</span><strong>59.0</strong><div class="bar warn"><span style="width:59%"></span></div></div>
+        <div class="metric"><span class="pill">Miami Dade</span><strong>50.5</strong><div class="bar warn"><span style="width:50.5%"></span></div></div>
+        <div class="metric"><span class="pill">Phoenix</span><strong>26.9</strong><div class="bar danger"><span style="width:26.9%"></span></div></div>
+      </div>
+    </div>
+    <div class="card s4">
+      <h2>Claim Governance</h2>
+      <div class="pill-row">
+        <span class="pill">Direct public data</span>
+        <span class="pill">Computed FHRI_max</span>
+        <span class="pill">IPS parameters</span>
+        <span class="pill">Interpretive diagnosis</span>
+        <span class="pill">Teaching prompt</span>
+      </div>
+      <div class="notice warn"><strong>Important:</strong><p>The migrated case preserves the source app's values while labeling the interactive formula below as a teaching proxy until exact formula replication is verified.</p></div>
+    </div>
+  </section>
+
+  <section id="case-tabs" class="card" style="margin-top:16px">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="overview">Full Spectrum</button>
+      <button class="tab-btn" data-tab="spc">SPC in Context</button>
+      <button class="tab-btn" data-tab="exit">Exit Finding</button>
+      <button class="tab-btn" data-tab="ips">IPS Parameters</button>
+      <button class="tab-btn" data-tab="psage">P-SAGE</button>
+      <button class="tab-btn" data-tab="simulation">Simulation</button>
+      <button class="tab-btn" data-tab="teaching">Teaching / Journal</button>
+      <button class="tab-btn" data-tab="evidence">Evidence Status</button>
+      <button class="tab-btn" data-tab="navigator">Navigator Bridge</button>
+      <button class="tab-btn" data-tab="export">Export</button>
+    </div>
+
+    <div id="tab-overview" class="tab-panel active">
+      <h2>The Full Structural Spectrum</h2>
+      <p>The spectrum places SPC beside other higher-education institutions and cross-sector benchmarks. The point is not to collapse all sectors into sameness, but to ask whether a common structural ceiling appears across different institutional architectures.</p>
+      <div id="spectrum" class="spectrum"></div>
+      <div class="notice warn"><strong>Reviewer note:</strong><p>Cross-sector values should remain labeled as prior IPS-audit benchmarks until their source files and formulas are migrated into the EECSL evidence system.</p></div>
+    </div>
+
+    <div id="tab-spc" class="tab-panel">
+      <h2>Saint Petersburg College in Context</h2>
+      <p>The source app treats SPC as a structural telescope: close enough to students to be meaningful, but public enough to analyze without private disclosure.</p>
+      <div id="comparisonCards" class="compare-grid"></div>
+      <div class="notice"><strong>Key classroom move:</strong><p>The SPC / UF comparison is not a claim that the institutions are the same. It asks how two very different public institutions can show near-equivalent structural capacity scores at very different student costs.</p></div>
+    </div>
+
+    <div id="tab-exit" class="tab-panel">
+      <h2>The Exit Option Finding</h2>
+      <div class="tool-grid">
+        <div class="tool-box"><strong>Higher-ed extraction tier</strong><p>High-extraction higher education appears in the source app around FHRI_max 27–33. Students can exit, but often with debt, lost credits, or opportunity cost.</p></div>
+        <div class="tool-box"><strong>Captive-population tier</strong><p>Captive or constrained sectors appear around FHRI_max 11–14 in the source app. Exit may be blocked by incarceration, cognitive impairment, foreclosure, or institutional dependency.</p></div>
+        <div class="tool-box"><strong>Formal hypothesis</strong><p>The exit option modulates how low the structural ceiling can fall, not whether the system can become extractive.</p></div>
+      </div>
+      <div class="notice"><strong>Testable prediction:</strong><p>If exit cost is highest within higher education — non-transferable credits, debt already incurred, locked-in employer tuition routes — FHRI_max should be lower than where exit is easier.</p></div>
+    </div>
+
+    <div id="tab-ips" class="tab-panel">
+      <h2>IPS Parameters</h2>
+      <p>Each parameter is presented as a structural question, not a personnel judgment. The point is to ask where institutional architecture absorbs or routes coordination capacity.</p>
+      <table class="table">
+        <thead><tr><th>Parameter</th><th>SPC</th><th>U. Phoenix</th><th>Gap</th><th>Teaching meaning</th></tr></thead>
+        <tbody id="ipsTable"></tbody>
+      </table>
+    </div>
+
+    <div id="tab-psage" class="tab-panel">
+      <h2>P-SAGE: Formal Structural Analysis</h2>
+      <div class="tool-grid">
+        <div class="tool-box"><strong>Sign intact</strong><p>Colleges operate. Degrees are awarded. Accreditation is maintained. Students enroll and classes meet.</p></div>
+        <div class="tool-box"><strong>Signal accessed</strong><p>The source app identifies the tuition revenue allocation channel and the 1992 HEA amendments expanding Title IV access for for-profit institutions.</p></div>
+        <div class="tool-box"><strong>Interpretant replaced</strong><p>Original: tuition as investment in educational capacity. Replaced: enrollment as revenue unit serviced by federal loan guarantees, with risk externalized.</p></div>
+        <div class="tool-box"><strong>SPC location</strong><p>SPC's lower ε suggests the replacement has not propagated in the same way as in the high-extraction for-profit comparison.</p></div>
+      </div>
+    </div>
+
+    <div id="tab-simulation" class="tab-panel">
+      <h2>Interactive IPS Teaching Simulation</h2>
+      <p>Use SPC or University of Phoenix as parameter-complete examples, then adjust variables to ask which governance shift would matter most.</p>
+      <p><strong>Active institution:</strong> <span id="activeInstitution"></span></p>
+      <div id="parameterControls"></div>
+      <div class="actions">
+        <button class="button primary" id="runBtn">Run teaching proxy</button>
+        <button class="button" id="resetSPC">Load SPC</button>
+        <button class="button" id="resetPhoenix">Load University of Phoenix</button>
+        <button class="button" id="exportBtn">Export summary</button>
+      </div>
+      <div id="simOutput"></div>
+    </div>
+
+    <div id="tab-teaching" class="tab-panel">
+      <h2>Teaching and Journal Prompts</h2>
+      <div class="tool-grid" id="journalQuestions"></div>
+    </div>
+
+    <div id="tab-evidence" class="tab-panel">
+      <h2 id="evidence">Evidence Status</h2>
+      <table class="table"><tbody id="evidenceStatus"></tbody></table>
+      <div class="notice warn"><strong>Source verification queue:</strong><p>Before this case becomes reviewer-facing empirical evidence, replicate exact API pulls, formula implementation, missing-data handling, and cross-sector benchmark derivation.</p></div>
+    </div>
+
+    <div id="tab-navigator" class="tab-panel">
+      <h2 id="navigator">Navigator Bridge</h2>
+      <div class="notice"><strong>Privacy boundary:</strong><p>Do not enter private educational, financial, or family details here. Use the Navigator or private notes for personal application.</p></div>
+      <div class="tool-box">
+        <strong>Private bridge prompt</strong>
+        <p>Choose a public institution you know as a student, worker, patient, client, or citizen. What formal mission or promise does it make? Which structural parameter blocks that promise from becoming actual capability? What small governance change would make the promise more real?</p>
+        <button class="button primary" id="copyNavigatorBtn">Copy Navigator prompt</button> <span id="copyStatus" class="footer-note"></span>
+      </div>
+    </div>
+
+    <div id="tab-export" class="tab-panel">
+      <h2>Export Summary</h2>
+      <button class="button primary" onclick="exportSummary()">Generate export summary</button>
+      <pre id="exportBox">No export generated yet.</pre>
+    </div>
+  </section>
+
+  
+<section class="card" style="margin-top:16px">
+  <div class="kicker">Phase H Bridge</div>
+  <h2>Use this case with the Capability Lab</h2>
+  <p>Run the public classroom simulation first, then use this empirical case module for evidence-governed analysis and repair design.</p>
+  <div class="actions">
+    <a class="button" href="../teaching/cross-case-integration.html">Cross-Case Dashboard</a>
+    <a class="button" href="../teaching/capability-lab-links.html">Capability Lab Links</a>
+    <a class="button primary" href="https://rmertzman-tech.github.io/capability-lab-public-studio/">Open Capability Lab</a>
+  </div>
+</section>
+
+  <p class="footer-note">Phase D migration note: this page migrates the Higher Education IPS case into the EECSL shell and adds evidence governance. Interactive formula is explicitly labeled as a teaching proxy until source formula replication is verified.</p>
+</main>
+
+<script>
+const DATA = {
+  "slug": "higher-education-ips",
+  "title": "Higher Education IPS",
+  "subtitle": "The Telescope on Your Own Institution",
+  "chapter": "Chapter 11 \u00b7 Economics \u00b7 Higher Education Case Study",
+  "status": "Phase D migrated case",
+  "sourceUrl": "https://rmertzman-tech.github.io/Three-Scenario-Sims/he-ips-analysis-app.html",
+  "institutions": [
+    {
+      "id": "spc",
+      "name": "Saint Petersburg College",
+      "type": "Public community college",
+      "fhri": 58.6,
+      "tier": "Mission-aligned public",
+      "netPrice": "~$3,154/yr",
+      "notes": "Open access mission; validated across three independent API runs in the source app.",
+      "params": {
+        "epsilon": 0.275,
+        "phi": 0.011,
+        "rho": 0.271,
+        "sigma": 0.104,
+        "mu": 0.412
+      }
+    },
+    {
+      "id": "uf",
+      "name": "University of Florida",
+      "type": "Flagship research university",
+      "fhri": 59.0,
+      "tier": "Mission-aligned public",
+      "netPrice": "~$6,381/yr",
+      "notes": "Selective admission; roughly comparable structural capacity score to SPC in the source app.",
+      "params": null
+    },
+    {
+      "id": "miami-dade",
+      "name": "Miami Dade College",
+      "type": "Public community college",
+      "fhri": 50.5,
+      "tier": "Public mission / capacity gap",
+      "netPrice": "Similar public mission comparison",
+      "notes": "Same broad public-community-college mission as SPC but lower reported FHRI_max in the source app.",
+      "params": null
+    },
+    {
+      "id": "full-sail",
+      "name": "Full Sail University",
+      "type": "High-extraction higher education",
+      "fhri": 32.5,
+      "tier": "High-extraction higher ed",
+      "netPrice": "Student exit possible at high cost",
+      "notes": "Upper-tier high-extraction higher-ed benchmark in source app.",
+      "params": null
+    },
+    {
+      "id": "snhu",
+      "name": "Southern New Hampshire University",
+      "type": "High-extraction higher education",
+      "fhri": 30.2,
+      "tier": "High-extraction higher ed",
+      "netPrice": "Student exit possible at high cost",
+      "notes": "Upper-tier high-extraction higher-ed benchmark in source app.",
+      "params": null
+    },
+    {
+      "id": "gcu",
+      "name": "Grand Canyon University",
+      "type": "High-extraction higher education",
+      "fhri": 28.4,
+      "tier": "High-extraction higher ed",
+      "netPrice": "Student exit possible at high cost",
+      "notes": "Upper-tier high-extraction higher-ed benchmark in source app.",
+      "params": null
+    },
+    {
+      "id": "phoenix",
+      "name": "University of Phoenix",
+      "type": "For-profit higher education",
+      "fhri": 26.9,
+      "tier": "High-extraction higher ed",
+      "netPrice": "Median debt and earnings comparison in source app",
+      "notes": "Source app identifies strong Interpretant replacement pattern; comparison parameters included.",
+      "params": {
+        "epsilon": 0.732,
+        "phi": 0.305,
+        "rho": 0.767,
+        "sigma": 0.352,
+        "mu": 0.5
+      }
+    },
+    {
+      "id": "pe-nursing-home",
+      "name": "PE Nursing Home (FL)",
+      "type": "Captive-population / care sector benchmark",
+      "fhri": 13.6,
+      "tier": "Captive-population extraction",
+      "netPrice": "Exit constrained by vulnerability",
+      "notes": "Cross-sector benchmark from prior IPS audit in source app.",
+      "params": null
+    },
+    {
+      "id": "financial-system",
+      "name": "2008 Financial System",
+      "type": "Financial-system benchmark",
+      "fhri": 11.2,
+      "tier": "Captive / systemic crisis benchmark",
+      "netPrice": "Exit constrained by foreclosure/system exposure",
+      "notes": "Cross-sector benchmark from prior IPS audit in source app.",
+      "params": null
+    },
+    {
+      "id": "geo-fl",
+      "name": "GEO Group FL Corrections",
+      "type": "Corrections benchmark",
+      "fhri": 10.9,
+      "tier": "Captive-population extraction",
+      "netPrice": "Exit blocked by incarceration",
+      "notes": "Cross-sector benchmark from prior IPS audit in source app.",
+      "params": null
+    }
+  ],
+  "journalQuestions": [
+    "SPC\u2019s FHRI_max is 58.6 \u2014 close to the Functional / Mission-Aligned threshold. From your experience as a student, which parameter feels most present as a structural constraint: \u03b5, \u03c6, or \u03bc? What would a small improvement look like in practice?",
+    "The exit-option modulator says students can leave extractive higher-education institutions, although often at high cost. From the perspective of a student who has already borrowed money, how free is the exit option actually?",
+    "Miami Dade and SPC have similar public missions but an 8.1-point FHRI_max gap in the source app. What data would you request first if you were asked to investigate this gap as a governance consultant?",
+    "The source app treats the 1992 HEA amendments as a P-adic access mechanism for higher education Interpretant replacement. What would a T1 structural intervention change if it addressed the access condition rather than only regulating downstream symptoms?",
+    "Looking toward your future sector, what institutional signals would suggest that an employer or professional setting is shifting from mission to extraction?"
+  ],
+  "evidenceStatus": {
+    "Public data sources named in source app": "College Scorecard API, IPEDS Finance survey, prior IPS audits for cross-sector benchmarks.",
+    "Date / run note from source app": "Higher-education values described as live April 2026 API runs; IPEDS Finance values described as embedded 2022\u201323 where used.",
+    "Directly measured or source-reported": "Institutional spending categories, median debt, median earnings, repayment, completion and enrollment-related fields, where available.",
+    "Computed model output": "FHRI_max and IPS parameters \u03b5, \u03c6, \u03c1, \u03c3, \u03bc.",
+    "Interpretive model claim": "Mission alignment, extraction floor, exit-option modulator, and Interpretant replacement.",
+    "Verification needed": "Replicate exact API pulls, formula implementation, missing-data handling, and cross-sector benchmark derivation before using as reviewer-facing empirical proof."
+  }
+};
+
+const state = {
+  tab: "overview",
+  selectedInstitution: "spc",
+  params: { epsilon:0.275, phi:0.011, rho:0.271, sigma:0.104, mu:0.412 },
+  lastResult: null
+};
+
+function esc(x){return String(x??"").replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#039;'}[m]));}
+function clamp(v,min=0,max=1){return Math.max(min,Math.min(max,Number(v)||0));}
+function pct(v){return Math.round(clamp(v,0,1)*1000)/10;}
+
+function institution(id){return DATA.institutions.find(x=>x.id===id)||DATA.institutions[0];}
+
+function showTab(tab){
+  state.tab=tab;
+  document.querySelectorAll(".tab-btn").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));
+  document.querySelectorAll(".tab-panel").forEach(p=>p.classList.toggle("active",p.id==="tab-"+tab));
+}
+
+function renderSpectrum(){
+  const el=document.getElementById("spectrum");
+  el.innerHTML=DATA.institutions.map(inst=>{
+    const tierClass=inst.fhri<20?"captive":inst.fhri<40?"high":"";
+    return `<div class="row">
+      <div class="row-name"><strong>${esc(inst.name)}</strong><span class="footer-note">${esc(inst.tier)}</span></div>
+      <div class="track ${tierClass}"><span style="width:${Math.max(2,inst.fhri)}%"></span></div>
+      <strong>${inst.fhri.toFixed(1)}</strong>
+    </div>`;
+  }).join("");
+}
+
+function renderComparison(){
+  const spc=institution("spc"), uf=institution("uf"), mdc=institution("miami-dade"), phoenix=institution("phoenix");
+  document.getElementById("comparisonCards").innerHTML = [spc,uf,mdc,phoenix].map(i=>`<div class="compare-card">
+    <span class="pill">${esc(i.type)}</span>
+    <h3>${esc(i.name)}</h3>
+    <div class="score">${i.fhri.toFixed(1)}</div>
+    <p>${esc(i.netPrice)}</p>
+    <p class="footer-note">${esc(i.notes)}</p>
+    <button class="button" data-select="${esc(i.id)}">Load parameters</button>
+  </div>`).join("");
+  document.querySelectorAll("[data-select]").forEach(btn=>btn.addEventListener("click",()=>loadInstitution(btn.dataset.select)));
+}
+
+function loadInstitution(id){
+  const inst=institution(id);
+  state.selectedInstitution=id;
+  if(inst.params) {
+    state.params={...inst.params};
+    state.lastResult=null;
+    renderSimulation();
+    renderOutput();
+    showTab("simulation");
+  } else {
+    alert("Detailed IPS parameters are not included in this Phase D migration for "+inst.name+". Use SPC or University of Phoenix for parameter simulation until source verification is expanded.");
+  }
+}
+
+function teachingProxyFHRI(params){
+  // This is a transparent pedagogical proxy calibrated to match the two parameter-complete examples.
+  // It is NOT presented as the source app's verified FHRI formula.
+  const p=params;
+  const penalty =
+    0.25*p.epsilon +
+    0.18*p.phi +
+    0.20*p.rho +
+    0.12*p.sigma +
+    0.25*p.mu;
+  const calibrated = 87.0 - 103.7*penalty;
+  return Math.max(0,Math.min(100,calibrated));
+}
+
+function compute(){
+  const fhri=teachingProxyFHRI(state.params);
+  const extractionFloor=100*(0.45*state.params.epsilon+0.30*state.params.phi+0.25*state.params.sigma);
+  const routingCeiling=100*(1-(0.55*state.params.rho+0.45*state.params.mu));
+  const interpretantRisk=100*(0.34*state.params.epsilon+0.24*state.params.phi+0.22*state.params.rho+0.10*state.params.sigma+0.10*state.params.mu);
+  let label="Mixed structural profile";
+  if(fhri>=60) label="Functional / mission-aligned range";
+  else if(fhri>=45) label="Near-functional governance question";
+  else if(fhri>=25) label="High-extraction higher-education range";
+  else label="Captive-population-level suppression range";
+  return {fhri,extractionFloor,routingCeiling,interpretantRisk,label};
+}
+
+function sliderRow(id,label){
+  const v=state.params[id];
+  return `<div class="slider-row"><label for="${id}">${esc(label)}</label><input id="${id}" type="range" min="0" max="1" step="0.001" value="${v}" data-param="${id}"><strong>${v.toFixed(3)}</strong></div>`;
+}
+
+function renderSimulation(){
+  document.getElementById("parameterControls").innerHTML = [
+    ["epsilon","ε Extraction"],
+    ["phi","φ Entropy"],
+    ["rho","ρ Regulatory burden"],
+    ["sigma","σ Morphic residue"],
+    ["mu","μ Misalignment"]
+  ].map(x=>sliderRow(x[0],x[1])).join("");
+  document.querySelectorAll("[data-param]").forEach(input=>input.addEventListener("input",e=>{
+    state.params[e.target.dataset.param]=clamp(e.target.value);
+    state.lastResult=null;
+    renderSimulation();
+    renderOutput();
+  }));
+  document.getElementById("activeInstitution").textContent=institution(state.selectedInstitution).name;
+}
+
+function metric(label,value,kind=""){
+  const v=Math.round(value*10)/10;
+  return `<div class="metric"><span class="pill">${esc(label)}</span><strong>${v}</strong><div class="bar ${kind}"><span style="width:${Math.max(0,Math.min(100,v))}%"></span></div></div>`;
+}
+
+function renderOutput(){
+  const r=state.lastResult || compute();
+  document.getElementById("simOutput").innerHTML = `<div class="output">
+    <h3>${esc(r.label)}</h3>
+    <div class="metric-grid">
+      ${metric("FHRI teaching proxy",r.fhri,r.fhri>=60?"good":r.fhri<35?"danger":"warn")}
+      ${metric("Extraction floor",r.extractionFloor,r.extractionFloor>50?"danger":"warn")}
+      ${metric("Routing ceiling",r.routingCeiling,r.routingCeiling>60?"good":"warn")}
+      ${metric("Interpretant-replacement risk",r.interpretantRisk,r.interpretantRisk>55?"danger":"warn")}
+    </div>
+    <div class="notice warn"><strong>Formula governance:</strong><p>This interactive panel is a transparent teaching proxy calibrated to the parameter-complete examples. The source app's empirical FHRI_max values remain the governed case data until exact formula replication is verified.</p></div>
+  </div>`;
+}
+
+function runSimulation(){
+  state.lastResult=compute();
+  renderOutput();
+}
+
+function resetSPC(){
+  state.selectedInstitution="spc";
+  state.params={...institution("spc").params};
+  state.lastResult=null;
+  renderSimulation();
+  renderOutput();
+}
+
+function resetPhoenix(){
+  state.selectedInstitution="phoenix";
+  state.params={...institution("phoenix").params};
+  state.lastResult=null;
+  renderSimulation();
+  renderOutput();
+}
+
+function renderEvidence(){
+  const tbody=document.getElementById("evidenceStatus");
+  tbody.innerHTML=Object.entries(DATA.evidenceStatus).map(([k,v])=>`<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td></tr>`).join("");
+}
+
+function renderIPS(){
+  const spc=institution("spc").params, phx=institution("phoenix").params;
+  const rows=[
+    ["ε Extraction",spc.epsilon,phx.epsilon,"Instructional vs. administrative expenditure proxy."],
+    ["φ Entropy",spc.phi,phx.phi,"Median debt relative to earnings proxy."],
+    ["ρ Regulatory burden",spc.rho,phx.rho,"Administrative fraction plus federal-loan dependency proxy."],
+    ["σ Morphic residue",spc.sigma,phx.sigma,"Tuition inflation and repayment-deficit proxy."],
+    ["μ Misalignment",spc.mu,phx.mu,"Enrollment growth vs. completion alignment proxy."]
+  ];
+  document.getElementById("ipsTable").innerHTML=rows.map(r=>`<tr><td>${esc(r[0])}</td><td>${r[1].toFixed(3)}</td><td>${r[2].toFixed(3)}</td><td>${(r[2]-r[1]).toFixed(3)}</td><td>${esc(r[3])}</td></tr>`).join("");
+}
+
+function renderJournal(){
+  document.getElementById("journalQuestions").innerHTML=DATA.journalQuestions.map((q,i)=>`<div class="tool-box"><strong>Q${i+1}</strong><p>${esc(q)}</p></div>`).join("");
+}
+
+function exportSummary(){
+  const r=state.lastResult||compute();
+  const inst=institution(state.selectedInstitution);
+  const text=[
+    "EECSL — Higher Education IPS Case Summary",
+    "Case: Higher Education IPS — The Telescope on Your Own Institution",
+    "Active institution: "+inst.name,
+    "",
+    "Current parameters:",
+    ...Object.entries(state.params).map(([k,v])=>"- "+k+": "+Number(v).toFixed(3)),
+    "",
+    "Computed teaching-proxy output:",
+    "- Label: "+r.label,
+    "- FHRI teaching proxy: "+r.fhri.toFixed(1),
+    "- Extraction floor: "+r.extractionFloor.toFixed(1),
+    "- Routing ceiling: "+r.routingCeiling.toFixed(1),
+    "- Interpretant-replacement risk: "+r.interpretantRisk.toFixed(1),
+    "",
+    "Governance reminder:",
+    "The interactive simulation is a teaching proxy. Use the source-app values and replicated formulas for reviewer-facing empirical claims.",
+    "",
+    "Navigator bridge:",
+    "Use this public institutional case privately: what formal mission or promise exists, which structural parameters support or block it, and what small governance change would improve actual capability?"
+  ].join("\n");
+  document.getElementById("exportBox").textContent=text;
+  showTab("export");
+}
+
+function copyNavigator(){
+  const text="Private Navigator bridge: choose a public institution you know as a student, worker, patient, client, or citizen. What formal mission or promise does it make? Which structural parameter blocks that promise from becoming actual capability? What small governance change would make the promise more real?";
+  navigator.clipboard.writeText(text).then(()=>document.getElementById("copyStatus").textContent="Copied.").catch(()=>document.getElementById("copyStatus").textContent="Select and copy manually.");
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+  renderSpectrum(); renderComparison(); renderSimulation(); renderOutput(); renderEvidence(); renderIPS(); renderJournal();
+  document.querySelectorAll(".tab-btn").forEach(btn=>btn.addEventListener("click",()=>showTab(btn.dataset.tab)));
+  document.getElementById("runBtn").addEventListener("click",runSimulation);
+  document.getElementById("resetSPC").addEventListener("click",resetSPC);
+  document.getElementById("resetPhoenix").addEventListener("click",resetPhoenix);
+  document.getElementById("exportBtn").addEventListener("click",exportSummary);
+  document.getElementById("copyNavigatorBtn").addEventListener("click",copyNavigator);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 2008 Financial Crisis — EECSL</title>
+<style>
+:root{--ink:#1f2933;--muted:#5f6b7a;--accent:#345d4e;--accent2:#8b6b3d;--good:#2f6b4f;--warn:#b5792d;--danger:#8b3a3a;--blue:#326e9f;--soft:#f4f7f4;--line:#d9e2dc;--card:#fff;--shadow:0 12px 30px rgba(31,41,51,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fbfcfb;line-height:1.55}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header{background:radial-gradient(circle at top left,rgba(255,255,255,.13),transparent 30rem),linear-gradient(135deg,#20382f,#345d4e);color:#fff;padding:36px 20px}
+.header-inner{max-width:1180px;margin:0 auto}.kicker{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;font-weight:900;opacity:.88}
+h1{font-size:clamp(2rem,4.2vw,3.8rem);line-height:1.03;margin:.35rem 0}.subtitle{max-width:960px;font-size:1.05rem;opacity:.94}
+nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}.nav-inner{max-width:1180px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;padding:10px 18px}
+.nav-link,.button{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:8px 12px;font-weight:850;display:inline-block;cursor:pointer}.button.primary,.nav-link.active{border-color:var(--accent);background:#eef7f1;color:var(--accent)}.button.warn{border-color:var(--warn);background:#fffaf1;color:var(--warn)}
+main{max-width:1180px;margin:0 auto;padding:24px 18px 84px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.s12{grid-column:span 12}.s8{grid-column:span 8}.s6{grid-column:span 6}.s4{grid-column:span 4}.s3{grid-column:span 3}@media(max-width:900px){.s8,.s6,.s4,.s3{grid-column:span 12}}
+.card,.hero{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow)}.hero{border:2px solid var(--accent);background:linear-gradient(180deg,#fff,#f4faf6)}.card h2,.card h3{margin-top:0}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.pill{border:1px solid var(--line);border-radius:999px;padding:5px 9px;background:var(--soft);font-size:.82rem;color:var(--muted);font-weight:850}.pill.gold{background:#f7f1e7}
+.notice{border-left:5px solid var(--accent);background:#f8fbf8;border-radius:14px;padding:12px;margin:12px 0}.notice.warn{border-left-color:var(--warn);background:#fffaf1}.notice.danger{border-left-color:var(--danger);background:#fff6f6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tab-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;font-weight:850;cursor:pointer}.tab-btn.active{border-color:var(--accent);background:#eef7f1;color:var(--accent)}.tab-panel{display:none}.tab-panel.active{display:block}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px;margin-top:10px}.metric{border:1px solid var(--line);border-radius:16px;background:#fff;padding:12px}.metric strong{display:block;font-size:1.4rem}.bar{height:10px;background:#e6ece5;border-radius:999px;overflow:hidden;margin-top:7px}.bar span{display:block;height:100%;background:var(--accent)}.bar.good span{background:var(--good)}.bar.warn span{background:var(--warn)}.bar.danger span{background:var(--danger)}.bar.blue span{background:var(--blue)}
+.timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:9px;margin:10px 0}.stage{border:1px solid var(--line);border-radius:16px;background:#fff;padding:11px;cursor:pointer}.stage.active{border-color:var(--accent);outline:3px solid rgba(52,93,78,.18);background:#f4faf6}.stage strong{display:block}.stage span{font-size:.78rem;color:var(--muted);font-weight:850}
+.sim-grid{display:grid;grid-template-columns:minmax(290px,1.25fr) minmax(270px,.75fr);gap:14px}@media(max-width:900px){.sim-grid{grid-template-columns:1fr}}
+.map{display:grid;grid-template-columns:repeat(18,1fr);gap:3px;border:1px solid var(--line);background:#fff;border-radius:18px;padding:10px;max-width:690px}.cell{aspect-ratio:1/1;border-radius:5px;background:#2f6b4f}.cell.degraded{background:#b5792d}.cell.foreclosed{background:#8b3a3a}.cell.recovery{background:#326e9f}
+.legend{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}.legend span{font-size:.86rem;color:var(--muted);font-weight:750}.sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:4px;vertical-align:-1px}.healthy{background:#2f6b4f}.degraded{background:#b5792d}.foreclosed{background:#8b3a3a}.recovery{background:#326e9f}
+.slider-row{display:grid;grid-template-columns:170px 1fr 56px;gap:10px;align-items:center;margin:11px 0}input[type=range]{width:100%}.toggle-row{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:9px;margin:8px 0;background:#fff}
+.output{border:1px solid var(--line);border-radius:18px;background:#fbfcfb;padding:14px;margin-top:12px}.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:10px}.tool-box{border:1px solid var(--line);border-radius:16px;background:#fff;padding:12px}.tool-box strong{display:block;margin-bottom:4px}
+.table{width:100%;border-collapse:collapse}.table th,.table td{border-top:1px solid var(--line);padding:9px;text-align:left;vertical-align:top}.table th{color:var(--accent)}
+pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;max-height:330px;overflow:auto}.footer-note{color:var(--muted);font-size:.92rem}.formula{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;overflow:auto}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="kicker">Empirical Ethics Case Simulation Library · Phase E Migrated Case</div>
+    <h1>The 2008 Financial Crisis</h1>
+    <p class="subtitle"><strong>Evidence Policy and Systemic Moral Failure.</strong> A P-SAGE and IPS case module for teaching Triadic Overwrite, rating-agency normalization, T1/T2 recovery, and the ethical difference between operational recovery and structural repair.</p>
+    <div class="actions">
+      <a class="button" href="../index.html">Back to Library Hub</a>
+      <a class="button primary" href="#case-tabs">Open case tools</a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-link" href="#overview">Overview</a>
+    <a class="nav-link" href="#case-tabs">Tools</a>
+    <a class="nav-link" href="#simulation">Simulation</a>
+    <a class="nav-link" href="#evidence">Evidence</a>
+    <a class="nav-link" href="#navigator">Navigator</a>
+  </div>
+</nav>
+
+<main>
+  <section id="overview" class="hero">
+    <div class="kicker">Chapter 12 · Governance · Financial Systems Case Study</div>
+    <h2>Triadic Overwrite at financial system scale</h2>
+    <div class="pill-row">
+      <span class="pill">P-SAGE</span><span class="pill">IPS</span><span class="pill">Triadic Overwrite</span><span class="pill">Evidence policy</span><span class="pill">T1 / T2 repair</span><span class="pill">Systemic risk</span>
+    </div>
+    <p><strong>Core public question:</strong> How can a financial system preserve operational continuity while replacing the ethical function of its warning and signal channels?</p>
+    <p><strong>Teaching purpose:</strong> Students learn how a system can look functional while its signal interpretation changes, how risk externalization becomes hidden, and why T2 stabilization is not the same as T1 structural repair.</p>
+    <div class="notice">
+      <strong>Public / private boundary:</strong>
+      <p>This is a public empirical case. Students should not enter private financial or family details here. Personal application belongs in the Navigator or course notebook.</p>
+    </div>
+  </section>
+
+  <section class="grid" style="margin-top:16px">
+    <div class="card s8">
+      <h2>Case Snapshot</h2>
+      <p>The source app frames the 2008 crisis as a Triadic Overwrite story: the financial-system sign remained intact, the signal channel was accessed through deregulated mortgage origination and rating assignment, and the Interpretant of mortgage lending shifted from creditworthiness assessment to securitization feedstock.</p>
+      <div class="metric-grid">
+        <div class="metric"><span class="pill">Peak ε</span><strong>0.71</strong><div class="bar danger"><span style="width:71%"></span></div></div>
+        <div class="metric"><span class="pill">Peak σ</span><strong>0.78</strong><div class="bar danger"><span style="width:78%"></span></div></div>
+        <div class="metric"><span class="pill">Peak μ</span><strong>0.84</strong><div class="bar danger"><span style="width:84%"></span></div></div>
+        <div class="metric"><span class="pill">FHRI_max</span><strong>11.2</strong><div class="bar danger"><span style="width:11.2%"></span></div></div>
+      </div>
+    </div>
+    <div class="card s4">
+      <h2>Claim Governance</h2>
+      <div class="pill-row"><span class="pill">Source-app values</span><span class="pill">Computed output</span><span class="pill">Interpretive model claim</span><span class="pill">Teaching simulation</span><span class="pill">Verification queue</span></div>
+      <div class="notice warn"><strong>Important:</strong><p>This migration preserves the source-app model values and labels the visual cascade as an educational simulation. Numerical claims should be verified before reviewer-facing empirical use.</p></div>
+    </div>
+  </section>
+
+  <section id="case-tabs" class="card" style="margin-top:16px">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="psage">P-SAGE</button>
+      <button class="tab-btn" data-tab="simulation">Live Simulation</button>
+      <button class="tab-btn" data-tab="ips">IPS Profile</button>
+      <button class="tab-btn" data-tab="recovery">T1 vs T2</button>
+      <button class="tab-btn" data-tab="today">System Today</button>
+      <button class="tab-btn" data-tab="teaching">Teaching / Journal</button>
+      <button class="tab-btn" data-tab="evidence">Evidence Status</button>
+      <button class="tab-btn" data-tab="navigator">Navigator Bridge</button>
+      <button class="tab-btn" data-tab="export">Export</button>
+    </div>
+
+    <div id="tab-psage" class="tab-panel active">
+      <h2>P-SAGE: The Structural Finding</h2>
+      <div class="tool-grid">
+        <div class="tool-box"><strong>Sign intact</strong><p>Banks lent. Mortgages were originated. CDOs were rated. Institutions were licensed and regulated. Surface operation continued through 2007.</p></div>
+        <div class="tool-box"><strong>Signal accessed</strong><p>The credit-risk channel was accessed through deregulated securitization architecture and rating-agency assignment.</p></div>
+        <div class="tool-box"><strong>Interpretant replaced</strong><p>Original: mortgage = creditworthiness assessment for sustainable homeownership. Replaced: mortgage = securitization feedstock with externalized risk.</p></div>
+        <div class="tool-box"><strong>φ consequence</strong><p>The crash made substrate damage visible: household wealth loss, foreclosure cascades, neighborhood decline, and unequal burden-bearing.</p></div>
+      </div>
+      <h3>Structural timeline</h3>
+      <div id="timeline" class="timeline"></div>
+    </div>
+
+    <div id="tab-simulation" class="tab-panel">
+      <h2 id="simulation">Live Simulation: Coherence Map</h2>
+      <p>The visual map is a teaching simulation. Each cell represents a financial-system node such as a household, pension fund, municipality, community bank, or credit channel. Green means coherent capacity; amber means degraded; red means foreclosure/φ cascade; blue means T1 recovery.</p>
+      <div class="sim-grid">
+        <div>
+          <div id="timeline2" class="timeline"></div>
+          <div class="legend">
+            <span><i class="sw healthy"></i>Healthy</span>
+            <span><i class="sw degraded"></i>Degraded</span>
+            <span><i class="sw foreclosed"></i>Foreclosed / φ</span>
+            <span><i class="sw recovery"></i>T1 recovery</span>
+          </div>
+          <div id="coherenceMap" class="map"></div>
+          <div id="resultBox"></div>
+        </div>
+        <div>
+          <div class="notice" id="eraDescription"></div>
+          <h3>IPS Parameters</h3>
+          <div id="paramControls"></div>
+          <h3>Defense / Repair Controls</h3>
+          <div id="defenseControls"></div>
+          <div class="actions">
+            <button class="button primary" id="runBtn">Run simulation</button>
+            <button class="button" id="resetCrash">Load 2007–2008 crash</button>
+            <button class="button" id="exportBtn">Export summary</button>
+          </div>
+        </div>
+      </div>
+      <h3>Live Metrics</h3>
+      <div id="metrics" class="metric-grid"></div>
+    </div>
+
+    <div id="tab-ips" class="tab-panel">
+      <h2>IPS Profile: Financial System 1999–2010</h2>
+      <p>The source app presents the peak-crisis profile as ε=.71, φ=.68, ρ=.62, σ=.78, μ=.84 and computes FHRI_max = 11.2.</p>
+      <div id="formulaBox"></div>
+      <table class="table">
+        <thead><tr><th>Parameter</th><th>Peak value</th><th>Teaching interpretation</th></tr></thead>
+        <tbody>
+          <tr><td>ε Extraction</td><td>0.71</td><td>Originate-to-distribute and leverage architecture extracting yield while externalizing default risk.</td></tr>
+          <tr><td>φ Entropy</td><td>0.68</td><td>Household, community, and neighborhood damage after cascade.</td></tr>
+          <tr><td>ρ Regulatory burden</td><td>0.62</td><td>Compliance activity that can preserve rather than change the access condition.</td></tr>
+          <tr><td>σ Morphic residue</td><td>0.78</td><td>Rating-agency normalization: repeated AAA assignments normalize the next assignment.</td></tr>
+          <tr><td>μ Misalignment</td><td>0.84</td><td>Rewards tied to origination volume, instruments structured, and ratings issued rather than long-term performance.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tab-recovery" class="tab-panel">
+      <h2>Recovery: T1 vs T2</h2>
+      <div class="tool-grid">
+        <div class="tool-box"><strong>T2 response</strong><p>TARP, quantitative easing, and compliance expansion can stabilize liquidity and restore operation without changing who controls the mission-critical channel.</p></div>
+        <div class="tool-box"><strong>T1 structural repair</strong><p>Glass-Steagall equivalent, rating-agency restructuring, and originate-to-hold requirements alter the access condition itself.</p></div>
+        <div class="tool-box"><strong>φ recovery gap</strong><p>Financial-system indicators can recover faster than households, neighborhoods, and communities that bore the substrate consequence.</p></div>
+        <div class="tool-box"><strong>Classroom contrast</strong><p>Run the T2 era, then toggle T1. Ask students what changes in the model and what remains hidden in a T2-only repair.</p></div>
+      </div>
+    </div>
+
+    <div id="tab-today" class="tab-panel">
+      <h2>The System Today</h2>
+      <div class="tool-grid">
+        <div class="tool-box"><strong>Sign intact</strong><p>The financial system operates. Banks lend. Mortgage markets function.</p></div>
+        <div class="tool-box"><strong>Signal still vulnerable</strong><p>The source app argues that the access condition shifted rather than disappeared.</p></div>
+        <div class="tool-box"><strong>BioBond / AMC response</strong><p>Condition capital access on measurable FHRI maintenance, beneficial ownership disclosure, and φ early-warning indicators.</p></div>
+        <div class="tool-box"><strong>Maathai principle</strong><p>CDFIs are offered as an alternative architecture: lower ε, community accountability, and genuine creditworthiness assessment.</p></div>
+      </div>
+    </div>
+
+    <div id="tab-teaching" class="tab-panel">
+      <h2>Teaching and Journal Prompts</h2>
+      <div class="tool-grid" id="journalQuestions"></div>
+    </div>
+
+    <div id="tab-evidence" class="tab-panel">
+      <h2 id="evidence">Evidence Status</h2>
+      <table class="table"><tbody id="evidenceStatus"></tbody></table>
+      <div class="notice warn"><strong>Source verification queue:</strong><p>Before this case becomes reviewer-facing empirical evidence, verify numerical claims against primary or authoritative secondary sources and preserve model-vs-data distinctions.</p></div>
+    </div>
+
+    <div id="tab-navigator" class="tab-panel">
+      <h2 id="navigator">Navigator Bridge</h2>
+      <div class="notice"><strong>Privacy boundary:</strong><p>Do not enter private financial or family details here. Use the Navigator or private notes for personal application.</p></div>
+      <div class="tool-box">
+        <strong>Private bridge prompt</strong>
+        <p>Use this public crisis structure privately. Identify one system where signal channels still operate but the meaning of the signal may have changed. What would count as T1 repair rather than T2 stabilization?</p>
+        <button class="button primary" id="copyNavigatorBtn">Copy Navigator prompt</button> <span id="copyStatus" class="footer-note"></span>
+      </div>
+    </div>
+
+    <div id="tab-export" class="tab-panel">
+      <h2>Export Summary</h2>
+      <button class="button primary" onclick="exportSummary()">Generate export summary</button>
+      <pre id="exportBox">No export generated yet.</pre>
+    </div>
+  </section>
+
+  
+<section class="card" style="margin-top:16px">
+  <div class="kicker">Phase H Bridge</div>
+  <h2>Use this case with the Capability Lab</h2>
+  <p>Run the public classroom simulation first, then use this empirical case module for evidence-governed analysis and repair design.</p>
+  <div class="actions">
+    <a class="button" href="../teaching/cross-case-integration.html">Cross-Case Dashboard</a>
+    <a class="button" href="../teaching/capability-lab-links.html">Capability Lab Links</a>
+    <a class="button primary" href="https://rmertzman-tech.github.io/capability-lab-public-studio/">Open Capability Lab</a>
+  </div>
+</section>
+
+  <p class="footer-note">Phase E migration note: this page migrates the 2008 Financial Crisis case into the EECSL shell with a timeline, coherence-map simulation, IPS formula panel, T1/T2 repair contrast, evidence governance, and Navigator bridge.</p>
+</main>
+
+<script>
+const DATA = {
+  "slug": "2008-financial-crisis",
+  "title": "The 2008 Financial Crisis",
+  "subtitle": "Evidence Policy and Systemic Moral Failure",
+  "chapter": "Chapter 12 \u00b7 Governance \u00b7 Financial Systems Case Study",
+  "status": "Phase E migrated case",
+  "sourceUrl": "https://rmertzman-tech.github.io/Three-Scenario-Sims/chapter12-2008-financial-crisis-app.html",
+  "coreQuestion": "How can a financial system preserve operational continuity while replacing the ethical function of its warning and signal channels?",
+  "eras": [
+    {
+      "id": "pre",
+      "label": "1995\u20131998",
+      "title": "Pre-deregulation stability",
+      "tag": "Mortgage = creditworthiness assessment",
+      "params": {
+        "epsilon": 0.12,
+        "sigma": 0.2,
+        "mu": 0.15,
+        "phi": 0.1,
+        "rho": 0.18
+      },
+      "description": "Commercial banking and credit-risk assessment remain more closely coupled. The source app presents this as a period of high coherence before the access condition changes."
+    },
+    {
+      "id": "access",
+      "label": "1999\u20132003",
+      "title": "Glass-Steagall repealed",
+      "tag": "P-adic access condition opens",
+      "params": {
+        "epsilon": 0.28,
+        "sigma": 0.32,
+        "mu": 0.35,
+        "phi": 0.18,
+        "rho": 0.28
+      },
+      "description": "Investment-banking architecture moves inside the credit-risk channel. The signal pathway remains operational, but the meaning of mortgage origination begins to shift."
+    },
+    {
+      "id": "surge",
+      "label": "2004\u20132006",
+      "title": "Leverage surge and \u03c3 build",
+      "tag": "Normalization under rating capture",
+      "params": {
+        "epsilon": 0.55,
+        "sigma": 0.6,
+        "mu": 0.68,
+        "phi": 0.34,
+        "rho": 0.46
+      },
+      "description": "AAA ratings, CDO growth, and originate-to-distribute incentives create the conditions for signal normalization and risk externalization."
+    },
+    {
+      "id": "crash",
+      "label": "2007\u20132008",
+      "title": "Crash \u2014 \u03c6 cascade",
+      "tag": "Substrate consequence becomes visible",
+      "params": {
+        "epsilon": 0.71,
+        "sigma": 0.78,
+        "mu": 0.84,
+        "phi": 0.68,
+        "rho": 0.62
+      },
+      "description": "The source app\u2019s peak-crisis IPS profile: \u03b5=.71, \u03c6=.68, \u03c1=.62, \u03c3=.78, \u03bc=.84, producing FHRI_max = 11.2 by the stated formula."
+    },
+    {
+      "id": "t2",
+      "label": "2009\u20132012",
+      "title": "T2 response",
+      "tag": "Liquidity restored, access condition preserved",
+      "params": {
+        "epsilon": 0.52,
+        "sigma": 0.62,
+        "mu": 0.61,
+        "phi": 0.46,
+        "rho": 0.7
+      },
+      "description": "TARP, QE, and compliance expansion restore financial-system operation while household \u03c6 remains less directly repaired. The source app identifies this as a T2 recovery pattern."
+    },
+    {
+      "id": "t1",
+      "label": "T1 counterfactual",
+      "title": "Glass-Steagall equivalent",
+      "tag": "Access condition structurally changed",
+      "params": {
+        "epsilon": 0.32,
+        "sigma": 0.34,
+        "mu": 0.38,
+        "phi": 0.3,
+        "rho": 0.44
+      },
+      "description": "A counterfactual structural repair: separation of consumer-credit origination from securitization/trading, rating-agency restructuring, and originate-to-hold requirements."
+    }
+  ],
+  "journalQuestions": [
+    "Before this analysis, would you have attributed the 2008 crisis to greed, deregulation, or the market? How does the formally derived responsible party \u2014 the ownership architecture that achieved P-adic proximity \u2014 change where your moral concern settles?",
+    "The \u03c3 accumulation in rating agencies is presented as formally parallel to Challenger O-ring normalization. Identify a \u03c3 accumulation pattern in an institution you know. What anomaly is being normalized?",
+    "The T2 recovery made the financial system whole before households and communities fully recovered. Who had P-adic proximity to the policy cluster at the moment recovery decisions were made?",
+    "Design one T1 intervention for financial governance. What access condition would it change, and how would you know that it was not merely another T2 compliance layer?",
+    "Using P-SAGE, predict what a future crisis might look like. Which channel could be accessed, through which instrument, and which Interpretant could be replaced?"
+  ],
+  "evidenceStatus": {
+    "Public source app": "The original Three-Scenario-Sims financial-crisis page, migrated into the EECSL case shell.",
+    "Case period": "1999\u20132010 arc, with a 1995\u20131998 pre-deregulation baseline and later recurrence discussion.",
+    "Directly stated source-app values": "Peak-crisis parameters \u03b5=.71, \u03c6=.68, \u03c1=.62, \u03c3=.78, \u03bc=.84; FHRI_max = 11.2; TARP $700B; Dodd-Frank 2,300 pages; household wealth loss $19.2T; 9.3M foreclosures between 2008 and 2012.",
+    "Computed model output": "RQ_ceiling, EE_floor, FHRI_max, coherence, \u03c6 load, and visual cascade state.",
+    "Interpretive model claim": "Triadic Overwrite, P-adic access, rating-agency \u03c3 accumulation, T1/T2 distinction, and Interpretant replacement.",
+    "Verification needed": "Verify all numerical claims against primary or authoritative secondary sources before reviewer-facing empirical use; preserve source-app values as teaching-model claims until then."
+  }
+};
+
+const state = {
+  tab: "psage",
+  eraId: "crash",
+  params: { epsilon:0.71, sigma:0.78, mu:0.84, phi:0.68, rho:0.62 },
+  defense: { integrity:false, t1:false, t2:false },
+  lastResult: null
+};
+
+function esc(x){return String(x??"").replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#039;'}[m]));}
+function clamp(v,min=0,max=1){return Math.max(min,Math.min(max,Number(v)||0));}
+function era(id){return DATA.eras.find(e=>e.id===id)||DATA.eras[0];}
+function pct(x){return Math.round(x*1000)/10;}
+
+function showTab(tab){
+  state.tab=tab;
+  document.querySelectorAll(".tab-btn").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));
+  document.querySelectorAll(".tab-panel").forEach(p=>p.classList.toggle("active",p.id==="tab-"+tab));
+}
+
+function loadEra(id){
+  const e=era(id);
+  state.eraId=id;
+  state.params={...e.params};
+  state.defense={integrity:false,t1:false,t2:false};
+  if(id==="t1") state.defense.t1=true;
+  if(id==="t2") state.defense.t2=true;
+  state.lastResult=null;
+  renderAll();
+  showTab("simulation");
+}
+
+function compute(){
+  let p={...state.params};
+  // Defense effects are teaching controls that show conceptual difference between T1 and T2.
+  if(state.defense.integrity) {
+    p.sigma=Math.max(0,p.sigma-0.12);
+    p.mu=Math.max(0,p.mu-0.08);
+  }
+  if(state.defense.t1) {
+    p.epsilon=Math.max(0,p.epsilon-0.22);
+    p.mu=Math.max(0,p.mu-0.22);
+    p.sigma=Math.max(0,p.sigma-0.14);
+    p.rho=Math.max(0,p.rho-0.08);
+  }
+  if(state.defense.t2) {
+    p.phi=Math.max(0,p.phi-0.16);
+    p.rho=Math.min(1,p.rho+0.12);
+    p.epsilon=Math.max(0,p.epsilon-0.04);
+  }
+  const rq = clamp(1 - (0.45*p.epsilon + 0.35*p.rho + 0.20*p.mu));
+  const ee = clamp(0.40*p.phi + 0.30*p.sigma + 0.25*p.epsilon);
+  const fhri = Math.max(0, Math.min(100, 100*(1-ee)*rq));
+  const phiLoad = clamp(0.55*p.phi + 0.20*p.sigma + 0.15*p.epsilon + 0.10*p.mu);
+  const coherence = clamp(fhri/100);
+  const foreclosed = Math.round(9.3 * phiLoad * (state.eraId==="pre"?0.05:1) * 10)/10;
+  const interpretantRisk = clamp(0.34*p.epsilon+0.22*p.sigma+0.24*p.mu+0.10*p.rho+0.10*p.phi);
+  let label="Fragile recovery / unresolved access condition";
+  if(fhri>=45) label="Functional or near-functional structure";
+  else if(fhri<20) label="Triadic overwrite cascade";
+  else if(state.defense.t2&&!state.defense.t1) label="T2 stabilization without structural repair";
+  if(state.defense.t1) label="T1 structural repair pathway";
+  return {params:p,rq,ee,fhri,phiLoad,coherence,foreclosed,interpretantRisk,label};
+}
+
+function metric(label,value,kind=""){
+  const v=Math.round(value*10)/10;
+  const width=Math.max(0,Math.min(100,v));
+  return `<div class="metric"><span class="pill">${esc(label)}</span><strong>${v}</strong><div class="bar ${kind}"><span style="width:${width}%"></span></div></div>`;
+}
+
+function renderTimeline(){
+  const html=DATA.eras.map(e=>`<div class="stage ${e.id===state.eraId?"active":""}" data-era="${esc(e.id)}"><span>${esc(e.label)}</span><strong>${esc(e.title)}</strong><p class="footer-note">${esc(e.tag)}</p></div>`).join("");
+  document.getElementById("timeline").innerHTML=html;
+  document.getElementById("timeline2").innerHTML=html;
+  document.querySelectorAll("[data-era]").forEach(el=>el.addEventListener("click",()=>loadEra(el.dataset.era)));
+}
+
+function renderControls(){
+  const labels={epsilon:"ε Extraction",sigma:"σ Morphic residue",mu:"μ Misalignment",phi:"φ Entropy",rho:"ρ Regulatory burden"};
+  document.getElementById("paramControls").innerHTML=Object.keys(labels).map(id=>`<div class="slider-row"><label for="${id}">${labels[id]}</label><input id="${id}" type="range" min="0" max="1" step="0.01" value="${state.params[id]}" data-param="${id}"><strong>${Number(state.params[id]).toFixed(2)}</strong></div>`).join("");
+  document.querySelectorAll("[data-param]").forEach(inp=>inp.addEventListener("input",e=>{state.params[e.target.dataset.param]=clamp(e.target.value);state.lastResult=null;renderAll(false);}));
+  document.getElementById("defenseControls").innerHTML=[
+    ["integrity","P-adic integrity check","Adds early signal review and blocks some σ/μ normalization."],
+    ["t1","T1 structural access repair","Changes who can control the credit-risk signal channel."],
+    ["t2","T2 liquidity/compliance response","Stabilizes φ but leaves much of the access condition intact."]
+  ].map(([id,label,note])=>`<label class="toggle-row"><span><strong>${label}</strong><br><span class="footer-note">${note}</span></span><input type="checkbox" data-defense="${id}" ${state.defense[id]?"checked":""}></label>`).join("");
+  document.querySelectorAll("[data-defense]").forEach(inp=>inp.addEventListener("change",e=>{state.defense[e.target.dataset.defense]=e.target.checked;state.lastResult=null;renderAll(false);}));
+}
+
+function renderMap(){
+  const r=compute();
+  const count=18*12;
+  let cells="";
+  for(let i=0;i<count;i++){
+    const wave=(Math.sin(i*12.9898 + Math.round(r.interpretantRisk*100)*78.233)*43758.5453)%1;
+    const val=Math.abs(wave);
+    let cls="";
+    const forecloseThreshold=0.98-r.phiLoad*0.72;
+    const degradeThreshold=0.82-r.interpretantRisk*0.46;
+    if(state.defense.t1 && val>0.72 && val<0.88) cls=" recovery";
+    else if(val>forecloseThreshold) cls=" foreclosed";
+    else if(val>degradeThreshold) cls=" degraded";
+    cells += `<div class="cell${cls}"></div>`;
+  }
+  document.getElementById("coherenceMap").innerHTML=cells;
+}
+
+function renderOutput(){
+  const r=compute();
+  document.getElementById("eraDescription").innerHTML=`<strong>${esc(era(state.eraId).label)}: ${esc(era(state.eraId).title)}</strong><p>${esc(era(state.eraId).description)}</p>`;
+  document.getElementById("metrics").innerHTML = [
+    metric("Coherence",r.coherence*100,r.coherence>.45?"good":r.coherence<.2?"danger":"warn"),
+    metric("φ load",r.phiLoad*100,r.phiLoad>.55?"danger":"warn"),
+    metric("FHRI_max",r.fhri,r.fhri<20?"danger":r.fhri>=45?"good":"warn"),
+    metric("Foreclosure cascade proxy",r.foreclosed*10,r.foreclosed>5?"danger":"warn")
+  ].join("");
+  document.getElementById("resultBox").innerHTML=`<div class="output"><h3>${esc(r.label)}</h3><p><strong>RQ_ceiling:</strong> ${r.rq.toFixed(3)} · <strong>EE_floor:</strong> ${r.ee.toFixed(3)} · <strong>FHRI_max:</strong> ${r.fhri.toFixed(1)}</p><p class="footer-note">The visual map is an educational simulation of cascade patterning, not a geographic foreclosure map.</p></div>`;
+}
+
+function renderFormula(){
+  const r=compute();
+  document.getElementById("formulaBox").innerHTML=`<div class="formula">
+RQ_ceiling = 1 − (0.45×ε + 0.35×ρ + 0.20×μ)
+EE_floor   = 0.40×φ + 0.30×σ + 0.25×ε
+FHRI_max   = 100 × (1−EE_floor) × RQ_ceiling
+
+Current run:
+RQ_ceiling = ${r.rq.toFixed(3)}
+EE_floor   = ${r.ee.toFixed(3)}
+FHRI_max   = ${r.fhri.toFixed(1)}
+</div>`;
+}
+
+function renderEvidence(){
+  document.getElementById("evidenceStatus").innerHTML=Object.entries(DATA.evidenceStatus).map(([k,v])=>`<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td></tr>`).join("");
+}
+
+function renderJournal(){
+  document.getElementById("journalQuestions").innerHTML=DATA.journalQuestions.map((q,i)=>`<div class="tool-box"><strong>Q${i+1}</strong><p>${esc(q)}</p></div>`).join("");
+}
+
+function runSimulation(){
+  state.lastResult=compute();
+  renderAll(false);
+  showTab("simulation");
+}
+
+function resetCrash(){
+  loadEra("crash");
+}
+
+function exportSummary(){
+  const r=compute();
+  const text=[
+    "EECSL — 2008 Financial Crisis Case Summary",
+    "Case: The 2008 Financial Crisis — Evidence Policy and Systemic Moral Failure",
+    "Active era: "+era(state.eraId).label+" — "+era(state.eraId).title,
+    "",
+    "Parameters:",
+    ...Object.entries(state.params).map(([k,v])=>"- "+k+": "+Number(v).toFixed(2)),
+    "",
+    "Defense controls:",
+    ...Object.entries(state.defense).map(([k,v])=>"- "+k+": "+(v?"on":"off")),
+    "",
+    "Computed model output:",
+    "- RQ_ceiling: "+r.rq.toFixed(3),
+    "- EE_floor: "+r.ee.toFixed(3),
+    "- FHRI_max: "+r.fhri.toFixed(1),
+    "- Coherence: "+(r.coherence*100).toFixed(1),
+    "- φ load: "+(r.phiLoad*100).toFixed(1),
+    "- Label: "+r.label,
+    "",
+    "Claim governance reminder:",
+    "Separate source-app values, computed model output, interpretive P-SAGE claims, and teaching prompts.",
+    "",
+    "Navigator bridge:",
+    "Use this public crisis structure privately: identify one system where signal channels still operate but the meaning of the signal may have changed. What would count as T1 repair rather than T2 stabilization?"
+  ].join("\n");
+  document.getElementById("exportBox").textContent=text;
+  showTab("export");
+}
+
+function copyNavigator(){
+  const text="Private Navigator bridge: use this public crisis structure privately. Identify one system where signal channels still operate but the meaning of the signal may have changed. What would count as T1 repair rather than T2 stabilization?";
+  navigator.clipboard.writeText(text).then(()=>document.getElementById("copyStatus").textContent="Copied.").catch(()=>document.getElementById("copyStatus").textContent="Select and copy manually.");
+}
+
+function renderAll(bind=true){
+  renderTimeline(); renderControls(); renderMap(); renderOutput(); renderFormula(); renderEvidence(); renderJournal();
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+  renderAll();
+  document.querySelectorAll(".tab-btn").forEach(btn=>btn.addEventListener("click",()=>showTab(btn.dataset.tab)));
+  document.getElementById("runBtn").addEventListener("click",runSimulation);
+  document.getElementById("resetCrash").addEventListener("click",resetCrash);
+  document.getElementById("exportBtn").addEventListener("click",exportSummary);
+  document.getElementById("copyNavigatorBtn").addEventListener("click",copyNavigator);
+});
+</script>
+</body>
+</html>

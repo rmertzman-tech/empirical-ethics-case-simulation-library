@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capability Lab Links — EECSL Phase H</title>
+<link rel="stylesheet" href="../assets/phase-h.css">
+</head>
+<body data-root-prefix="../">
+<header>
+  <div class="header-inner">
+    <div class="kicker">Empirical Ethics Case Simulation Library · Phase H</div>
+    <h1>Capability Lab Links</h1>
+    <p class="subtitle">A practical bridge page for moving from the public Capability Lab simulation into the right evidence-governed empirical case module.</p>
+    <div class="actions">
+      <a class="button" href="../index.html">Back to Library Hub</a>
+      <a class="button primary" href="cross-case-integration.html">Cross-Case Dashboard</a>
+      <a class="button" href="https://rmertzman-tech.github.io/capability-lab-public-studio/">Open Capability Lab Public Studio</a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-link" href="#bridge">Bridge Logic</a>
+    <a class="nav-link" href="#cases">Case Links</a>
+    <a class="nav-link" href="#patch">Link Panel Patch</a>
+  </div>
+</nav>
+
+<main>
+  <section id="bridge" class="hero section">
+    <h2>Keep the three layers distinct.</h2>
+    <div class="connection">
+      <div class="card">
+        <div class="small-label">Capability Lab</div>
+        <h3>Public simulation</h3>
+        <p>Use live classroom demonstrations: Schelling emergence, coordination under heat, Challenger, evidence policy, and repair design.</p>
+      </div>
+      <div class="arrow">→</div>
+      <div class="card">
+        <div class="small-label">EECSL</div>
+        <h3>Empirical case module</h3>
+        <p>Move to public case evidence, source governance, model outputs, interpretation, and repair proposals.</p>
+      </div>
+    </div>
+    <div class="notice">
+      <strong>Then:</strong>
+      <p>Use the Navigator Bridge only for private student application. Do not collect private reflections inside public case pages.</p>
+    </div>
+  </section>
+
+  <section id="cases" class="section card">
+    <h2>Open an EECSL Case from the Capability Lab</h2>
+    <div id="caseGrid" class="case-grid"></div>
+  </section>
+
+  <section id="patch" class="section card">
+    <h2>Simple Link Panel Patch</h2>
+    <p>Use this to add a small “Open EECSL Case” panel to the Capability Lab. Set the deployed EECSL base URL below, generate the snippet, then paste the section into the desired Capability Lab teaching panel.</p>
+    <label class="small-label" for="eecslBase">EECSL deployed base URL</label>
+    <input id="eecslBase" type="text" value="https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/" placeholder="https://your-github-pages-site/your-eecsl-repo/">
+    <div class="actions"><button class="button primary" id="generateLinksBtn">Generate link panel</button></div>
+    <pre id="linkCode"></pre>
+    <div class="notice warn">
+      <strong>Deployment note:</strong>
+      <p>If you choose a different GitHub repository name for EECSL, update the base URL before pasting the snippet.</p>
+    </div>
+  </section>
+</main>
+
+<script src="../shared/phase-h-integration.js"></script>
+</body>
+</html>

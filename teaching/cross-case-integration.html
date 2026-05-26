@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cross-Case Integration — EECSL Phase H</title>
+<link rel="stylesheet" href="../assets/phase-h.css">
+</head>
+<body data-root-prefix="../">
+<header>
+  <div class="header-inner">
+    <div class="kicker">Empirical Ethics Case Simulation Library · Phase H</div>
+    <h1>Cross-Case Integration</h1>
+    <p class="subtitle">A teaching dashboard that connects the four empirical case modules to chapter routes, concept threads, Capability Lab demonstrations, and private Navigator bridges.</p>
+    <div class="actions">
+      <a class="button" href="../index.html">Back to Library Hub</a>
+      <a class="button primary" href="#chapter-router">Chapter Router</a>
+      <a class="button" href="capability-lab-links.html">Capability Lab Links</a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-link" href="#cases">Cases</a>
+    <a class="nav-link" href="#matrix">Matrix</a>
+    <a class="nav-link" href="#chapter-router">Chapter Router</a>
+    <a class="nav-link" href="#concepts">Concept Threads</a>
+    <a class="nav-link" href="#toolbelt">Toolbelt</a>
+  </div>
+</nav>
+
+<main>
+  <section class="hero section">
+    <div class="kicker">Design Rule</div>
+    <h2>Simulation first. Evidence next. Private application last.</h2>
+    <p>The Capability Lab remains the public classroom simulation space. The EECSL holds empirical case modules. The Navigator remains private and student-controlled. Phase H links the three without collapsing them into one overloaded app.</p>
+    <div class="notice">
+      <strong>Pedagogical rhythm:</strong>
+      <p>Start with a live classroom simulation, open the matching EECSL case, apply the active analysis toolbelt, then route personal application into the private Navigator or course notebook.</p>
+    </div>
+  </section>
+
+  <section id="cases" class="section card">
+    <h2>Empirical Case Modules</h2>
+    <p>Each case now has a direct teaching role and an explicit bridge back to the Capability Lab.</p>
+    <div id="caseGrid" class="case-grid"></div>
+    <h3>Generated classroom move</h3>
+    <pre id="classMoveOutput">Choose “Build class move” on any case card.</pre>
+  </section>
+
+  <section id="matrix" class="section card">
+    <h2>Cross-Case Comparison Matrix</h2>
+    <div class="table-wrap">
+      <table class="matrix">
+        <thead>
+          <tr><th>Case</th><th>Chapters</th><th>Core Question</th><th>Concept Threads</th><th>Simulation</th><th>Open</th></tr>
+        </thead>
+        <tbody id="matrixBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="chapter-router" class="section card">
+    <h2>Chapter Router</h2>
+    <p>Select a chapter route to see how the Capability Lab and EECSL should work together without making the class formulaic.</p>
+    <select id="chapterSelect"></select>
+    <div id="chapterOutput" style="margin-top:12px"></div>
+  </section>
+
+  <section id="concepts" class="section card">
+    <h2>Concept Threads Across Cases</h2>
+    <div id="conceptGrid" class="concept-grid"></div>
+  </section>
+
+  <section id="toolbelt" class="section card">
+    <h2>Active Analysis Toolbelt</h2>
+    <p>This is the recommended button sequence after a public simulation run.</p>
+    <div id="toolGrid" class="tool-grid"></div>
+  </section>
+</main>
+
+<script src="../shared/phase-h-integration.js"></script>
+</body>
+</html>

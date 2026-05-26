@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GEO Group Florida — EECSL</title>
+<style>
+:root{--ink:#1f2933;--muted:#5f6b7a;--accent:#345d4e;--accent2:#8b6b3d;--good:#2f6b4f;--warn:#b5792d;--danger:#8b3a3a;--blue:#326e9f;--soft:#f4f7f4;--soft2:#f7f1e7;--line:#d9e2dc;--card:#fff;--shadow:0 12px 30px rgba(31,41,51,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fbfcfb;line-height:1.55}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header{background:radial-gradient(circle at top left,rgba(255,255,255,.13),transparent 30rem),linear-gradient(135deg,#20382f,#345d4e);color:#fff;padding:36px 20px}
+.header-inner{max-width:1180px;margin:0 auto}.kicker{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;font-weight:900;opacity:.88}
+h1{font-size:clamp(2rem,4.2vw,3.8rem);line-height:1.03;margin:.35rem 0}.subtitle{max-width:960px;font-size:1.05rem;opacity:.94}
+nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}.nav-inner{max-width:1180px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;padding:10px 18px}
+.nav-link,.button{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:8px 12px;font-weight:850;display:inline-block;cursor:pointer}.button.primary,.nav-link.active{border-color:var(--accent);background:#eef7f1;color:var(--accent)}.button.warn{border-color:var(--warn);background:#fffaf1;color:var(--warn)}
+main{max-width:1180px;margin:0 auto;padding:24px 18px 84px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.s12{grid-column:span 12}.s8{grid-column:span 8}.s6{grid-column:span 6}.s4{grid-column:span 4}.s3{grid-column:span 3}@media(max-width:900px){.s8,.s6,.s4,.s3{grid-column:span 12}}
+.card,.hero{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow)}.hero{border:2px solid var(--accent);background:linear-gradient(180deg,#fff,#f4faf6)}.card h2,.card h3{margin-top:0}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.pill{border:1px solid var(--line);border-radius:999px;padding:5px 9px;background:var(--soft);font-size:.82rem;color:var(--muted);font-weight:850}.pill.gold{background:var(--soft2)}
+.notice{border-left:5px solid var(--accent);background:#f8fbf8;border-radius:14px;padding:12px;margin:12px 0}.notice.warn{border-left-color:var(--warn);background:#fffaf1}.notice.danger{border-left-color:var(--danger);background:#fff6f6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tab-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;font-weight:850;cursor:pointer}.tab-btn.active{border-color:var(--accent);background:#eef7f1;color:var(--accent)}.tab-panel{display:none}.tab-panel.active{display:block}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px;margin-top:10px}.metric{border:1px solid var(--line);border-radius:16px;background:#fff;padding:12px}.metric strong{display:block;font-size:1.4rem}.bar{height:10px;background:#e6ece5;border-radius:999px;overflow:hidden;margin-top:7px}.bar span{display:block;height:100%;background:var(--accent)}.bar.good span{background:var(--good)}.bar.warn span{background:var(--warn)}.bar.danger span{background:var(--danger)}.bar.blue span{background:var(--blue)}
+.spectrum{display:flex;flex-direction:column;gap:8px}.row{display:grid;grid-template-columns:220px 1fr 66px;gap:10px;align-items:center;border:1px solid var(--line);border-radius:14px;background:#fff;padding:10px}.row-name strong{display:block}.track{height:14px;background:#e8eee9;border-radius:999px;overflow:hidden}.track span{display:block;height:100%;background:var(--accent)}.track.collapse span{background:var(--danger)}.track.mid span{background:var(--warn)}.track.good span{background:var(--good)}
+.sim-grid{display:grid;grid-template-columns:minmax(300px,1.15fr) minmax(275px,.85fr);gap:14px}@media(max-width:900px){.sim-grid{grid-template-columns:1fr}}
+.slider-row{display:grid;grid-template-columns:190px 1fr 58px;gap:10px;align-items:center;margin:11px 0}input[type=range]{width:100%}.toggle-row{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:9px;margin:8px 0;background:#fff}
+.output{border:1px solid var(--line);border-radius:18px;background:#fbfcfb;padding:14px;margin-top:12px}.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:10px}.tool-box{border:1px solid var(--line);border-radius:16px;background:#fff;padding:12px}.tool-box strong{display:block;margin-bottom:4px}
+.table{width:100%;border-collapse:collapse}.table th,.table td{border-top:1px solid var(--line);padding:9px;text-align:left;vertical-align:top}.table th{color:var(--accent)}
+.pathway{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}.phase{border:1px solid var(--line);border-radius:18px;background:#fff;padding:14px}.phase strong{color:var(--accent);display:block}
+.facility-map{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;border:1px solid var(--line);background:#fff;border-radius:18px;padding:10px}.node{aspect-ratio:1/1;border-radius:999px;background:#8b3a3a}.node.mid{background:#b5792d}.node.good{background:#2f6b4f}.node.blue{background:#326e9f}
+pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;max-height:330px;overflow:auto}.footer-note{color:var(--muted);font-size:.92rem}.formula{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;overflow:auto}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="kicker">Empirical Ethics Case Simulation Library · Phase F Migrated Case</div>
+    <h1>GEO Group Florida</h1>
+    <p class="subtitle"><strong>From Parasite to Commonwealth.</strong> A justice, public accountability, and moral-commons case module for teaching P-SAGE, captive-population extraction, BioBond repair design, and the Maathai bottom-up pathway.</p>
+    <div class="actions">
+      <a class="button" href="../index.html">Back to Library Hub</a>
+      <a class="button primary" href="#case-tabs">Open case tools</a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-link" href="#overview">Overview</a>
+    <a class="nav-link" href="#case-tabs">Tools</a>
+    <a class="nav-link" href="#simulation">Simulation</a>
+    <a class="nav-link" href="#evidence">Evidence</a>
+    <a class="nav-link" href="#navigator">Navigator</a>
+  </div>
+</nav>
+
+<main>
+  <section id="overview" class="hero">
+    <div class="kicker">Chapter 5 extension · Justice · Moral Commons · Capstone</div>
+    <h2>From extraction architecture to moral-commons repair</h2>
+    <div class="pill-row">
+      <span class="pill">P-SAGE</span><span class="pill">IPS</span><span class="pill">Justice</span><span class="pill">Captive population</span><span class="pill">BioBond</span><span class="pill">Maathai pathway</span><span class="pill">Moral commons</span>
+    </div>
+    <p><strong>Core public question:</strong> What would it take to move a captive-population institution from extraction architecture toward moral-commons repair?</p>
+    <p><strong>Teaching purpose:</strong> Students learn why formal operation and accreditation do not necessarily mean that the institution still serves its original rehabilitative Interpretant. They then test whether repair requires changing the ownership, financing, measurement, and public-accountability structure.</p>
+    <div class="notice">
+      <strong>Responsibility caution:</strong>
+      <p>This case is designed to shift analysis away from blaming frontline officers, program counselors, or incarcerated people and toward the ownership and governance architecture that controls mission-critical budget channels.</p>
+    </div>
+  </section>
+
+  <section class="grid" style="margin-top:16px">
+    <div class="card s8">
+      <h2>Case Snapshot</h2>
+      <p>The source app frames GEO Group Florida facilities through P-SAGE and IPS: the Sign of correctional operation remains intact, the programming budget Signal is accessed through ownership and debt structure, and the Interpretant is replaced from rehabilitation to revenue/debt-service extraction.</p>
+      <div class="metric-grid">
+        <div class="metric"><span class="pill">FHRI_max</span><strong>10.9</strong><div class="bar danger"><span style="width:10.9%"></span></div></div>
+        <div class="metric"><span class="pill">Staff turnover</span><strong>43%</strong><div class="bar danger"><span style="width:43%"></span></div></div>
+        <div class="metric"><span class="pill">Programming share</span><strong>0.6%</strong><div class="bar danger"><span style="width:3%"></span></div></div>
+        <div class="metric"><span class="pill">Debt inherited</span><strong>$1.9B</strong><div class="bar warn"><span style="width:65%"></span></div></div>
+      </div>
+    </div>
+    <div class="card s4">
+      <h2>Claim Governance</h2>
+      <div class="pill-row"><span class="pill">Source-app values</span><span class="pill">Computed output</span><span class="pill">Interpretive claim</span><span class="pill">Repair design</span><span class="pill">Verification queue</span></div>
+      <div class="notice warn"><strong>Important:</strong><p>The page preserves the source-app framing while marking the interactive panel as a teaching simulator. Source verification is required before reviewer-facing empirical use.</p></div>
+    </div>
+  </section>
+
+  <section id="case-tabs" class="card" style="margin-top:16px">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="psage">P-SAGE</button>
+      <button class="tab-btn" data-tab="simulation">Repair Simulator</button>
+      <button class="tab-btn" data-tab="ips">IPS Profile</button>
+      <button class="tab-btn" data-tab="biobond">BioBond Design</button>
+      <button class="tab-btn" data-tab="maathai">Maathai Pathway</button>
+      <button class="tab-btn" data-tab="scale">Scale-Free Proof</button>
+      <button class="tab-btn" data-tab="teaching">Teaching / Journal</button>
+      <button class="tab-btn" data-tab="evidence">Evidence Status</button>
+      <button class="tab-btn" data-tab="navigator">Navigator Bridge</button>
+      <button class="tab-btn" data-tab="export">Export</button>
+    </div>
+
+    <div id="tab-psage" class="tab-panel active">
+      <h2>P-SAGE: The Structural Finding</h2>
+      <div class="tool-grid">
+        <div class="tool-box"><strong>Sign intact</strong><p>Facilities operate. Inmates are housed. Staff are employed. DOC contracts are fulfilled. Accreditation can remain high at the Sign level.</p></div>
+        <div class="tool-box"><strong>Signal accessed</strong><p>The programming budget allocation channel is accessed through ownership structure, REIT-era dividend logic, debt inheritance, and contract architecture.</p></div>
+        <div class="tool-box"><strong>Interpretant replaced</strong><p>Original: per-diem as public investment in rehabilitation and public safety. Replaced: per-diem as contracted revenue for debt service and shareholder return.</p></div>
+        <div class="tool-box"><strong>Responsible address</strong><p>The target of repair is the ownership and governance architecture, not the frontline worker or incarcerated person living inside the structure.</p></div>
+      </div>
+    </div>
+
+    <div id="tab-simulation" class="tab-panel">
+      <h2 id="simulation">Repair Simulator</h2>
+      <p>Load the current GEO profile, a public-facility benchmark, or a low-epsilon alternative. Then toggle repair mechanisms to test what structural changes would move the case toward moral-commons repair.</p>
+      <div class="sim-grid">
+        <div>
+          <p><strong>Active profile:</strong> <span id="activeProfile"></span></p>
+          <div id="facilityMap" class="facility-map"></div>
+          <p class="footer-note">Red nodes represent extraction/harm load. Amber nodes represent unstable coordination. Green nodes represent repair capacity. Blue nodes represent Maathai-style alternatives becoming visible.</p>
+          <div id="metrics" class="metric-grid"></div>
+          <div id="resultBox"></div>
+        </div>
+        <div>
+          <h3>Load Profile</h3>
+          <div class="actions"><button class="button" onclick="loadProfile('geo-current')">GEO current</button><button class="button" onclick="loadProfile('fl-doc-public')">Public facility</button><button class="button" onclick="loadProfile('unchained')">Low-epsilon alternative</button></div>
+          <h3>IPS Parameters</h3>
+          <div id="paramControls"></div>
+          <h3>Repair Controls</h3>
+          <div id="repairControls"></div>
+          <div class="actions">
+            <button class="button primary" id="runBtn">Run repair simulation</button>
+            <button class="button" id="resetGeo">Reset GEO current</button>
+            <button class="button" id="exportBtn">Export summary</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-ips" class="tab-panel">
+      <h2>IPS Parameter Profile</h2>
+      <p>The source app gives GEO Group Florida facilities this IPS profile: ε=.650, φ=.720, ρ=.550, σ=.780, μ=.840, FHRI_max=10.9.</p>
+      <div id="formulaBox"></div>
+      <table class="table">
+        <thead><tr><th>Parameter</th><th>Source-app value</th><th>Teaching interpretation</th></tr></thead>
+        <tbody>
+          <tr><td>ε Extraction</td><td>0.650</td><td>Revenue and budget channels are routed toward debt service, management, and return rather than rehabilitation capacity.</td></tr>
+          <tr><td>φ Physical entropy</td><td>0.720</td><td>Violence, turnover, stress biology, staff instability, and substrate harm.</td></tr>
+          <tr><td>ρ Regulatory burden</td><td>0.550</td><td>Compliance and accreditation structures may document the Sign while missing the replaced Interpretant.</td></tr>
+          <tr><td>σ Morphic residue</td><td>0.780</td><td>Normalization of violence and abnormal staffing conditions as ordinary operation.</td></tr>
+          <tr><td>μ Misalignment</td><td>0.840</td><td>Occupancy and per-diem incentives dominate recidivism or rehabilitation incentives.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tab-biobond" class="tab-panel">
+      <h2>BioBond Transition Design</h2>
+      <p>The BioBond is presented as a T1 instrument because it changes the capital-access and ownership conditions, not merely the performance language inside the existing structure.</p>
+      <div class="tool-grid" id="biobondSteps"></div>
+      <div class="notice"><strong>Chapter 5 connection:</strong><p>Formal rights and formal contracts are not enough. The question is whether actual capability-supporting conditions are distributed to incarcerated people, staff, families, and communities.</p></div>
+    </div>
+
+    <div id="tab-maathai" class="tab-panel">
+      <h2>The Maathai Bottom-Up Pathway</h2>
+      <p>The case uses Maathai not as a decorative analogy but as a strategy: build and scale low-epsilon alternatives until the existing institution cannot ignore what has become measurable and viable.</p>
+      <div id="maathaiPathway" class="pathway"></div>
+      <div class="notice"><strong>Functional equivalence:</strong><p>Different communities can support the same repair pathway for different authentic reasons: public safety, human dignity, fiscal prudence, family stability, faith commitments, workforce health, or democratic accountability.</p></div>
+    </div>
+
+    <div id="tab-scale" class="tab-panel">
+      <h2>Scale-Free Comparison</h2>
+      <p>The source app argues that GEO Group Florida and PE-acquired nursing homes show nearly identical structural ceilings despite different sectors, populations, regulations, and stated missions.</p>
+      <div id="spectrum" class="spectrum"></div>
+      <div class="tool-grid" id="profileCards" style="margin-top:12px"></div>
+      <div class="notice warn"><strong>Reviewer caution:</strong><p>The scale-free claim is powerful but should remain a research hypothesis until all cross-sector data, formulas, and source documents are independently verified.</p></div>
+    </div>
+
+    <div id="tab-teaching" class="tab-panel">
+      <h2>Teaching and Journal Prompts</h2>
+      <div class="tool-grid" id="journalQuestions"></div>
+    </div>
+
+    <div id="tab-evidence" class="tab-panel">
+      <h2 id="evidence">Evidence Status</h2>
+      <table class="table"><tbody id="evidenceStatus"></tbody></table>
+      <div class="notice warn"><strong>Source verification queue:</strong><p>Before reviewer-facing empirical use, verify the numerical claims, distinguish facility-level and sector-level data, and cite each source category precisely.</p></div>
+    </div>
+
+    <div id="tab-navigator" class="tab-panel">
+      <h2 id="navigator">Navigator Bridge</h2>
+      <div class="notice"><strong>Privacy boundary:</strong><p>Do not enter private legal, criminal-justice, family, or employment details here. Use the Navigator or private notes for personal application.</p></div>
+      <div class="tool-box">
+        <strong>Private bridge prompt</strong>
+        <p>Use this public justice case privately. Identify one institution where formal mission differs from actual capability. What low-epsilon alternative could be built, supported, or scaled from your actual position?</p>
+        <button class="button primary" id="copyNavigatorBtn">Copy Navigator prompt</button> <span id="copyStatus" class="footer-note"></span>
+      </div>
+    </div>
+
+    <div id="tab-export" class="tab-panel">
+      <h2>Export Summary</h2>
+      <button class="button primary" onclick="exportSummary()">Generate export summary</button>
+      <pre id="exportBox">No export generated yet.</pre>
+    </div>
+  </section>
+
+  
+<section class="card" style="margin-top:16px">
+  <div class="kicker">Phase H Bridge</div>
+  <h2>Use this case with the Capability Lab</h2>
+  <p>Run the public classroom simulation first, then use this empirical case module for evidence-governed analysis and repair design.</p>
+  <div class="actions">
+    <a class="button" href="../teaching/cross-case-integration.html">Cross-Case Dashboard</a>
+    <a class="button" href="../teaching/capability-lab-links.html">Capability Lab Links</a>
+    <a class="button primary" href="https://rmertzman-tech.github.io/capability-lab-public-studio/">Open Capability Lab</a>
+  </div>
+</section>
+
+  <p class="footer-note">Phase F migration note: this page migrates the GEO Group Florida case into the EECSL shell with P-SAGE, IPS profile, repair simulator, BioBond design, Maathai pathway, scale-free comparison, evidence governance, and Navigator bridge.</p>
+</main>
+
+<script>
+const DATA = {
+  "slug": "geo-florida-prison",
+  "title": "GEO Group Florida",
+  "subtitle": "From Parasite to Commonwealth",
+  "chapter": "Chapter 5 extension \u00b7 Justice \u00b7 Moral Commons \u00b7 Capstone case",
+  "status": "Phase F migrated case",
+  "sourceUrl": "https://rmertzman-tech.github.io/Three-Scenario-Sims/geo-florida-prison-app.html",
+  "coreQuestion": "What would it take to move a captive-population institution from extraction architecture toward moral-commons repair?",
+  "profiles": [
+    {
+      "id": "geo-current",
+      "name": "GEO Group FL DOC",
+      "fhri": 10.9,
+      "tier": "Extraction / coordination collapse",
+      "epsilon": 0.65,
+      "phi": 0.72,
+      "rho": 0.55,
+      "sigma": 0.78,
+      "mu": 0.84,
+      "note": "Current source-app profile for GEO Group Florida DOC facilities."
+    },
+    {
+      "id": "pe-nursing",
+      "name": "PE-Acquired Nursing Home",
+      "fhri": 13.6,
+      "tier": "Cross-sector extraction benchmark",
+      "epsilon": 0.6,
+      "phi": 0.52,
+      "rho": 0.7,
+      "sigma": 0.74,
+      "mu": 0.81,
+      "note": "Cross-sector comparison used for scale-free validation."
+    },
+    {
+      "id": "home-health-proprietary",
+      "name": "Proprietary Home Health",
+      "fhri": 37.3,
+      "tier": "Low-function / high-friction",
+      "epsilon": 0.41,
+      "phi": 0.41,
+      "rho": 0.52,
+      "sigma": 0.48,
+      "mu": 0.52,
+      "note": "Mid-spectrum comparison from source-app scale-free panel."
+    },
+    {
+      "id": "fl-doc-public",
+      "name": "FL DOC Public Facility",
+      "fhri": 49.7,
+      "tier": "Near-functional public benchmark",
+      "epsilon": 0.32,
+      "phi": 0.39,
+      "rho": 0.43,
+      "sigma": 0.39,
+      "mu": 0.44,
+      "note": "Public-facility comparison from source-app scale-free panel."
+    },
+    {
+      "id": "nonprofit-home-health",
+      "name": "Non-Profit Home Health",
+      "fhri": 62.9,
+      "tier": "Mission-aligned care benchmark",
+      "epsilon": 0.21,
+      "phi": 0.28,
+      "rho": 0.33,
+      "sigma": 0.26,
+      "mu": 0.25,
+      "note": "Mission-aligned cross-sector benchmark from source-app scale-free panel."
+    },
+    {
+      "id": "unchained",
+      "name": "Unchained Industries",
+      "fhri": 71.0,
+      "tier": "Low-epsilon alternative",
+      "epsilon": 0.18,
+      "phi": 0.22,
+      "rho": 0.27,
+      "sigma": 0.21,
+      "mu": 0.19,
+      "note": "Low-epsilon alternative used in the Maathai pathway."
+    }
+  ],
+  "biobondSteps": [
+    {
+      "title": "FHRI-indexed margin ratchet",
+      "summary": "Capital cost rises when FHRI_max remains below functional thresholds and falls as coordination capacity improves.",
+      "teaching": "This changes the financial meaning of rehabilitation capacity: repair becomes economically rewarded rather than treated as cost leakage."
+    },
+    {
+      "title": "Hysteresis recovery tranche",
+      "summary": "Early funds restore the biological and staffing floor before programming expansion is expected to work.",
+      "teaching": "A damaged coordination substrate cannot use new programming funds effectively until stress, turnover, violence, and staffing instability are addressed."
+    },
+    {
+      "title": "Public Benefit Corporation identity kernel",
+      "summary": "A PBC structure changes the governance access condition by including mission-aligned fiduciary duties and affected-party representation.",
+      "teaching": "The question is not whether better people enter the same structure; the question is whether the structure changes who can govern the mission-critical channel."
+    }
+  ],
+  "maathaiPathway": [
+    {
+      "phase": "Phase 1",
+      "years": "Years 1\u20133",
+      "title": "Measurement infrastructure + ACP support",
+      "detail": "Build public FHRI measurement, family/advocate lookup tools, and regulatory comments supporting beneficial ownership disclosure."
+    },
+    {
+      "phase": "Phase 2",
+      "years": "Years 3\u20136",
+      "title": "Pilot BioBond for low-epsilon alternatives",
+      "detail": "Capitalize an already functioning alternative such as Unchained Industries and measure recidivism, employment, staff stability, and FHRI improvement."
+    },
+    {
+      "phase": "Phase 3",
+      "years": "Years 6\u201312",
+      "title": "Market pressure and contract renegotiation",
+      "detail": "Use measured alternatives to create a public evidence basis for contract standards and FHRI floors."
+    }
+  ],
+  "journalQuestions": [
+    "The correctional officer at a GEO Group Florida facility with 43% annual turnover probability experiences a Boisjoly-like dynamic: anomaly reports can be structurally absorbed without response. Where does your moral sympathy instinctively go in this case \u2014 and does P-SAGE change who you identify as the responsible party?",
+    "The source app argues that an ACA 100% accreditation score can be consistent with FHRI_max = 10.9 because ACA measures the Sign, not the Interpretant. Identify another institution where high scores on surface compliance could conceal replaced purpose.",
+    "The BioBond margin ratchet makes FHRI_max improvement financially rational. Design one element of a BioBond for a different institution or sector. What is the improvement trigger, and what structural change does it require?",
+    "Maathai planted trees. Unchained Industries employs formerly incarcerated workers at living wages. In your own structural position, what is the equivalent low-epsilon alternative you could help build, tend, or scale?",
+    "The scale-free law says the IPS mechanism can recur across sectors. In a professional field you may enter, what is the likely access mechanism through which an extraction architecture could replace the original mission?"
+  ],
+  "evidenceStatus": {
+    "Public source app": "The original Three-Scenario-Sims GEO Florida page, migrated into the EECSL case shell.",
+    "Case domain": "Private correctional facilities, Florida DOC contracting, programming budget allocation, rehabilitation capacity, staffing, recidivism, and public accountability.",
+    "Directly stated source-app values": "FHRI_max = 10.9; \u03b5=.650, \u03c6=.720, \u03c1=.550, \u03c3=.780, \u03bc=.840; staff turnover 43%; programming 0.6% of revenue; debt service + management approximately 65%; long-term debt $1.9B; recidivism increase +6.5 to +8.6%; cross-sector FHRI comparisons.",
+    "Data-source categories named in source app": "GEO Group 10-K filings, Florida DOC inspection reports, OSHA findings, AFSC Investigate, Bloomberg private-prison violence analysis, Mukherjee 2016, and In the Public Interest research briefs.",
+    "Computed model output": "FHRI_max, extraction/entropy/misalignment indicators, BioBond recovery path, scale-free comparison, and repair leverage.",
+    "Interpretive model claim": "Triadic Overwrite, P-adic access through ownership architecture, programming-budget signal capture, Sign/Interpretant gap, moral-commons repair, and Maathai bottom-up alternative-building.",
+    "Verification needed": "Verify each numerical claim against source documents; distinguish facility-level values from sector-level proxies; check legal, contract, and ownership details before reviewer-facing empirical use."
+  }
+};
+
+const state = {
+  tab: "psage",
+  profileId: "geo-current",
+  params: { epsilon:0.650, phi:0.720, rho:0.550, sigma:0.780, mu:0.840 },
+  repair: { biobond:false, hysteresis:false, pbc:false, maathai:false },
+  lastResult: null
+};
+
+function esc(x){return String(x??"").replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#039;'}[m]));}
+function clamp(v,min=0,max=1){return Math.max(min,Math.min(max,Number(v)||0));}
+function profile(id){return DATA.profiles.find(p=>p.id===id)||DATA.profiles[0];}
+
+function showTab(tab){
+  state.tab=tab;
+  document.querySelectorAll(".tab-btn").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));
+  document.querySelectorAll(".tab-panel").forEach(p=>p.classList.toggle("active",p.id==="tab-"+tab));
+}
+
+function loadProfile(id){
+  const p=profile(id);
+  state.profileId=id;
+  state.params={epsilon:p.epsilon,phi:p.phi,rho:p.rho,sigma:p.sigma,mu:p.mu};
+  state.repair={biobond:false,hysteresis:false,pbc:false,maathai:false};
+  if(id==="unchained") state.repair.maathai=true;
+  state.lastResult=null;
+  renderAll();
+  showTab("simulation");
+}
+
+function compute(){
+  let p={...state.params};
+  if(state.repair.hysteresis) {
+    p.phi=Math.max(0,p.phi-0.16);
+    p.sigma=Math.max(0,p.sigma-0.08);
+  }
+  if(state.repair.pbc) {
+    p.epsilon=Math.max(0,p.epsilon-0.13);
+    p.mu=Math.max(0,p.mu-0.18);
+  }
+  if(state.repair.biobond) {
+    p.epsilon=Math.max(0,p.epsilon-0.10);
+    p.rho=Math.max(0,p.rho-0.04);
+    p.mu=Math.max(0,p.mu-0.12);
+  }
+  if(state.repair.maathai) {
+    p.epsilon=Math.max(0,p.epsilon-0.18);
+    p.phi=Math.max(0,p.phi-0.10);
+    p.sigma=Math.max(0,p.sigma-0.14);
+    p.mu=Math.max(0,p.mu-0.16);
+  }
+  const rq = clamp(1 - (0.44*p.epsilon + 0.28*p.rho + 0.28*p.mu));
+  const ee = clamp(0.35*p.phi + 0.26*p.sigma + 0.22*p.epsilon + 0.10*p.mu);
+  const fhri = Math.max(0, Math.min(100, 100*(1-ee)*rq));
+  const programmingSignal = clamp(1 - (0.52*p.epsilon + 0.28*p.mu + 0.20*p.rho));
+  const harmLoad = clamp(0.42*p.phi + 0.28*p.sigma + 0.16*p.mu + 0.14*p.epsilon);
+  const repairLeverage = clamp(0.34*(1-p.epsilon)+0.28*(1-p.mu)+0.20*(1-p.phi)+0.18*(1-p.sigma));
+  let label="Extraction architecture";
+  if(fhri>=60) label="Low-epsilon / mission-aligned alternative";
+  else if(fhri>=45) label="Near-functional public repair range";
+  else if(fhri>=30) label="Improving but below functional threshold";
+  else if(fhri<15) label="Coordination collapse / extraction exceeds mission capacity";
+  return {p,rq,ee,fhri,programmingSignal,harmLoad,repairLeverage,label};
+}
+
+function metric(label,value,kind=""){
+  const v=Math.round(value*10)/10;
+  const width=Math.max(0,Math.min(100,v));
+  return `<div class="metric"><span class="pill">${esc(label)}</span><strong>${v}</strong><div class="bar ${kind}"><span style="width:${width}%"></span></div></div>`;
+}
+
+function renderSpectrum(){
+  document.getElementById("spectrum").innerHTML=DATA.profiles.map(p=>{
+    const cls=p.fhri<20?"collapse":p.fhri<50?"mid":"good";
+    return `<div class="row"><div class="row-name"><strong>${esc(p.name)}</strong><span class="footer-note">${esc(p.tier)}</span></div><div class="track ${cls}"><span style="width:${Math.max(3,p.fhri)}%"></span></div><strong>${p.fhri.toFixed(1)}</strong></div>`;
+  }).join("");
+}
+
+function renderProfileCards(){
+  document.getElementById("profileCards").innerHTML=DATA.profiles.map(p=>`<div class="tool-box">
+    <span class="pill">${esc(p.tier)}</span>
+    <h3>${esc(p.name)}</h3>
+    <div class="metric"><span class="pill">FHRI_max</span><strong>${p.fhri.toFixed(1)}</strong><div class="bar ${p.fhri<20?"danger":p.fhri<50?"warn":"good"}"><span style="width:${Math.max(3,p.fhri)}%"></span></div></div>
+    <p class="footer-note">${esc(p.note)}</p>
+    <button class="button" data-profile="${esc(p.id)}">Load profile</button>
+  </div>`).join("");
+  document.querySelectorAll("[data-profile]").forEach(btn=>btn.addEventListener("click",()=>loadProfile(btn.dataset.profile)));
+}
+
+function sliderRow(id,label){
+  const v=state.params[id];
+  return `<div class="slider-row"><label for="${id}">${esc(label)}</label><input id="${id}" type="range" min="0" max="1" step="0.01" value="${v}" data-param="${id}"><strong>${Number(v).toFixed(2)}</strong></div>`;
+}
+
+function renderControls(){
+  document.getElementById("activeProfile").textContent=profile(state.profileId).name;
+  const labels={epsilon:"ε Extraction",phi:"φ Physical entropy",rho:"ρ Regulatory burden",sigma:"σ Morphic residue",mu:"μ Misalignment"};
+  document.getElementById("paramControls").innerHTML=Object.keys(labels).map(id=>sliderRow(id,labels[id])).join("");
+  document.querySelectorAll("[data-param]").forEach(inp=>inp.addEventListener("input",e=>{state.params[e.target.dataset.param]=clamp(e.target.value);state.lastResult=null;renderAll(false);}));
+
+  document.getElementById("repairControls").innerHTML=[
+    ["biobond","BioBond margin ratchet","Makes extraction financially costly and FHRI improvement financially valuable."],
+    ["hysteresis","Hysteresis recovery tranche","Restores the biological and staffing floor before demanding program gains."],
+    ["pbc","PBC identity kernel","Changes governance access by including mission and affected-party representation."],
+    ["maathai","Maathai alternative-building","Scales low-epsilon alternatives until incumbent contracts face evidence-based pressure."]
+  ].map(([id,label,note])=>`<label class="toggle-row"><span><strong>${label}</strong><br><span class="footer-note">${note}</span></span><input type="checkbox" data-repair="${id}" ${state.repair[id]?"checked":""}></label>`).join("");
+  document.querySelectorAll("[data-repair]").forEach(inp=>inp.addEventListener("change",e=>{state.repair[e.target.dataset.repair]=e.target.checked;state.lastResult=null;renderAll(false);}));
+}
+
+function renderOutput(){
+  const r=compute();
+  document.getElementById("metrics").innerHTML=[
+    metric("FHRI teaching output",r.fhri,r.fhri<20?"danger":r.fhri<50?"warn":"good"),
+    metric("Programming signal",r.programmingSignal*100,r.programmingSignal>.55?"good":"warn"),
+    metric("Harm load",r.harmLoad*100,r.harmLoad>.55?"danger":"warn"),
+    metric("Repair leverage",r.repairLeverage*100,r.repairLeverage>.55?"good":"warn")
+  ].join("");
+  document.getElementById("resultBox").innerHTML=`<div class="output"><h3>${esc(r.label)}</h3><p><strong>RQ_ceiling:</strong> ${r.rq.toFixed(3)} · <strong>EE_floor:</strong> ${r.ee.toFixed(3)} · <strong>FHRI teaching output:</strong> ${r.fhri.toFixed(1)}</p><p class="footer-note">The current source-app GEO value remains FHRI_max = 10.9. This panel is an educational repair simulator until the exact source formula and facility-level data are migrated.</p></div>`;
+}
+
+function renderFacilityMap(){
+  const r=compute();
+  const count=12*8;
+  let cells="";
+  for(let i=0;i<count;i++){
+    const wave=Math.abs((Math.sin(i*17.17 + Math.round(r.harmLoad*100)*31.31)*9999)%1);
+    let cls="";
+    if(wave > 0.96-r.repairLeverage*.35) cls=" good";
+    else if(wave > 0.86-r.fhri/250) cls=" mid";
+    else if(state.repair.maathai && wave > 0.72 && wave < 0.82) cls=" blue";
+    cells += `<div class="node${cls}"></div>`;
+  }
+  document.getElementById("facilityMap").innerHTML=cells;
+}
+
+function renderFormula(){
+  const r=compute();
+  document.getElementById("formulaBox").innerHTML=`<div class="formula">
+RQ_ceiling = 1 − (0.44×ε + 0.28×ρ + 0.28×μ)
+EE_floor   = 0.35×φ + 0.26×σ + 0.22×ε + 0.10×μ
+FHRI       = 100 × (1−EE_floor) × RQ_ceiling
+
+Current teaching run:
+RQ_ceiling = ${r.rq.toFixed(3)}
+EE_floor   = ${r.ee.toFixed(3)}
+FHRI       = ${r.fhri.toFixed(1)}
+</div>`;
+}
+
+function renderBioBond(){
+  document.getElementById("biobondSteps").innerHTML=DATA.biobondSteps.map(s=>`<div class="tool-box"><strong>${esc(s.title)}</strong><p>${esc(s.summary)}</p><p class="footer-note">${esc(s.teaching)}</p></div>`).join("");
+}
+
+function renderPathway(){
+  document.getElementById("maathaiPathway").innerHTML=DATA.maathaiPathway.map(p=>`<div class="phase"><strong>${esc(p.phase)} · ${esc(p.years)}</strong><h3>${esc(p.title)}</h3><p>${esc(p.detail)}</p></div>`).join("");
+}
+
+function renderEvidence(){
+  document.getElementById("evidenceStatus").innerHTML=Object.entries(DATA.evidenceStatus).map(([k,v])=>`<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td></tr>`).join("");
+}
+
+function renderJournal(){
+  document.getElementById("journalQuestions").innerHTML=DATA.journalQuestions.map((q,i)=>`<div class="tool-box"><strong>Q${i+1}</strong><p>${esc(q)}</p></div>`).join("");
+}
+
+function runSimulation(){
+  state.lastResult=compute();
+  renderAll(false);
+  showTab("simulation");
+}
+
+function resetGeo(){
+  loadProfile("geo-current");
+}
+
+function exportSummary(){
+  const r=compute();
+  const text=[
+    "EECSL — GEO Group Florida Case Summary",
+    "Case: GEO Group Florida — From Parasite to Commonwealth",
+    "Active profile: "+profile(state.profileId).name,
+    "",
+    "Parameters:",
+    ...Object.entries(state.params).map(([k,v])=>"- "+k+": "+Number(v).toFixed(2)),
+    "",
+    "Repair controls:",
+    ...Object.entries(state.repair).map(([k,v])=>"- "+k+": "+(v?"on":"off")),
+    "",
+    "Computed teaching output:",
+    "- RQ_ceiling: "+r.rq.toFixed(3),
+    "- EE_floor: "+r.ee.toFixed(3),
+    "- FHRI teaching output: "+r.fhri.toFixed(1),
+    "- Programming signal: "+(r.programmingSignal*100).toFixed(1),
+    "- Harm load: "+(r.harmLoad*100).toFixed(1),
+    "- Repair leverage: "+(r.repairLeverage*100).toFixed(1),
+    "- Label: "+r.label,
+    "",
+    "Claim governance reminder:",
+    "Separate source-app values, computed teaching output, interpretive P-SAGE claims, and reviewer-verified empirical claims.",
+    "",
+    "Navigator bridge:",
+    "Use this public justice case privately: identify one institution where formal mission differs from actual capability. What low-epsilon alternative could be built, supported, or scaled?"
+  ].join("\n");
+  document.getElementById("exportBox").textContent=text;
+  showTab("export");
+}
+
+function copyNavigator(){
+  const text="Private Navigator bridge: use this public justice case privately. Identify one institution where formal mission differs from actual capability. What low-epsilon alternative could be built, supported, or scaled from your actual position?";
+  navigator.clipboard.writeText(text).then(()=>document.getElementById("copyStatus").textContent="Copied.").catch(()=>document.getElementById("copyStatus").textContent="Select and copy manually.");
+}
+
+function renderAll(){
+  renderSpectrum(); renderProfileCards(); renderControls(); renderOutput(); renderFacilityMap(); renderFormula(); renderBioBond(); renderPathway(); renderEvidence(); renderJournal();
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+  renderAll();
+  document.querySelectorAll(".tab-btn").forEach(btn=>btn.addEventListener("click",()=>showTab(btn.dataset.tab)));
+  document.getElementById("runBtn").addEventListener("click",runSimulation);
+  document.getElementById("resetGeo").addEventListener("click",resetGeo);
+  document.getElementById("exportBtn").addEventListener("click",exportSummary);
+  document.getElementById("copyNavigatorBtn").addEventListener("click",copyNavigator);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "higher-ed-ips",
+    "title": "Higher Education IPS",
+    "subtitle": "The Telescope on Your Own Institution",
+    "short": "Higher Education IPS",
+    "status": "Migrated in Phase D",
+    "primaryRole": "Education, economics, institutional self-study, public mission, extraction architecture, and student-facing institutional literacy.",
+    "chapters": [
+      "Chapter 5",
+      "Chapter 11",
+      "Capstone"
+    ],
+    "question": "Where does a public college sit in a wider structural spectrum, and what does the IPS model reveal about mission, debt, access, and institutional architecture?",
+    "route": "Chapter 11 primary; Chapter 5 and capstone extensions.",
+    "caseUrl": "cases/higher-education-ips.html",
+    "tags": [
+      "IPS",
+      "education",
+      "public mission",
+      "student debt",
+      "institutional design"
+    ],
+    "primaryData": "College Scorecard, IPEDS, institutional public data, and documented model formulas.",
+    "migrationNote": "Phase D migrated case with full spectrum, SPC context, exit-option finding, IPS/P-SAGE panels, teaching simulation, evidence governance, and Navigator bridge."
+  },
+  {
+    "id": "florida-nursing-homes",
+    "title": "Florida Nursing Homes and the Visible Parasite",
+    "subtitle": "Public Care, Structural Risk, and National Benchmark Evidence",
+    "short": "Florida Nursing Homes",
+    "status": "Migrated in Phase G",
+    "primaryRole": "Public care, elder-care vulnerability, staffing pressure, inspection evidence, hidden burden, national benchmarking, and repair design.",
+    "chapters": [
+      "Chapter 12",
+      "Chapter 13",
+      "Chapter 14/15",
+      "Chapter 5 extension"
+    ],
+    "question": "How can a care institution formally organized around resident protection become structurally capable of shifting risk, cost, and vulnerability onto residents, workers, families, and public systems?",
+    "route": "Chapter 12 or 13 primary; capstone synthesis; Chapter 5 rights/capabilities extension.",
+    "caseUrl": "cases/florida-nursing-homes-visible-parasite.html",
+    "tags": [
+      "nursing homes",
+      "public care",
+      "visible parasite",
+      "FHRI",
+      "benchmarks"
+    ],
+    "primaryData": "Florida nursing-home evidence, Florida AHCA where appropriate, CMS national nursing-home datasets, and national benchmark context.",
+    "migrationNote": "Phase G migrated case with measurement, repair simulator, scale obligations, SAGE scenario, T1/T2 classifier, IPS profile, evidence governance, and Navigator bridge."
+  },
+  {
+    "id": "financial-crisis-2008",
+    "title": "The 2008 Financial Crisis",
+    "subtitle": "Evidence Policy and Systemic Moral Failure",
+    "short": "2008 Financial Crisis",
+    "status": "Migrated in Phase E",
+    "primaryRole": "Governance, financial systems, regulatory capture, systemic risk, triadic overwrite, P-SAGE diagnosis, and T1/T2 repair.",
+    "chapters": [
+      "Chapter 3",
+      "Chapter 8",
+      "Chapter 12",
+      "Capstone"
+    ],
+    "question": "How can a financial system preserve operational continuity while replacing the ethical function of its warning and signal channels?",
+    "route": "Chapter 12 primary; Chapter 3 evidence policy extension; capstone systems comparison.",
+    "caseUrl": "cases/2008-financial-crisis.html",
+    "tags": [
+      "financial crisis",
+      "P-SAGE",
+      "systemic risk",
+      "evidence policy",
+      "T1/T2"
+    ],
+    "primaryData": "Public crisis documentation, regulatory history, financial-system timelines, and structured model inputs.",
+    "migrationNote": "Phase E migrated case with P-SAGE, timeline, live coherence map, IPS profile, T1/T2 recovery contrast, system-today panel, evidence governance, and Navigator bridge."
+  },
+  {
+    "id": "geo-florida",
+    "title": "GEO Group Florida",
+    "subtitle": "From Parasite to Commonwealth",
+    "short": "GEO Florida",
+    "status": "Migrated in Phase F",
+    "primaryRole": "Justice, prison privatization, captive populations, public accountability, structural repair, Maathai pathway, and commonwealth design.",
+    "chapters": [
+      "Chapter 5",
+      "Chapter 7",
+      "Chapter 10",
+      "Chapter 13/14",
+      "Capstone"
+    ],
+    "question": "What would it take to move a captive-population institution from extraction architecture toward moral-commons repair?",
+    "route": "Chapter 5 extension through rights/capabilities and functional equivalence; justice and capstone routes later.",
+    "caseUrl": "cases/geo-florida-prison.html",
+    "tags": [
+      "justice",
+      "prisons",
+      "privatization",
+      "moral commons",
+      "repair"
+    ],
+    "primaryData": "SEC filings, Florida DOC materials, OSHA or public safety data where relevant, public-interest research, and carefully labeled interpretive model claims.",
+    "migrationNote": "Phase F migrated case with P-SAGE, IPS profile, repair simulator, BioBond design, Maathai pathway, scale-free comparison, evidence governance, and Navigator bridge."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Evidence Standards",
+    "text": "Every case separates direct public data, computed model output, interpretive diagnosis, teaching prompt, and research hypothesis.",
+    "url": "methods/evidence-standards.html"
+  },
+  {
+    "title": "IPS Methodology",
+    "text": "Institutional parameter structure for examining how systems convert values, constraints, incentives, and repair capacity into outcomes.",
+    "url": "methods/ips-methodology.html"
+  },
+  {
+    "title": "P-SAGE Methodology",
+    "text": "A structured way to audit perception, suppression, agency, governance, and ethics across institutional cases.",
+    "url": "methods/psage-methodology.html"
+  },
+  {
+    "title": "FHRI / Structural Ceiling",
+    "text": "A placeholder methods page for modeling resilience, health, repair capacity, and institutional constraints without overclaiming.",
+    "url": "methods/fhri-methodology.html"
+  }
+]

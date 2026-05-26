@@ -1,0 +1,137 @@
+{
+  "slug": "higher-education-ips",
+  "title": "Higher Education IPS",
+  "subtitle": "The Telescope on Your Own Institution",
+  "chapter": "Chapter 11 \u00b7 Economics \u00b7 Higher Education Case Study",
+  "status": "Phase D migrated case",
+  "sourceUrl": "https://rmertzman-tech.github.io/Three-Scenario-Sims/he-ips-analysis-app.html",
+  "institutions": [
+    {
+      "id": "spc",
+      "name": "Saint Petersburg College",
+      "type": "Public community college",
+      "fhri": 58.6,
+      "tier": "Mission-aligned public",
+      "netPrice": "~$3,154/yr",
+      "notes": "Open access mission; validated across three independent API runs in the source app.",
+      "params": {
+        "epsilon": 0.275,
+        "phi": 0.011,
+        "rho": 0.271,
+        "sigma": 0.104,
+        "mu": 0.412
+      }
+    },
+    {
+      "id": "uf",
+      "name": "University of Florida",
+      "type": "Flagship research university",
+      "fhri": 59.0,
+      "tier": "Mission-aligned public",
+      "netPrice": "~$6,381/yr",
+      "notes": "Selective admission; roughly comparable structural capacity score to SPC in the source app.",
+      "params": null
+    },
+    {
+      "id": "miami-dade",
+      "name": "Miami Dade College",
+      "type": "Public community college",
+      "fhri": 50.5,
+      "tier": "Public mission / capacity gap",
+      "netPrice": "Similar public mission comparison",
+      "notes": "Same broad public-community-college mission as SPC but lower reported FHRI_max in the source app.",
+      "params": null
+    },
+    {
+      "id": "full-sail",
+      "name": "Full Sail University",
+      "type": "High-extraction higher education",
+      "fhri": 32.5,
+      "tier": "High-extraction higher ed",
+      "netPrice": "Student exit possible at high cost",
+      "notes": "Upper-tier high-extraction higher-ed benchmark in source app.",
+      "params": null
+    },
+    {
+      "id": "snhu",
+      "name": "Southern New Hampshire University",
+      "type": "High-extraction higher education",
+      "fhri": 30.2,
+      "tier": "High-extraction higher ed",
+      "netPrice": "Student exit possible at high cost",
+      "notes": "Upper-tier high-extraction higher-ed benchmark in source app.",
+      "params": null
+    },
+    {
+      "id": "gcu",
+      "name": "Grand Canyon University",
+      "type": "High-extraction higher education",
+      "fhri": 28.4,
+      "tier": "High-extraction higher ed",
+      "netPrice": "Student exit possible at high cost",
+      "notes": "Upper-tier high-extraction higher-ed benchmark in source app.",
+      "params": null
+    },
+    {
+      "id": "phoenix",
+      "name": "University of Phoenix",
+      "type": "For-profit higher education",
+      "fhri": 26.9,
+      "tier": "High-extraction higher ed",
+      "netPrice": "Median debt and earnings comparison in source app",
+      "notes": "Source app identifies strong Interpretant replacement pattern; comparison parameters included.",
+      "params": {
+        "epsilon": 0.732,
+        "phi": 0.305,
+        "rho": 0.767,
+        "sigma": 0.352,
+        "mu": 0.5
+      }
+    },
+    {
+      "id": "pe-nursing-home",
+      "name": "PE Nursing Home (FL)",
+      "type": "Captive-population / care sector benchmark",
+      "fhri": 13.6,
+      "tier": "Captive-population extraction",
+      "netPrice": "Exit constrained by vulnerability",
+      "notes": "Cross-sector benchmark from prior IPS audit in source app.",
+      "params": null
+    },
+    {
+      "id": "financial-system",
+      "name": "2008 Financial System",
+      "type": "Financial-system benchmark",
+      "fhri": 11.2,
+      "tier": "Captive / systemic crisis benchmark",
+      "netPrice": "Exit constrained by foreclosure/system exposure",
+      "notes": "Cross-sector benchmark from prior IPS audit in source app.",
+      "params": null
+    },
+    {
+      "id": "geo-fl",
+      "name": "GEO Group FL Corrections",
+      "type": "Corrections benchmark",
+      "fhri": 10.9,
+      "tier": "Captive-population extraction",
+      "netPrice": "Exit blocked by incarceration",
+      "notes": "Cross-sector benchmark from prior IPS audit in source app.",
+      "params": null
+    }
+  ],
+  "journalQuestions": [
+    "SPC\u2019s FHRI_max is 58.6 \u2014 close to the Functional / Mission-Aligned threshold. From your experience as a student, which parameter feels most present as a structural constraint: \u03b5, \u03c6, or \u03bc? What would a small improvement look like in practice?",
+    "The exit-option modulator says students can leave extractive higher-education institutions, although often at high cost. From the perspective of a student who has already borrowed money, how free is the exit option actually?",
+    "Miami Dade and SPC have similar public missions but an 8.1-point FHRI_max gap in the source app. What data would you request first if you were asked to investigate this gap as a governance consultant?",
+    "The source app treats the 1992 HEA amendments as a P-adic access mechanism for higher education Interpretant replacement. What would a T1 structural intervention change if it addressed the access condition rather than only regulating downstream symptoms?",
+    "Looking toward your future sector, what institutional signals would suggest that an employer or professional setting is shifting from mission to extraction?"
+  ],
+  "evidenceStatus": {
+    "Public data sources named in source app": "College Scorecard API, IPEDS Finance survey, prior IPS audits for cross-sector benchmarks.",
+    "Date / run note from source app": "Higher-education values described as live April 2026 API runs; IPEDS Finance values described as embedded 2022\u201323 where used.",
+    "Directly measured or source-reported": "Institutional spending categories, median debt, median earnings, repayment, completion and enrollment-related fields, where available.",
+    "Computed model output": "FHRI_max and IPS parameters \u03b5, \u03c6, \u03c1, \u03c3, \u03bc.",
+    "Interpretive model claim": "Mission alignment, extraction floor, exit-option modulator, and Interpretant replacement.",
+    "Verification needed": "Replicate exact API pulls, formula implementation, missing-data handling, and cross-sector benchmark derivation before using as reviewer-facing empirical proof."
+  }
+}

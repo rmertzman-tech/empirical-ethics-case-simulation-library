@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Empirical Ethics Case Simulation Library</title>
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/phase-h.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="kicker">Ethics Beyond Boundaries</div>
+    <h1>Empirical Ethics Case Simulation Library</h1>
+    <p class="subtitle">A public empirical case-study atlas for simulations, structural ethics, evidence governance, repair design, and teaching routes. The Library remains separate from the Navigator and connects outward to the Capability Lab.</p>
+    <div class="actions">
+      <a class="button primary" href="#cases">Open Case Library</a>
+      <a class="button" href="#routes">Chapter Teaching Routes</a>
+      <a class="button" href="#methods">Methods and Evidence Standards</a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-link" href="#mission">Mission</a>
+    <a class="nav-link" href="#cases">Cases</a>
+    <a class="nav-link" href="#routes">Teaching Routes</a>
+    <a class="nav-link" href="#methods">Methods</a>
+    <a class="nav-link" href="#evidence">Evidence Standards</a>
+    <a class="nav-link" href="#navigator">Navigator Boundary</a>
+  </div>
+</nav>
+
+<main>
+
+<section id="phase-h-integration" class="section hero">
+  <div class="kicker">Phase H Integration</div>
+  <h2>Cross-case integration and Capability Lab links are now active.</h2>
+  <p>The EECSL now includes a cross-case teaching dashboard and a Capability Lab bridge page. Use the Capability Lab for public classroom simulations, then open the matching EECSL empirical case for evidence-governed analysis.</p>
+  <div class="actions">
+    <a class="button primary" href="teaching/cross-case-integration.html">Open Cross-Case Dashboard</a>
+    <a class="button" href="teaching/capability-lab-links.html">Open Capability Lab Links</a>
+    <a class="button" href="https://rmertzman-tech.github.io/capability-lab-public-studio/">Open Capability Lab Public Studio</a>
+  </div>
+  <div class="notice">
+    <strong>Boundary rule:</strong>
+    <p>Capability Lab = public simulation. EECSL = public empirical case study. Navigator = private student application.</p>
+  </div>
+</section>
+
+  <section id="mission" class="section hero">
+    <div class="kicker">Phase C Landing Page and Library Hub</div>
+    <h2>Public empirical cases for teaching structural ethics.</h2>
+    <p>The EECSL is the public empirical case-study layer of the EBB ecosystem. It hosts reusable simulations and structured case studies that help students connect ethical theory to real institutions, public data, model assumptions, and repair design.</p>
+    <div class="layer-stack">
+      <div class="layer"><strong>Capability Lab</strong><p>Public classroom simulations and chapter demonstrations.</p></div>
+      <div class="layer"><strong>EECSL</strong><p>Public empirical case-study simulations and evidence-facing modules.</p></div>
+      <div class="layer"><strong>Navigator</strong><p>Private, student-controlled application and reflection.</p></div>
+    </div>
+    <div class="notice">
+      <strong>Design rule:</strong>
+      <p>Do not overload the Navigator. The Library should remain a public empirical case atlas with direct Canvas links and standalone case modules.</p>
+    </div>
+  </section>
+
+  <section id="cases" class="section">
+    <div class="card">
+      <h2>Case Library</h2>
+      <p>Each case should be standalone enough to teach directly, but connected through shared methods, glossary, evidence standards, and chapter routing.</p>
+      <div class="search-row">
+        <input id="caseSearch" type="search" placeholder="Search cases by chapter, topic, or method...">
+        <a class="button" href="cases/shared-case-shell.html">Open shared shell</a>
+      </div>
+      <div id="caseGrid" class="case-grid"></div>
+    </div>
+  </section>
+
+  <section id="quickView" class="grid"></section>
+
+  <section id="routes" class="section">
+    <div class="card">
+      <h2>Chapter Teaching Routes</h2>
+      <p>These routes show how empirical cases can be reused across the EBB course without making every chapter feel formulaic.</p>
+      <div id="routeGrid" class="route-grid"></div>
+    </div>
+  </section>
+
+  <section id="methods" class="section">
+    <div class="card">
+      <h2>Methods and Standards</h2>
+      <p>These pages are placeholders in Phase C. They define the reviewer-facing structure that later case migrations should use.</p>
+      <div id="methodGrid" class="method-grid"></div>
+    </div>
+  </section>
+
+  <section id="evidence" class="section grid">
+    <div class="card s8">
+      <h2>Claim Governance</h2>
+      <table class="claim-table">
+        <thead><tr><th>Claim Type</th><th>Meaning</th><th>Student Question</th></tr></thead>
+        <tbody>
+          <tr><td>Direct public data</td><td>A value reported by a public source or dataset.</td><td>Where did the number come from?</td></tr>
+          <tr><td>Computed model output</td><td>A score or result calculated from stated formulas.</td><td>How was it computed?</td></tr>
+          <tr><td>Interpretive model claim</td><td>An ethical or structural diagnosis drawn from the model.</td><td>What assumptions connect the result to the interpretation?</td></tr>
+          <tr><td>Teaching prompt</td><td>A question designed for learning.</td><td>What is this prompt helping me notice?</td></tr>
+          <tr><td>Research hypothesis</td><td>A proposed pattern needing further verification.</td><td>What future evidence would test this?</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card s4">
+      <h2>Evidence Status Template</h2>
+      <p>Each case page should show:</p>
+      <div class="pill-row">
+        <span class="pill">Sources</span>
+        <span class="pill">Date retrieved</span>
+        <span class="pill">Directly measured</span>
+        <span class="pill">Modeled / inferred</span>
+        <span class="pill">Confidence</span>
+        <span class="pill">Verification needed</span>
+      </div>
+      <div class="notice warn">
+        <strong>Caution:</strong>
+        <p>Simulation results are prompts for disciplined ethical analysis, not automatic moral proof.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="navigator" class="section hero">
+    <h2>Navigator Boundary</h2>
+    <p>The EECSL can include Navigator bridge prompts, but it should not become the Navigator. Students should not enter private personal details into public case pages.</p>
+    <div class="notice">
+      <strong>Standard bridge language:</strong>
+      <p>Use this public case structure privately. Do not enter private personal details into this public case page. Use the Navigator, private notes, or your course notebook for personal application.</p>
+    </div>
+  </section>
+
+  <p class="footer-note">EECSL Phase C — Landing Page and Library Hub. Next: migrate the first empirical case into the shared case shell.</p>
+</main>
+
+<script src="shared/hub.js"></script>
+</body>
+</html>

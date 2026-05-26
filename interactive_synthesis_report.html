@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Architecture of Agency: Synthesis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <!-- Chosen Palette: Warm Institutional Neutral -->
+    <!-- Application Structure Plan: The SPA is structured as a progressive narrative dashboard. It begins with the Synthesis (the proposed manuscript outline) to give the user the "big picture" immediately. It then drills down into the three scales of the theory: Societal (Macro), Biological (Meso), and Formal (Micro). This structure was chosen because understanding the unified relationship is the primary user goal, making it easier to digest the dense, domain-specific details of the individual papers by placing them in a contextual hierarchy. -->
+    <!-- Visualization & Content Choices: 
+         1. Synthesis -> Goal: Organize -> Interactive Accordion (HTML/JS) -> Justification: Allows user to explore the proposed book outline without overwhelming the screen.
+         2. Physics of Flourishing -> Goal: Change/Compare -> Line Chart (Chart.js) -> Justification: Visualizes the abstract concept of "Entropy vs. Coherence" over time under different interventions, making the philosophical argument concrete.
+         3. Agential Material -> Goal: Compare -> Radar Chart (Chart.js) -> Justification: Effectively compares multi-dimensional biological states (Baseline, Perturbed, Dark Coherence) across variables like Bioelectricity and Memory.
+         4. Principia Agentialis -> Goal: Inform/Organize -> Progress Grid (HTML/Tailwind) -> Justification: Displays the categorical status of the 5 mathematical proofs clearly without relying on SVG or external diagramming tools.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcfc;
+            color: #334155;
+        }
+        h1, h2, h3, h4, .serif {
+            font-family: 'Merriweather', serif;
+        }
+        
+        /* REQUIRED CHART CONTAINER STYLING */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 60vh;
+            max-height: 500px;
+            min-height: 300px;
+            padding: 1rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .nav-link {
+            transition: all 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #0369a1; /* Sky 700 */
+            border-bottom: 2px solid #0369a1;
+        }
+        
+        /* Custom UI Elements using standard HTML/CSS */
+        .status-badge-complete { background-color: #dcfce7; color: #166534; padding: 2px 8px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+        .status-badge-ongoing { background-color: #fef08a; color: #854d0e; padding: 2px 8px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+        .status-badge-near { background-color: #e0f2fe; color: #075985; padding: 2px 8px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-slate-800 serif">Architecture of Agency</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#synthesis" class="nav-link text-slate-600 font-medium">Synthesis</a>
+                    <a href="#macro" class="nav-link text-slate-600 font-medium">Macro (Society)</a>
+                    <a href="#meso" class="nav-link text-slate-600 font-medium">Meso (Biology)</a>
+                    <a href="#micro" class="nav-link text-slate-600 font-medium">Micro (Formal)</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero -->
+    <header class="bg-slate-50 py-16 border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">A Unified Theory of Human Flourishing</h1>
+            <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                Evaluating the conceptual throughline connecting the mathematical foundations of <span class="italic">Principia Agentialis</span>, the biological mechanisms of <span class="italic">Agential Material</span>, and the societal imperatives outlined in <span class="italic">The Physics of Flourishing</span>.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+
+        <!-- SECTION: Synthesis & Outline -->
+        <section id="synthesis" class="scroll-mt-20">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4 border-b-2 border-sky-600 pb-2 inline-block">The Proposed Manuscript</h2>
+                <p class="text-slate-600 text-lg">
+                    This section presents the synthesized architecture of the three distinct reports. By combining the formal proofs, biological mechanisms, and societal ethics, we derive a comprehensive manuscript outline. Click on the manuscript parts below to explore how the individual papers interlock to form a complete thesis on re-engineering moral agency.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow border border-slate-200 overflow-hidden" id="accordion-container">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- SECTION: Macro (Physics of Flourishing) -->
+        <section id="macro" class="scroll-mt-20">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-amber-700 mb-4 border-b-2 border-amber-600 pb-2 inline-block">1. The Macro Scale: Societal Entropy</h2>
+                <p class="text-slate-600 text-lg">
+                    Derived from <em>"The Physics of Flourishing"</em>, this section examines the crisis of fragmented explanations. It visualizes the core argument: moral agency is a fragile thermodynamic achievement. The chart below simulates the theoretical impact of "BioBonds" (predictable institutional support) on a population's internal entropy and executive function over time. Use the toggle to see the "Coherence Dividend".
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-amber-50 p-6 rounded-lg border border-amber-100">
+                        <h3 class="text-xl font-semibold text-amber-900 mb-2">The Coherence Paradigm</h3>
+                        <p class="text-sm text-amber-800 mb-4">
+                            Human agency is not an automatic default. Excessive environmental entropy leads to "system failures" (burnout, polarization).
+                        </p>
+                        <button id="toggleInterventionBtn" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded transition-colors">
+                            Simulate BioBond Intervention
+                        </button>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                        <h4 class="font-bold text-slate-800 mb-2">Key Takeaways:</h4>
+                        <ul class="list-disc pl-5 text-sm text-slate-600 space-y-2">
+                            <li><strong>Thermodynamic view:</strong> Treat moral failures as system failures.</li>
+                            <li><strong>BioBonds:</strong> Lower the "temperature" of a population.</li>
+                            <li><strong>Adaptive Moral Commonwealth:</strong> A society engineered to protect the Temporal Commons.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-2">
+                    <div class="chart-container">
+                        <canvas id="entropyChart"></canvas>
+                    </div>
+                    <p class="text-center text-sm text-slate-500 mt-2 italic">Figure 1: Simulated interaction between Environmental Stress (Entropy) and Executive Function, demonstrating the Coherence Dividend.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Meso (Agential Material) -->
+        <section id="meso" class="scroll-mt-20">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-emerald-700 mb-4 border-b-2 border-emerald-600 pb-2 inline-block">2. The Meso Scale: Agential Material</h2>
+                <p class="text-slate-600 text-lg">
+                    Drawn from <em>"Agential Material and Coherence Construction"</em>, this section dives into the biological substrate. It explores how cells and tissues act as "nested agents" utilizing bioelectricity to maintain target morphologies (UCP V5.02). The interactive radar chart allows you to compare the multidimensional state of agential material under baseline conditions versus perturbations and "Dark Coherence" (false recovery).
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                 <div class="lg:col-span-2 order-2 lg:order-1">
+                    <div class="chart-container">
+                        <canvas id="morphoChart"></canvas>
+                    </div>
+                     <p class="text-center text-sm text-slate-500 mt-2 italic">Figure 2: Morphogenetic Control Variables across different systemic states. Notice the hidden instability in Dark Coherence.</p>
+                </div>
+
+                <div class="lg:col-span-1 order-1 lg:order-2 space-y-6">
+                    <div class="bg-emerald-50 p-6 rounded-lg border border-emerald-100">
+                        <h3 class="text-xl font-semibold text-emerald-900 mb-2">Select System State</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-emerald-100 transition">
+                                <input type="radio" name="stateSelect" value="0" class="text-emerald-600 focus:ring-emerald-500" checked>
+                                <span class="text-emerald-800 font-medium">Baseline / Healthy</span>
+                            </label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-emerald-100 transition">
+                                <input type="radio" name="stateSelect" value="1" class="text-emerald-600 focus:ring-emerald-500">
+                                <span class="text-emerald-800 font-medium">Severe Perturbation (Stress)</span>
+                            </label>
+                            <label class="flex items-center space-x-2 cursor-pointer p-2 rounded hover:bg-emerald-100 transition">
+                                <input type="radio" name="stateSelect" value="2" class="text-emerald-600 focus:ring-emerald-500">
+                                <span class="text-emerald-800 font-medium">Dark Coherence (False Repair)</span>
+                            </label>
+                        </div>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                        <h4 class="font-bold text-slate-800 mb-2">The Agency Coherence Principle (ACP)</h4>
+                        <p class="text-sm text-slate-600">
+                            Transformations are justified only when they preserve the agent's capacity for <em>future</em> coherent action, avoiding the trap of Dark Coherence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Micro (Principia Agentialis) -->
+        <section id="micro" class="scroll-mt-20">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-sky-700 mb-4 border-b-2 border-sky-600 pb-2 inline-block">3. The Micro Scale: Formal Proofs</h2>
+                <p class="text-slate-600 text-lg">
+                    Based on <em>"Principia Agentialis" (May 2026)</em>, this section tracks the rigorous mathematical formalization of the theory. Using category theory, sheaf theory, and Lean 4, this research program encodes the principles of agency into a dual-aspect architecture. The grid below organizes the five primary formal specifications and their current developmental status within the research program.
+                </p>
+            </div>
+
+            <div class="bg-slate-50 rounded-xl p-8 border border-slate-200 shadow-inner">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="proof-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center mt-12">
+        <p class="text-sm">Synthesized from source reports: The Physics of Flourishing, Agential Material, and Principia Agentialis.</p>
+        <p class="text-xs mt-2">Interactive Document Architecture &copy; 2026</p>
+    </footer>
+
+    <!-- Application Logic -->
+    <script>
+        // --- DATA STATE ---
+        const manuscriptOutline = [
+            {
+                title: "Part I: The Thermodynamic Crisis of Meaning (The 'Why')",
+                source: "The Physics of Flourishing",
+                content: "Establishes the societal context. Analyzes the failure of domain-bound explanations for burnout and polarization. Introduces the 'Coherence Paradigm' replacing moral judgment with thermodynamic system analysis. Defines the Temporal Commons."
+            },
+            {
+                title: "Part II: The Mathematics of the Agent (The 'Formalism')",
+                source: "Principia Agentialis",
+                content: "Lays the rigorous foundation. Uses category theory and the Generalized Holographic Principle to define the Functor Laws of subjective physics. Introduces the Institutional Interaction Hamiltonian (H_int) to model how environments dictate possible coherent action."
+            },
+            {
+                title: "Part III: Agential Material & Biological Substrates (The 'Mechanism')",
+                source: "Agential Material and Coherence Construction",
+                content: "Bridges math to biology using Michael Levin's frameworks. Details the morphogenetic control layer (UCP V5.02) showing how nested cellular agents use bioelectricity and pattern memory to maintain target morphologies against perturbations."
+            },
+            {
+                title: "Part IV: Engineering the Moral Commonwealth (The 'Application')",
+                source: "Synthesis / All Documents",
+                content: "The prescriptive conclusion. Merges the Agency Coherence Principle (ACP) with societal design. Proposes 'BioBonds' as thermodynamic cooling mechanisms to prevent 'Dark Coherence' in institutions, aiming for the Coherence Dividend."
+            }
+        ];
+
+        const proofStatus = [
+            { id: "P1", title: "Functor Laws of Subjective Physics", status: "Near-Closure", class: "status-badge-near", desc: "Maps subjective state spaces to physical dynamics via Grothendieck topologies." },
+            { id: "P2", title: "Competence Persistence", status: "Near-Closure", class: "status-badge-near", desc: "Rigorous definition of morphological stability under stress propagation." },
+            { id: "P3", title: "Institutional Interaction Hamiltonian", status: "Ongoing", class: "status-badge-ongoing", desc: "Defines H_int governing coupling between agential boundaries and institutional fields." },
+            { id: "P4", title: "Lean 4 Macro-Architecture Encoding", status: "Complete", class: "status-badge-complete", desc: "Mechanized proof architecture utilizing Mathlib4 structures and category theory." },
+            { id: "P5", title: "Dual-Aspect Phenomenological Bridge", status: "Complete", class: "status-badge-complete", desc: "Maps Active Inference generative models to UCP thermodynamic variables." }
+        ];
+
+        // --- UI INITIALIZATION: ACCORDION (Synthesis) ---
+        function renderAccordion() {
+            const container = document.getElementById('accordion-container');
+            let html = '';
+            manuscriptOutline.forEach((item, index) => {
+                html += `
+                    <div class="border-b border-slate-200 last:border-b-0">
+                        <button class="w-full text-left px-6 py-4 bg-white hover:bg-slate-50 focus:outline-none flex justify-between items-center accordion-btn" onclick="toggleAccordion(${index})">
+                            <div>
+                                <span class="font-bold text-slate-800 text-lg">${item.title}</span>
+                                <span class="ml-3 text-xs font-semibold text-sky-600 bg-sky-50 px-2 py-1 rounded tracking-wide uppercase border border-sky-100">Source: ${item.source}</span>
+                            </div>
+                            <span class="text-slate-400 transform transition-transform duration-200" id="icon-${index}">▼</span>
+                        </button>
+                        <div class="accordion-content bg-slate-50 px-6" id="content-${index}">
+                            <p class="py-4 text-slate-600 border-t border-slate-100">${item.content}</p>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        window.toggleAccordion = function(index) {
+            const content = document.getElementById(`content-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+            
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                // Close others
+                document.querySelectorAll('.accordion-content').forEach(el => el.style.maxHeight = null);
+                document.querySelectorAll('[id^="icon-"]').forEach(el => el.style.transform = 'rotate(0deg)');
+                
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+            }
+        };
+
+        // --- UI INITIALIZATION: PROOF GRID (Micro) ---
+        function renderProofs() {
+            const container = document.getElementById('proof-grid');
+            let html = '';
+            proofStatus.forEach(proof => {
+                html += `
+                    <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-slate-800 flex items-center">
+                                <span class="text-sky-600 mr-2">${proof.id}.</span> ${proof.title}
+                            </h4>
+                            <span class="${proof.class}">${proof.status}</span>
+                        </div>
+                        <p class="text-sm text-slate-600 flex-grow">${proof.desc}</p>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        // --- CHART 1: ENTROPY VS COHERENCE (Macro) ---
+        let entropyChartInstance = null;
+        let isInterventionActive = false;
+
+        function initEntropyChart() {
+            const ctx = document.getElementById('entropyChart').getContext('2d');
+            
+            const labels = ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5', 'Year 6', 'Year 7'];
+            const baselineEntropy = [30, 45, 60, 75, 85, 90, 95];
+            const baselineExecFunc = [80, 70, 50, 35, 20, 15, 10];
+            
+            const interventionEntropy = [30, 45, 40, 35, 30, 25, 20];
+            const interventionExecFunc = [80, 70, 75, 85, 92, 95, 98];
+
+            entropyChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'System Entropy (Stress)',
+                            data: baselineEntropy,
+                            borderColor: '#ef4444', // Red
+                            backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                            borderWidth: 3,
+                            tension: 0.4,
+                            fill: true
+                        },
+                        {
+                            label: 'Executive Function (Agency)',
+                            data: baselineExecFunc,
+                            borderColor: '#0ea5e9', // Sky
+                            backgroundColor: 'rgba(14, 165, 233, 0.1)',
+                            borderWidth: 3,
+                            tension: 0.4,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) { label += ': '; }
+                                    if (context.parsed.y !== null) { label += context.parsed.y + ' units'; }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            title: { display: true, text: 'Thermodynamic Level' }
+                        }
+                    }
+                }
+            });
+
+            document.getElementById('toggleInterventionBtn').addEventListener('click', function() {
+                isInterventionActive = !isInterventionActive;
+                
+                if (isInterventionActive) {
+                    this.textContent = "Remove BioBonds (Revert to Baseline)";
+                    this.classList.replace('bg-amber-600', 'bg-slate-600');
+                    this.classList.replace('hover:bg-amber-700', 'hover:bg-slate-700');
+                    
+                    entropyChartInstance.data.datasets[0].data = interventionEntropy;
+                    entropyChartInstance.data.datasets[1].data = interventionExecFunc;
+                } else {
+                    this.textContent = "Simulate BioBond Intervention";
+                    this.classList.replace('bg-slate-600', 'bg-amber-600');
+                    this.classList.replace('hover:bg-slate-700', 'hover:bg-amber-700');
+
+                    entropyChartInstance.data.datasets[0].data = baselineEntropy;
+                    entropyChartInstance.data.datasets[1].data = baselineExecFunc;
+                }
+                entropyChartInstance.update();
+            });
+        }
+
+        // --- CHART 2: AGENTIAL MATERIAL RADAR (Meso) ---
+        let morphoChartInstance = null;
+
+        function initMorphoChart() {
+            const ctx = document.getElementById('morphoChart').getContext('2d');
+            
+            // Data maps to: Bioelectric Integrity, Pattern Memory, Recovery Capacity, Morphological Stability, Plasticity
+            const statesData = [
+                { // 0: Baseline
+                    data: [90, 85, 95, 90, 70],
+                    color: 'rgba(16, 185, 129, 0.6)', // Emerald
+                    borderColor: '#10b981'
+                },
+                { // 1: Severe Perturbation
+                    data: [30, 40, 20, 35, 90], // High plasticity, but collapsing stability
+                    color: 'rgba(239, 68, 68, 0.6)', // Red
+                    borderColor: '#ef4444'
+                },
+                { // 2: Dark Coherence
+                    data: [80, 20, 10, 85, 10], // Looks stable, but zero memory/recovery/plasticity
+                    color: 'rgba(71, 85, 105, 0.6)', // Slate/Dark
+                    borderColor: '#475569'
+                }
+            ];
+
+            morphoChartInstance = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        ['Bioelectric', 'Integrity'], 
+                        ['Pattern', 'Memory'], 
+                        ['Recovery', 'Capacity'], 
+                        ['Morphological', 'Stability'], 
+                        ['Safe', 'Plasticity']
+                    ],
+                    datasets: [{
+                        label: 'Current System State',
+                        data: statesData[0].data,
+                        backgroundColor: statesData[0].color,
+                        borderColor: statesData[0].borderColor,
+                        borderWidth: 2,
+                        pointBackgroundColor: statesData[0].borderColor
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(0,0,0,0.1)' },
+                            grid: { color: 'rgba(0,0,0,0.1)' },
+                            pointLabels: {
+                                font: { size: 12, family: "'Inter', sans-serif" },
+                                color: '#334155'
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 100,
+                            ticks: { display: false } // Hide numbers on web
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                title: function(context) { 
+                                    const label = context[0].label || '';
+                                    return Array.isArray(label) ? label.join(' ') : String(label).replace(/,/g, ' '); 
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Radio button listeners
+            document.querySelectorAll('input[name="stateSelect"]').forEach((elem) => {
+                elem.addEventListener('change', function(event) {
+                    const val = parseInt(event.target.value);
+                    morphoChartInstance.data.datasets[0].data = statesData[val].data;
+                    morphoChartInstance.data.datasets[0].backgroundColor = statesData[val].color;
+                    morphoChartInstance.data.datasets[0].borderColor = statesData[val].borderColor;
+                    morphoChartInstance.data.datasets[0].pointBackgroundColor = statesData[val].borderColor;
+                    morphoChartInstance.update();
+                });
+            });
+        }
+
+        // --- INITIALIZE ALL ---
+        document.addEventListener('DOMContentLoaded', () => {
+            renderAccordion();
+            renderProofs();
+            initEntropyChart();
+            initMorphoChart();
+            
+            // Open the first accordion item by default
+            setTimeout(() => { toggleAccordion(0); }, 100);
+        });
+
+    </script>
+</body>
+</html>
