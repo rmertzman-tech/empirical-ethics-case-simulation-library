@@ -27,6 +27,15 @@ main{max-width:1180px;margin:0 auto;padding:24px 18px 84px}.grid{display:grid;gr
 .pathway{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}.phase{border:1px solid var(--line);border-radius:18px;background:#fff;padding:14px}.phase strong{color:var(--accent);display:block}
 .facility-map{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;border:1px solid var(--line);background:#fff;border-radius:18px;padding:10px}.node{aspect-ratio:1/1;border-radius:999px;background:#8b3a3a}.node.mid{background:#b5792d}.node.good{background:#2f6b4f}.node.blue{background:#326e9f}
 pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;max-height:330px;overflow:auto}.footer-note{color:var(--muted);font-size:.92rem}.formula{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;overflow:auto}
+
+.fall-badge{display:inline-block;border:1px solid var(--accent);background:#eef7f1;color:var(--accent);border-radius:999px;padding:5px 10px;font-size:.78rem;font-weight:900;margin:3px}
+.fall-badge.warn{border-color:var(--warn);background:#fffaf1;color:var(--warn)}
+.fall-badge.blue{border-color:#326e9f;background:#f1f7fd;color:#326e9f}
+.fall-route-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:14px;box-shadow:0 8px 20px rgba(31,41,51,.05)}
+.fall-route-card h3{margin-top:0}.fall-status{border-left:5px solid var(--accent);background:#f8fbf8;border-radius:14px;padding:11px;margin:10px 0}
+.fall-status.warn{border-left-color:var(--warn);background:#fffaf1}
+.fall-table td,.fall-table th{vertical-align:top}
+
 </style>
 </head>
 <body>
@@ -74,6 +83,15 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
       <p>This case is designed to shift analysis away from blaming frontline officers, program counselors, or incarcerated people and toward the ownership and governance architecture that controls mission-critical budget channels.</p>
     </div>
   </section>
+
+<section class="card">
+  <div class="kicker">Phase M Fall Use Status</div>
+  <h2>Chapters 8 and 11</h2>
+  <p><span class="fall-badge">Classroom-ready</span> <span class="fall-badge warn">Reviewer-facing verification pending</span></p>
+  <p><strong>Current route:</strong> Use with the GEO Group Florida Lab for Parasitic Institution, Invisible Ledger, captive populations, public-private governance, and repair design.</p>
+</section>
+
+
 
   <section class="grid" style="margin-top:16px">
     <div class="card s8">
@@ -183,7 +201,7 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
     </div>
 
     <div id="tab-teaching" class="tab-panel">
-      <h2>Teaching and Journal Prompts</h2>
+      <h2>Suggested Teaching Prompts</h2>
       <div class="tool-grid" id="journalQuestions"></div>
     </div>
 
@@ -230,8 +248,8 @@ const DATA = {
   "slug": "geo-florida-prison",
   "title": "GEO Group Florida",
   "subtitle": "From Parasite to Commonwealth",
-  "chapter": "Chapter 5 extension \u00b7 Justice \u00b7 Moral Commons \u00b7 Capstone case",
-  "status": "Phase F migrated case",
+  "chapter": "Chapters 8 and 11 · GEO Group Florida Lab · Parasitic Institution · Invisible Ledger",
+  "status": "Phase M fall-ready case · classroom-ready teaching proxy",
   "sourceUrl": "https://rmertzman-tech.github.io/Three-Scenario-Sims/geo-florida-prison-app.html",
   "coreQuestion": "What would it take to move a captive-population institution from extraction architecture toward moral-commons repair?",
   "profiles": [

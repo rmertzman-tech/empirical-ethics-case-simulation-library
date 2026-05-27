@@ -28,6 +28,15 @@ main{max-width:1180px;margin:0 auto;padding:24px 18px 84px}.grid{display:grid;gr
 .sage-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.sage-step{border:1px solid var(--line);border-radius:18px;background:#fff;padding:14px}.letter{width:42px;height:42px;border-radius:999px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.3rem;margin-bottom:8px}
 .spectrum{display:flex;flex-direction:column;gap:8px}.row{display:grid;grid-template-columns:240px 1fr 76px;gap:10px;align-items:center;border:1px solid var(--line);border-radius:14px;background:#fff;padding:10px}.row-name strong{display:block}.track{height:14px;background:#e8eee9;border-radius:999px;overflow:hidden}.track span{display:block;height:100%;background:var(--accent)}.track.collapse span{background:var(--danger)}.track.mid span{background:var(--warn)}.track.good span{background:var(--good)}
 pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;max-height:330px;overflow:auto}.footer-note{color:var(--muted);font-size:.92rem}.formula{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;overflow:auto}
+
+.fall-badge{display:inline-block;border:1px solid var(--accent);background:#eef7f1;color:var(--accent);border-radius:999px;padding:5px 10px;font-size:.78rem;font-weight:900;margin:3px}
+.fall-badge.warn{border-color:var(--warn);background:#fffaf1;color:var(--warn)}
+.fall-badge.blue{border-color:#326e9f;background:#f1f7fd;color:#326e9f}
+.fall-route-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:14px;box-shadow:0 8px 20px rgba(31,41,51,.05)}
+.fall-route-card h3{margin-top:0}.fall-status{border-left:5px solid var(--accent);background:#f8fbf8;border-radius:14px;padding:11px;margin:10px 0}
+.fall-status.warn{border-left-color:var(--warn);background:#fffaf1}
+.fall-table td,.fall-table th{vertical-align:top}
+
 </style>
 </head>
 <body>
@@ -75,6 +84,15 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
       <p>This case should not blame nurses, aides, families, residents, or individual regulators. It examines ownership, capital, staffing, incentive, and information structures that can absorb care capacity before it reaches vulnerable people.</p>
     </div>
   </section>
+
+<section class="card">
+  <div class="kicker">Phase M Fall Use Status</div>
+  <h2>Chapters 8, 11, and 13</h2>
+  <p><span class="fall-badge">Classroom-ready with verification note</span> <span class="fall-badge warn">Teaching proxy — reconcile formulas before reviewer use</span></p>
+  <p><strong>Current route:</strong> Use with the Visible Parasite Lab for hidden extraction in care systems, vulnerability, ownership opacity, governance, and repair.</p>
+</section>
+
+
 
   <section class="grid" style="margin-top:16px">
     <div class="card s8">
@@ -190,7 +208,7 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
     </div>
 
     <div id="tab-teaching" class="tab-panel">
-      <h2>Teaching and Journal Prompts</h2>
+      <h2>Suggested Teaching Prompts</h2>
       <div class="tool-grid" id="journalQuestions"></div>
     </div>
 
@@ -237,8 +255,8 @@ const DATA = {
   "slug": "florida-nursing-homes-visible-parasite",
   "title": "Florida Nursing Homes and the Visible Parasite",
   "subtitle": "Public Care, Structural Risk, and National Benchmark Evidence",
-  "chapter": "Chapter 12/15 \u00b7 Care Ethics \u00b7 Governance \u00b7 Capstone case",
-  "status": "Phase G migrated case",
+  "chapter": "Chapters 8, 11, and 13 · Visible Parasite Lab · Care Vulnerability · Institutional Opacity",
+  "status": "Phase M fall-ready case · classroom-ready with formula/data reconciliation note",
   "sourceUrl": "https://rmertzman-tech.github.io/Three-Scenario-Sims/chapter15-visible-parasite-app.html",
   "coreQuestion": "How can a care institution formally organized around resident protection become structurally capable of shifting risk, cost, and vulnerability onto residents, workers, families, and public systems?",
   "profiles": [

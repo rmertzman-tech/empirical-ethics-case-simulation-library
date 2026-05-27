@@ -1,73 +1,46 @@
 [
   {
-    "chapter": "Chapter 3",
-    "title": "Ethical Lenses and Evidence Policy",
+    "route": "Week 1\u20132 Preview",
+    "title": "Preview of public empirical ethics and institutional analysis",
+    "primary": [
+      "Higher Education IPS"
+    ],
+    "extensions": [],
+    "prompt": "How can a public case help us learn institutional analysis without requiring private disclosure?"
+  },
+  {
+    "route": "Chapters 3, 9, and 12",
+    "title": "Ethical Frameworks as Lenses; Ethics of Uncertainty; Governing the Commons",
     "primary": [
       "The 2008 Financial Crisis"
     ],
     "extensions": [
       "Florida Nursing Homes and the Visible Parasite"
     ],
-    "prompt": "What does a system's evidence policy make visible, and what does it hide?"
+    "prompt": "How do evidence policy, uncertainty, and commons governance shape moral responsibility?"
   },
   {
-    "chapter": "Chapter 4",
-    "title": "Emergence, Complexity, and Responsibility",
+    "route": "Chapters 8 and 11",
+    "title": "Parasitic Institution; Invisible Ledger",
     "primary": [
-      "The 2008 Financial Crisis",
-      "Higher Education IPS"
-    ],
-    "extensions": [
-      "Florida Nursing Homes and the Visible Parasite"
-    ],
-    "prompt": "When macro-patterns emerge from local rules or incentives, how does responsibility shift toward system design?"
-  },
-  {
-    "chapter": "Chapter 5",
-    "title": "Social Contract, Justice, and the Moral Commons",
-    "primary": [
+      "Higher Education IPS",
       "GEO Group Florida"
     ],
     "extensions": [
-      "Higher Education IPS",
       "Florida Nursing Homes and the Visible Parasite"
     ],
-    "prompt": "Where do formal rights fail to become actual capabilities, and what shared task can different PRFs support for different authentic reasons?"
+    "prompt": "Where does formal mission diverge from the actual institutional ledger of burden, benefit, and repair?"
   },
   {
-    "chapter": "Chapter 11",
-    "title": "Education, Economics, and Institutional Design",
+    "route": "Chapters 8, 11, and 13",
+    "title": "Visible Parasite Lab; care vulnerability; institutional opacity; repair",
     "primary": [
+      "Florida Nursing Homes and the Visible Parasite"
+    ],
+    "extensions": [
+      "GEO Group Florida",
       "Higher Education IPS"
     ],
-    "extensions": [
-      "The 2008 Financial Crisis"
-    ],
-    "prompt": "How can students use public data to understand institutional mission, access, debt, and structural incentives?"
-  },
-  {
-    "chapter": "Chapter 12",
-    "title": "Systems, Care, Governance, and Institutional Risk",
-    "primary": [
-      "The 2008 Financial Crisis",
-      "Florida Nursing Homes and the Visible Parasite"
-    ],
-    "extensions": [
-      "Higher Education IPS"
-    ],
-    "prompt": "How do risk, responsibility, and repair travel through complex institutional systems?"
-  },
-  {
-    "chapter": "Capstone",
-    "title": "Comparative Structural Ethics",
-    "primary": [
-      "Florida Nursing Homes and the Visible Parasite"
-    ],
-    "extensions": [
-      "Higher Education IPS",
-      "The 2008 Financial Crisis",
-      "GEO Group Florida"
-    ],
-    "prompt": "What patterns recur across domains, and which claims are direct data, model outputs, interpretations, or hypotheses?"
+    "prompt": "How does hidden extraction become visible, and what forms of repair change the structure rather than only the appearance?"
   }
 ]

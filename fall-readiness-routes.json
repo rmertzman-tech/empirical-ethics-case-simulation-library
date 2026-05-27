@@ -1,0 +1,62 @@
+[
+  {
+    "case": "Higher Education IPS",
+    "short": "Higher Ed IPS",
+    "url": "cases/higher-education-ips.html",
+    "teaching_url": "../cases/higher-education-ips.html",
+    "current_route": "Week 1\u20132 preview; Chapters 8 and 11",
+    "current_route_html": "Week 1\u20132 Preview \u00b7 Chapters 8 and 11",
+    "chapter_focus": "Parasitic Institution; Invisible Ledger",
+    "fall_role": "Use early as a light preview of public-data institutional analysis, then return later for the full institutional-structure and invisible-ledger treatment.",
+    "status": "Classroom-ready with teaching-proxy framing; IPS parameter table now has a static fallback.",
+    "badge": "Week 1\u20132 Preview + Ch. 8/11",
+    "readiness": "Classroom-ready with fallback",
+    "lab": "Higher Education IPS public-data lab",
+    "student_note": "Best for showing students that the course can analyze institutions using public evidence without asking for private disclosure."
+  },
+  {
+    "case": "The 2008 Financial Crisis",
+    "short": "2008 Financial Crisis",
+    "url": "cases/2008-financial-crisis.html",
+    "teaching_url": "../cases/2008-financial-crisis.html",
+    "current_route": "Chapters 3, 9, and 12",
+    "current_route_html": "Chapters 3, 9, and 12",
+    "chapter_focus": "Ethical Frameworks as Lenses; Ethics of Uncertainty; Governing the Commons",
+    "fall_role": "Use for ethical frameworks as lenses, uncertainty and evidence policy, systemic warning failure, and governance of shared-risk systems.",
+    "status": "Classroom-ready with teaching-proxy and verification-queue framing.",
+    "badge": "Ch. 3/9/12",
+    "readiness": "Classroom-ready",
+    "lab": "Evidence policy and systemic warning route",
+    "student_note": "Best for showing how apparently technical systems can reshape what counts as evidence, risk, warning, and responsibility."
+  },
+  {
+    "case": "GEO Group Florida",
+    "short": "GEO Florida Prison",
+    "url": "cases/geo-florida-prison.html",
+    "teaching_url": "../cases/geo-florida-prison.html",
+    "current_route": "Chapters 8 and 11",
+    "current_route_html": "Chapters 8 and 11",
+    "chapter_focus": "GEO Group Florida Lab; Parasitic Institution; Invisible Ledger",
+    "fall_role": "Use for institutional extraction, captive populations, public-private governance, accountability, and repair design.",
+    "status": "Classroom-ready with teaching simulation; reviewer-facing claims require verification queue completion.",
+    "badge": "Ch. 8/11",
+    "readiness": "Classroom-ready",
+    "lab": "GEO Group Florida Lab",
+    "student_note": "Best for examining institutional structure where exit is blocked or sharply constrained."
+  },
+  {
+    "case": "Florida Nursing Homes and the Visible Parasite",
+    "short": "Florida Nursing Homes",
+    "url": "cases/florida-nursing-homes-visible-parasite.html",
+    "teaching_url": "../cases/florida-nursing-homes-visible-parasite.html",
+    "current_route": "Chapters 8, 11, and 13",
+    "current_route_html": "Chapters 8, 11, and 13",
+    "chapter_focus": "Visible Parasite Lab; care vulnerability; institutional opacity; repair",
+    "fall_role": "Use for hidden extraction in care systems, vulnerability, measurement, public responsibility, and repair across care and governance contexts.",
+    "status": "Classroom-ready with teaching-proxy framing; verify exact formula/data reconciliation before reviewer-facing empirical use.",
+    "badge": "Ch. 8/11/13",
+    "readiness": "Classroom-ready with verification note",
+    "lab": "Visible Parasite Lab",
+    "student_note": "Best for showing how care work, vulnerability, ownership opacity, and public accountability interact."
+  }
+]

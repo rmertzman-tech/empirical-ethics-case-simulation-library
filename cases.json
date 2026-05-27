@@ -7,12 +7,10 @@
     "status": "Migrated in Phase D",
     "primaryRole": "Education, economics, institutional self-study, public mission, extraction architecture, and student-facing institutional literacy.",
     "chapters": [
-      "Chapter 5",
-      "Chapter 11",
-      "Capstone"
+      "Week 1\u20132 preview; Chapters 8 and 11"
     ],
     "question": "Where does a public college sit in a wider structural spectrum, and what does the IPS model reveal about mission, debt, access, and institutional architecture?",
-    "route": "Chapter 11 primary; Chapter 5 and capstone extensions.",
+    "route": "Use early as a light preview of public-data institutional analysis, then return later for the full institutional-structure and invisible-ledger treatment.",
     "caseUrl": "cases/higher-education-ips.html",
     "tags": [
       "IPS",
@@ -22,7 +20,9 @@
       "institutional design"
     ],
     "primaryData": "College Scorecard, IPEDS, institutional public data, and documented model formulas.",
-    "migrationNote": "Phase D migrated case with full spectrum, SPC context, exit-option finding, IPS/P-SAGE panels, teaching simulation, evidence governance, and Navigator bridge."
+    "migrationNote": "Phase D migrated case with full spectrum, SPC context, exit-option finding, IPS/P-SAGE panels, teaching simulation, evidence governance, and Navigator bridge.",
+    "fallReadiness": "Classroom-ready with teaching-proxy framing; IPS parameter table now has a static fallback.",
+    "currentFallRoute": "Week 1\u20132 preview; Chapters 8 and 11"
   },
   {
     "id": "florida-nursing-homes",
@@ -32,13 +32,10 @@
     "status": "Migrated in Phase G",
     "primaryRole": "Public care, elder-care vulnerability, staffing pressure, inspection evidence, hidden burden, national benchmarking, and repair design.",
     "chapters": [
-      "Chapter 12",
-      "Chapter 13",
-      "Chapter 14/15",
-      "Chapter 5 extension"
+      "Chapters 8, 11, and 13"
     ],
     "question": "How can a care institution formally organized around resident protection become structurally capable of shifting risk, cost, and vulnerability onto residents, workers, families, and public systems?",
-    "route": "Chapter 12 or 13 primary; capstone synthesis; Chapter 5 rights/capabilities extension.",
+    "route": "Use for hidden extraction in care systems, vulnerability, measurement, public responsibility, and repair across care and governance contexts.",
     "caseUrl": "cases/florida-nursing-homes-visible-parasite.html",
     "tags": [
       "nursing homes",
@@ -48,7 +45,9 @@
       "benchmarks"
     ],
     "primaryData": "Florida nursing-home evidence, Florida AHCA where appropriate, CMS national nursing-home datasets, and national benchmark context.",
-    "migrationNote": "Phase G migrated case with measurement, repair simulator, scale obligations, SAGE scenario, T1/T2 classifier, IPS profile, evidence governance, and Navigator bridge."
+    "migrationNote": "Phase G migrated case with measurement, repair simulator, scale obligations, SAGE scenario, T1/T2 classifier, IPS profile, evidence governance, and Navigator bridge.",
+    "fallReadiness": "Classroom-ready with teaching-proxy framing; verify exact formula/data reconciliation before reviewer-facing empirical use.",
+    "currentFallRoute": "Chapters 8, 11, and 13"
   },
   {
     "id": "financial-crisis-2008",
@@ -58,13 +57,10 @@
     "status": "Migrated in Phase E",
     "primaryRole": "Governance, financial systems, regulatory capture, systemic risk, triadic overwrite, P-SAGE diagnosis, and T1/T2 repair.",
     "chapters": [
-      "Chapter 3",
-      "Chapter 8",
-      "Chapter 12",
-      "Capstone"
+      "Chapters 3, 9, and 12"
     ],
     "question": "How can a financial system preserve operational continuity while replacing the ethical function of its warning and signal channels?",
-    "route": "Chapter 12 primary; Chapter 3 evidence policy extension; capstone systems comparison.",
+    "route": "Use for ethical frameworks as lenses, uncertainty and evidence policy, systemic warning failure, and governance of shared-risk systems.",
     "caseUrl": "cases/2008-financial-crisis.html",
     "tags": [
       "financial crisis",
@@ -74,7 +70,9 @@
       "T1/T2"
     ],
     "primaryData": "Public crisis documentation, regulatory history, financial-system timelines, and structured model inputs.",
-    "migrationNote": "Phase E migrated case with P-SAGE, timeline, live coherence map, IPS profile, T1/T2 recovery contrast, system-today panel, evidence governance, and Navigator bridge."
+    "migrationNote": "Phase E migrated case with P-SAGE, timeline, live coherence map, IPS profile, T1/T2 recovery contrast, system-today panel, evidence governance, and Navigator bridge.",
+    "fallReadiness": "Classroom-ready with teaching-proxy and verification-queue framing.",
+    "currentFallRoute": "Chapters 3, 9, and 12"
   },
   {
     "id": "geo-florida",
@@ -84,14 +82,10 @@
     "status": "Migrated in Phase F",
     "primaryRole": "Justice, prison privatization, captive populations, public accountability, structural repair, Maathai pathway, and commonwealth design.",
     "chapters": [
-      "Chapter 5",
-      "Chapter 7",
-      "Chapter 10",
-      "Chapter 13/14",
-      "Capstone"
+      "Chapters 8 and 11"
     ],
     "question": "What would it take to move a captive-population institution from extraction architecture toward moral-commons repair?",
-    "route": "Chapter 5 extension through rights/capabilities and functional equivalence; justice and capstone routes later.",
+    "route": "Use for institutional extraction, captive populations, public-private governance, accountability, and repair design.",
     "caseUrl": "cases/geo-florida-prison.html",
     "tags": [
       "justice",
@@ -101,6 +95,8 @@
       "repair"
     ],
     "primaryData": "SEC filings, Florida DOC materials, OSHA or public safety data where relevant, public-interest research, and carefully labeled interpretive model claims.",
-    "migrationNote": "Phase F migrated case with P-SAGE, IPS profile, repair simulator, BioBond design, Maathai pathway, scale-free comparison, evidence governance, and Navigator bridge."
+    "migrationNote": "Phase F migrated case with P-SAGE, IPS profile, repair simulator, BioBond design, Maathai pathway, scale-free comparison, evidence governance, and Navigator bridge.",
+    "fallReadiness": "Classroom-ready with teaching simulation; reviewer-facing claims require verification queue completion.",
+    "currentFallRoute": "Chapters 8 and 11"
   }
 ]

@@ -27,6 +27,15 @@ main{max-width:1180px;margin:0 auto;padding:24px 18px 84px}.grid{display:grid;gr
 .output{border:1px solid var(--line);border-radius:18px;background:#fbfcfb;padding:14px;margin-top:12px}.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:10px}.tool-box{border:1px solid var(--line);border-radius:16px;background:#fff;padding:12px}.tool-box strong{display:block;margin-bottom:4px}
 .table{width:100%;border-collapse:collapse}.table th,.table td{border-top:1px solid var(--line);padding:9px;text-align:left;vertical-align:top}.table th{color:var(--accent)}
 pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;max-height:330px;overflow:auto}.footer-note{color:var(--muted);font-size:.92rem}.formula{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;overflow:auto}
+
+.fall-badge{display:inline-block;border:1px solid var(--accent);background:#eef7f1;color:var(--accent);border-radius:999px;padding:5px 10px;font-size:.78rem;font-weight:900;margin:3px}
+.fall-badge.warn{border-color:var(--warn);background:#fffaf1;color:var(--warn)}
+.fall-badge.blue{border-color:#326e9f;background:#f1f7fd;color:#326e9f}
+.fall-route-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:14px;box-shadow:0 8px 20px rgba(31,41,51,.05)}
+.fall-route-card h3{margin-top:0}.fall-status{border-left:5px solid var(--accent);background:#f8fbf8;border-radius:14px;padding:11px;margin:10px 0}
+.fall-status.warn{border-left-color:var(--warn);background:#fffaf1}
+.fall-table td,.fall-table th{vertical-align:top}
+
 </style>
 </head>
 <body>
@@ -62,7 +71,7 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
 </section>
 
   <section id="overview" class="hero">
-    <div class="kicker">Chapter 12 · Governance · Financial Systems Case Study</div>
+    <div class="kicker">Chapters 3, 9, and 12 · Evidence Policy · Uncertainty · Governing the Commons</div>
     <h2>Triadic Overwrite at financial system scale</h2>
     <div class="pill-row">
       <span class="pill">P-SAGE</span><span class="pill">IPS</span><span class="pill">Triadic Overwrite</span><span class="pill">Evidence policy</span><span class="pill">T1 / T2 repair</span><span class="pill">Systemic risk</span>
@@ -74,6 +83,16 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
       <p>This is a public empirical case. Students should not enter private financial or family details here. Personal application belongs in the Navigator or course notebook.</p>
     </div>
   </section>
+
+<section class="card">
+  <div class="kicker">Phase M Fall Use Status</div>
+  <h2>Chapters 3, 9, and 12</h2>
+  <p><span class="fall-badge">Classroom-ready</span> <span class="fall-badge warn">Verification queue for reviewer-facing claims</span></p>
+  <p><strong>Current route:</strong> Use for Ethical Frameworks as Lenses, Ethics of Uncertainty, and Governing the Commons.</p>
+  <p><strong>Instructor note:</strong> Frame the simulation as a teaching proxy for evidence policy, systemic warning, and T1/T2 repair, not as a certified empirical audit.</p>
+</section>
+
+
 
   <section class="grid" style="margin-top:16px">
     <div class="card s8">
@@ -187,7 +206,7 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
     </div>
 
     <div id="tab-teaching" class="tab-panel">
-      <h2>Teaching and Journal Prompts</h2>
+      <h2>Suggested Teaching Prompts</h2>
       <div class="tool-grid" id="journalQuestions"></div>
     </div>
 
@@ -234,8 +253,8 @@ const DATA = {
   "slug": "2008-financial-crisis",
   "title": "The 2008 Financial Crisis",
   "subtitle": "Evidence Policy and Systemic Moral Failure",
-  "chapter": "Chapter 12 \u00b7 Governance \u00b7 Financial Systems Case Study",
-  "status": "Phase E migrated case",
+  "chapter": "Chapters 3, 9, and 12 · Evidence Policy · Uncertainty · Governing the Commons",
+  "status": "Phase M fall-ready case · classroom-ready teaching proxy",
   "sourceUrl": "https://rmertzman-tech.github.io/Three-Scenario-Sims/chapter12-2008-financial-crisis-app.html",
   "coreQuestion": "How can a financial system preserve operational continuity while replacing the ethical function of its warning and signal channels?",
   "eras": [

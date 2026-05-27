@@ -115,3 +115,14 @@ main{max-width:1200px;margin:0 auto;padding:24px 18px 84px}
 .layer strong{display:block;color:var(--accent)}
 .standalone-note{border:1px dashed var(--line);background:#fff;border-radius:16px;padding:12px;margin-top:10px}
 .case-detail-hero{border:2px solid var(--accent);border-radius:24px;background:linear-gradient(180deg,#fff,#f4faf6);padding:20px}
+
+
+/* Phase M Fall Readiness Alignment */
+
+.fall-badge{display:inline-block;border:1px solid var(--accent);background:#eef7f1;color:var(--accent);border-radius:999px;padding:5px 10px;font-size:.78rem;font-weight:900;margin:3px}
+.fall-badge.warn{border-color:var(--warn);background:#fffaf1;color:var(--warn)}
+.fall-badge.blue{border-color:#326e9f;background:#f1f7fd;color:#326e9f}
+.fall-route-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:14px;box-shadow:0 8px 20px rgba(31,41,51,.05)}
+.fall-route-card h3{margin-top:0}.fall-status{border-left:5px solid var(--accent);background:#f8fbf8;border-radius:14px;padding:11px;margin:10px 0}
+.fall-status.warn{border-left-color:var(--warn);background:#fffaf1}
+.fall-table td,.fall-table th{vertical-align:top}
