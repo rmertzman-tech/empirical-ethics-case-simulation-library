@@ -126,3 +126,26 @@ main{max-width:1200px;margin:0 auto;padding:24px 18px 84px}
 .fall-route-card h3{margin-top:0}.fall-status{border-left:5px solid var(--accent);background:#f8fbf8;border-radius:14px;padding:11px;margin:10px 0}
 .fall-status.warn{border-left-color:var(--warn);background:#fffaf1}
 .fall-table td,.fall-table th{vertical-align:top}
+
+
+/* Phase O — Fall Classroom Readiness Patch */
+.readiness-card{border-left:6px solid var(--accent)}
+.terms-box,.static-fallback,.prompt-fallback,.evidence-taxonomy,.privacy-box,.classroom-move{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:16px;
+  margin:14px 0;
+}
+.static-fallback{background:#f7fbf8}
+.prompt-fallback{background:#fbfcff}
+.evidence-taxonomy{background:#fffaf1;border-left:6px solid var(--warn)}
+.privacy-box{background:#f6f8fb;border-left:6px solid var(--accent2)}
+.term-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.term-item{border:1px solid var(--line);border-radius:14px;padding:12px;background:#fff}
+.term-item strong{color:var(--accent)}
+.fall-route{display:inline-block;border:1px solid var(--line);background:#eef7f1;color:var(--accent);border-radius:999px;padding:5px 10px;font-weight:850;font-size:.84rem}
+.clean-list li{margin:8px 0}
+.case-use-sequence{counter-reset:steps}
+.case-use-sequence li{margin:8px 0}
+.small-note{font-size:.9rem;color:var(--muted)}

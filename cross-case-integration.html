@@ -1,107 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cross-Case Integration — EECSL</title>
-<link rel="stylesheet" href="../assets/styles.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EECSL Cross-Case Dashboard</title><link rel="stylesheet" href="styles.css"></head>
 <body>
-
 <header><div class="header-inner">
-  <div class="kicker">EECSL Phase M</div>
-  <h1>Cross-Case Integration</h1>
-  <p class="subtitle">Fall-aligned case comparison and routing for the Empirical Ethics Case Simulation Library.</p>
-  <div class="actions"><a class="button" href="../index.html">Back to Library Hub</a><a class="button primary" href="#chapter-router">Current Route Selector</a></div>
+  <div class="kicker">EECSL Fall Classroom Version</div>
+  <h1>Cross-Case Integration Dashboard</h1>
+  <p class="subtitle">Compare the public empirical cases across evidence type, hidden burden, institutional repair, and current EBB course routing.</p>
+  <div class="actions"><a class="button" href="index.html">Library Hub</a><a class="button primary" href="#moves">Classroom Moves</a><a class="button" href="chapter-routing.html">Chapter Routing</a></div>
 </div></header>
-<nav><div class="nav-inner">
-  <a class="nav-link" href="#matrix">Matrix</a>
-  <a class="nav-link" href="#chapter-router">Route Selector</a>
-  <a class="nav-link" href="#threads">Concept Threads</a>
-</div></nav>
 <main>
-<section class="hero">
-  <h2>Current-course alignment</h2>
-  <p>This page replaces earlier draft chapter routing with the current Fall map. Use it as an instructor navigation tool, not as a student assignment list.</p>
+<section class="card">
+  <h2>Case-to-course route map</h2>
+  <table class="table"><thead><tr><th>Case</th><th>Current course route</th><th>Course focus</th></tr></thead><tbody><tr><td>Higher Education IPS</td><td>Week 1–2 preview; Chapters 8 and 11</td><td>Chapter 8 institutional design and Chapter 11 education/institutional capability; early preview for invisible institutional ledgers.</td></tr><tr><td>The 2008 Financial Crisis</td><td>Chapters 8, 9, and 12</td><td>Institutional design, uncertainty, risk modeling, and commons governance.</td></tr><tr><td>GEO Group Florida</td><td>Chapters 8 and 11; BioBond / capstone connection</td><td>Public-private institutional design, captive vulnerability, accountability, and repair.</td></tr><tr><td>Florida Nursing Homes and the Visible Parasite</td><td>Chapters 8, 11, and 13</td><td>Institutional design, education/development, care, sympathy, dependency, and visible ledgers.</td></tr></tbody></table>
 </section>
-<section id="matrix" class="card">
-  <h2>Cross-case comparison matrix</h2>
-  <table class="table fall-table">
-    <thead><tr><th>Case</th><th>Current route</th><th>Course focus</th><th>Lab route</th><th>Status</th><th>Open</th></tr></thead>
-    <tbody>
-<tr>
-  <td><strong>Higher Ed IPS</strong></td>
-  <td>Week 1–2 preview; Chapters 8 and 11</td>
-  <td>Parasitic Institution; Invisible Ledger</td>
-  <td>Higher Education IPS public-data lab</td>
-  <td>Classroom-ready with fallback</td>
-  <td><a class="button" href="../cases/higher-education-ips.html">Open</a></td>
-</tr>
 
-
-<tr>
-  <td><strong>2008 Financial Crisis</strong></td>
-  <td>Chapters 3, 9, and 12</td>
-  <td>Ethical Frameworks as Lenses; Ethics of Uncertainty; Governing the Commons</td>
-  <td>Evidence policy and systemic warning route</td>
-  <td>Classroom-ready</td>
-  <td><a class="button" href="../cases/2008-financial-crisis.html">Open</a></td>
-</tr>
-
-
-<tr>
-  <td><strong>GEO Florida Prison</strong></td>
-  <td>Chapters 8 and 11</td>
-  <td>GEO Group Florida Lab; Parasitic Institution; Invisible Ledger</td>
-  <td>GEO Group Florida Lab</td>
-  <td>Classroom-ready</td>
-  <td><a class="button" href="../cases/geo-florida-prison.html">Open</a></td>
-</tr>
-
-
-<tr>
-  <td><strong>Florida Nursing Homes</strong></td>
-  <td>Chapters 8, 11, and 13</td>
-  <td>Visible Parasite Lab; care vulnerability; institutional opacity; repair</td>
-  <td>Visible Parasite Lab</td>
-  <td>Classroom-ready with verification note</td>
-  <td><a class="button" href="../cases/florida-nursing-homes-visible-parasite.html">Open</a></td>
-</tr>
-</tbody>
-  </table>
-</section>
-<section id="chapter-router" class="card">
-  <h2>Current Route Selector</h2>
-  <p>Choose a case route to see how it should be framed for Fall.</p>
-  <select id="routeSelect" class="button"><option value="Higher Ed IPS">Week 1–2 Preview · Chapters 8 and 11 — Higher Ed IPS</option>
-<option value="2008 Financial Crisis">Chapters 3, 9, and 12 — 2008 Financial Crisis</option>
-<option value="GEO Florida Prison">Chapters 8 and 11 — GEO Florida Prison</option>
-<option value="Florida Nursing Homes">Chapters 8, 11, and 13 — Florida Nursing Homes</option></select>
-  <div id="routeOutput" style="margin-top:12px"></div>
-</section>
-<section id="threads" class="card">
-  <h2>Concept threads across cases</h2>
-  <div class="tool-grid">
-    <div class="tool-box"><strong>Evidence policy</strong><p>2008 Financial Crisis is the primary route; Higher Education IPS previews public evidence discipline.</p></div>
-    <div class="tool-box"><strong>Parasitic institution / Invisible ledger</strong><p>Higher Education IPS, GEO Florida, and Florida Nursing Homes are the primary institutional-structure cases.</p></div>
-    <div class="tool-box"><strong>Exit-option modulation</strong><p>Higher education, financial systems, prisons, and nursing homes show different levels of real exit capacity.</p></div>
-    <div class="tool-box"><strong>Care, vulnerability, and opacity</strong><p>Florida Nursing Homes is the main Visible Parasite Lab route.</p></div>
-    <div class="tool-box"><strong>Commons governance</strong><p>2008 Financial Crisis supports the Chapter 12 route into governing shared-risk systems.</p></div>
+<section class="card">
+  <h2>Cross-case comparison questions</h2>
+  <div class="grid">
+    <div class="tool-box"><strong>Visibility</strong><p>What is visible in ordinary institutional language, and what remains hidden?</p></div>
+    <div class="tool-box"><strong>Burden</strong><p>Who carries the stress, cost, risk, or entropy?</p></div>
+    <div class="tool-box"><strong>Voice</strong><p>Whose knowledge can be heard, and whose testimony is discounted?</p></div>
+    <div class="tool-box"><strong>Exit</strong><p>Can affected persons leave, bargain, or contest the system?</p></div>
+    <div class="tool-box"><strong>Repair</strong><p>What would change the condition, not just describe it?</p></div>
   </div>
 </section>
-<section class="card">
-  <h2>Teaching-proxy governance</h2>
-  <p>Simulation results are prompts for disciplined ethical analysis. They are not automatic moral proof or certified empirical measures. Use source verification queues before making reviewer-facing claims.</p>
+
+<section id="moves" class="card">
+  <h2>Pre-built classroom moves</h2>
+  <p>These replace the earlier incomplete classroom-move generator. Each move can be used directly in class without relying on JavaScript.</p>
+  <div class="grid"><article class="classroom-move"><h3>Higher Education IPS</h3><p>Begin with the static IPS parameter table. Ask students which parameter most directly separates formal access from real capability. Then ask what T1 and T2 repair would require.</p><div class="actions"><a class="button primary" href="higher-education-ips.html">Open Case</a></div></article><article class="classroom-move"><h3>2008 Financial Crisis</h3><p>Use the static crisis summary. Ask what changed when risk became transferable and what stayed hidden until substrate damage appeared. Then compare framework lenses.</p><div class="actions"><a class="button primary" href="2008-financial-crisis.html">Open Case</a></div></article><article class="classroom-move"><h3>GEO Group Florida</h3><p>Ask which single parameter change would most improve agency-supporting conditions for persons who cannot easily exit. Then distinguish oversight from genuine repair.</p><div class="actions"><a class="button primary" href="geo-florida-prison.html">Open Case</a></div></article><article class="classroom-move"><h3>Florida Nursing Homes</h3><p>Use the visible-ledger frame. Ask what ownership opacity, dependency, staffing pressure, and family voice reveal that ordinary compliance language hides.</p><div class="actions"><a class="button primary" href="florida-nursing-homes-visible-parasite.html">Open Case</a></div></article></div>
+</section>
+
+<section class="notice warn">
+  <strong>Instructor reminder:</strong>
+  <p>Use simulations and static summaries as teaching aids. Do not treat teaching-proxy outputs as certified measures without source verification.</p>
 </section>
 </main>
-<script>
-const ROUTES = [{"case": "Higher Education IPS", "short": "Higher Ed IPS", "url": "cases/higher-education-ips.html", "teaching_url": "../cases/higher-education-ips.html", "current_route": "Week 1\u20132 preview; Chapters 8 and 11", "current_route_html": "Week 1\u20132 Preview \u00b7 Chapters 8 and 11", "chapter_focus": "Parasitic Institution; Invisible Ledger", "fall_role": "Use early as a light preview of public-data institutional analysis, then return later for the full institutional-structure and invisible-ledger treatment.", "status": "Classroom-ready with teaching-proxy framing; IPS parameter table now has a static fallback.", "badge": "Week 1\u20132 Preview + Ch. 8/11", "readiness": "Classroom-ready with fallback", "lab": "Higher Education IPS public-data lab", "student_note": "Best for showing students that the course can analyze institutions using public evidence without asking for private disclosure."}, {"case": "The 2008 Financial Crisis", "short": "2008 Financial Crisis", "url": "cases/2008-financial-crisis.html", "teaching_url": "../cases/2008-financial-crisis.html", "current_route": "Chapters 3, 9, and 12", "current_route_html": "Chapters 3, 9, and 12", "chapter_focus": "Ethical Frameworks as Lenses; Ethics of Uncertainty; Governing the Commons", "fall_role": "Use for ethical frameworks as lenses, uncertainty and evidence policy, systemic warning failure, and governance of shared-risk systems.", "status": "Classroom-ready with teaching-proxy and verification-queue framing.", "badge": "Ch. 3/9/12", "readiness": "Classroom-ready", "lab": "Evidence policy and systemic warning route", "student_note": "Best for showing how apparently technical systems can reshape what counts as evidence, risk, warning, and responsibility."}, {"case": "GEO Group Florida", "short": "GEO Florida Prison", "url": "cases/geo-florida-prison.html", "teaching_url": "../cases/geo-florida-prison.html", "current_route": "Chapters 8 and 11", "current_route_html": "Chapters 8 and 11", "chapter_focus": "GEO Group Florida Lab; Parasitic Institution; Invisible Ledger", "fall_role": "Use for institutional extraction, captive populations, public-private governance, accountability, and repair design.", "status": "Classroom-ready with teaching simulation; reviewer-facing claims require verification queue completion.", "badge": "Ch. 8/11", "readiness": "Classroom-ready", "lab": "GEO Group Florida Lab", "student_note": "Best for examining institutional structure where exit is blocked or sharply constrained."}, {"case": "Florida Nursing Homes and the Visible Parasite", "short": "Florida Nursing Homes", "url": "cases/florida-nursing-homes-visible-parasite.html", "teaching_url": "../cases/florida-nursing-homes-visible-parasite.html", "current_route": "Chapters 8, 11, and 13", "current_route_html": "Chapters 8, 11, and 13", "chapter_focus": "Visible Parasite Lab; care vulnerability; institutional opacity; repair", "fall_role": "Use for hidden extraction in care systems, vulnerability, measurement, public responsibility, and repair across care and governance contexts.", "status": "Classroom-ready with teaching-proxy framing; verify exact formula/data reconciliation before reviewer-facing empirical use.", "badge": "Ch. 8/11/13", "readiness": "Classroom-ready with verification note", "lab": "Visible Parasite Lab", "student_note": "Best for showing how care work, vulnerability, ownership opacity, and public accountability interact."}];
-function esc(x){return String(x??"").replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
-function renderRoute(){
-  const key = document.getElementById('routeSelect').value;
-  const r = ROUTES.find(x=>x.short===key) || ROUTES[0];
-  document.getElementById('routeOutput').innerHTML = `<div class="workspace"><h3>${esc(r.case)}</h3><p><strong>Current Fall route:</strong> ${esc(r.current_route)}</p><p><strong>Course focus:</strong> ${esc(r.chapter_focus)}</p><p><strong>Teaching use:</strong> ${esc(r.fall_role)}</p><p><strong>Status:</strong> ${esc(r.status)}</p><p><button class="button primary" type="button" onclick="location.href=\`${esc(r.teaching_url)}\`">Open case</button></p></div>`;
-}
-document.addEventListener('DOMContentLoaded',()=>{document.getElementById('routeSelect').addEventListener('change',renderRoute);renderRoute();});
-</script>
+<footer><p class="footer-note">Static, classroom-ready cross-case dashboard.</p></footer>
 </body></html>
