@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canvas Copy/Paste Blocks</title>
+<style>
+:root{--ink:#1f2933;--muted:#5f6b7a;--accent:#345d4e;--gold:#8b6b3d;--line:#d9e2dc;--card:#fff;--shadow:0 12px 30px rgba(31,41,51,.08)}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fbfcfb;line-height:1.58}
+header{background:linear-gradient(135deg,#20382f,#345d4e);color:#fff;padding:38px 20px}
+.header-inner,main{max-width:1180px;margin:0 auto}
+main{padding:24px 18px 84px}
+h1{font-size:clamp(2rem,4vw,3.6rem);line-height:1.05;margin:.3rem 0}
+h2{color:var(--accent)}
+.kicker{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;font-weight:900;opacity:.88}
+.subtitle{max-width:960px;font-size:1.05rem;opacity:.94}
+.card,.hero{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow);margin:16px 0}
+.hero{border:2px solid var(--accent);background:linear-gradient(180deg,#fff,#f4faf6)}
+.button{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:8px 12px;font-weight:850;display:inline-block;text-decoration:none;margin:3px}
+.button.primary{border-color:var(--accent);background:#eef7f1;color:var(--accent)}
+.button.gold{border-color:var(--gold);background:#fff8ed;color:#7a5c2f}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.notice{border-left:5px solid var(--accent);background:#f8fbf8;border-radius:14px;padding:12px;margin:12px 0}
+.warn{border-left-color:#b5792d;background:#fffaf1}
+.danger{border-left-color:#8b3a3a;background:#fff6f6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
+.route-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:15px}
+.route-card h3{margin-top:0;color:var(--accent)}
+table{width:100%;border-collapse:collapse;background:#fff}
+th,td{border-top:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+th{color:var(--accent);background:#f8fbf8}
+code,pre{background:#f4f7f4;border:1px solid var(--line);border-radius:10px;padding:2px 5px}
+pre{padding:14px;overflow:auto;white-space:pre-wrap}
+.small{font-size:.92rem;color:var(--muted)}
+.copybox{border:1px dashed var(--line);border-radius:16px;background:#fff;padding:14px;margin:12px 0}
+.badge{display:inline-block;border:1px solid var(--line);background:#f4f7f4;border-radius:999px;padding:4px 8px;font-size:.82rem;font-weight:800;color:var(--muted);margin:2px}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="kicker">Empirical Ethics Case Simulation Library · Phase L.1</div>
+    <h1>Canvas Copy/Paste Blocks</h1>
+    <p class="subtitle">Simple Canvas-ready HTML blocks for Chapters 1–5.</p>
+    <div class="actions">
+      <a class="button" href="../../index.html">Library Hub</a>
+      <a class="button" href="../../teaching/classroom-bookmarks.html">Classroom Bookmarks</a>
+      <a class="button" href="../../teaching/cross-case-integration.html">Cross-Case Dashboard</a>
+      <a class="button" href="../../methods/key-terms-glossary.html">Glossary</a>
+      <a class="button primary" href="https://rmertzman-tech.github.io/capability-lab-public-studio/">Capability Lab</a>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="hero">
+  <h2>Canvas copy/paste blocks</h2>
+  <p>These are deliberately simple HTML blocks. They avoid JavaScript and can be pasted into Canvas pages or module descriptions.</p>
+</section>
+<section class="card">
+  <h2>Chapter pack links</h2>
+  <ul><li><a href="https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/teaching/canvas/chapter-1-canvas-pack.html">Chapter 1 — Ethical Perception, Complexity, and the Need for Models</a></li>
+<li><a href="https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/teaching/canvas/chapter-2-canvas-pack.html">Chapter 2 — Ethical Attention, PRF, and the Structure of Moral Perception</a></li>
+<li><a href="https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/teaching/canvas/chapter-3-canvas-pack.html">Chapter 3 — Evidence Policy, Warning, and Ethical Lenses</a></li>
+<li><a href="https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/teaching/canvas/chapter-4-canvas-pack.html">Chapter 4 — Systems, Emergence, SAGE, and Responsibility</a></li>
+<li><a href="https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/teaching/canvas/chapter-5-canvas-pack.html">Chapter 5 — Social Contract, Justice, and the Moral Commons</a></li></ul>
+</section>
+<section class='card'><h2>Chapter 1 Canvas block</h2><pre>&lt;div class=&quot;ebb-canvas-activity&quot;&gt;
+  &lt;h2&gt;Chapter 1: Ethical Perception, Complexity, and the Need for Models&lt;/h2&gt;
+  &lt;p&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Introduce students to layered emergence, complexity, and the idea that ethical outcomes may exceed individual intentions.&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://rmertzman-tech.github.io/capability-lab-public-studio/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Open public tool: Capability Lab Schelling emergence simulation&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Optional extension: Light EECSL preview only&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Prompt note:&lt;/strong&gt; Note: Your instructor will tell you which questions, if any, you should answer for class. The prompts below are examples for reflection and discussion.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Privacy reminder:&lt;/strong&gt; Do not enter private personal, family, medical, legal, employment, or other sensitive information into public case pages. Public tools are for shared classroom analysis. Personal application belongs in a private course notebook, journal, or Navigator route when your instructor directs you there.&lt;/p&gt;
+&lt;/div&gt;</pre></section><section class='card'><h2>Chapter 2 Canvas block</h2><pre>&lt;div class=&quot;ebb-canvas-activity&quot;&gt;
+  &lt;h2&gt;Chapter 2: Ethical Attention, PRF, and the Structure of Moral Perception&lt;/h2&gt;
+  &lt;p&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Help students see that ethical perception is structured by attention, assumptions, values, language, and interpretive frames.&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/methods/key-terms-glossary.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Open public tool: Glossary + Ethical Lens framing&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/teaching/cross-case-integration.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Optional extension: Optional Cross-Case Dashboard preview&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Prompt note:&lt;/strong&gt; Note: Your instructor will tell you which questions, if any, you should answer for class. The prompts below are examples for reflection and discussion.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Privacy reminder:&lt;/strong&gt; Do not enter private personal, family, medical, legal, employment, or other sensitive information into public case pages. Public tools are for shared classroom analysis. Personal application belongs in a private course notebook, journal, or Navigator route when your instructor directs you there.&lt;/p&gt;
+&lt;/div&gt;</pre></section><section class='card'><h2>Chapter 3 Canvas block</h2><pre>&lt;div class=&quot;ebb-canvas-activity&quot;&gt;
+  &lt;h2&gt;Chapter 3: Evidence Policy, Warning, and Ethical Lenses&lt;/h2&gt;
+  &lt;p&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Show how warning signals can be suppressed, normalized, overwritten, or institutionally ignored under pressure.&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://rmertzman-tech.github.io/capability-lab-public-studio/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Open public tool: Capability Lab Challenger / Boisjoly run mode&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/cases/2008-financial-crisis.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Optional extension: 2008 Financial Crisis&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Prompt note:&lt;/strong&gt; Note: Your instructor will tell you which questions, if any, you should answer for class. The prompts below are examples for reflection and discussion.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Privacy reminder:&lt;/strong&gt; Do not enter private personal, family, medical, legal, employment, or other sensitive information into public case pages. Public tools are for shared classroom analysis. Personal application belongs in a private course notebook, journal, or Navigator route when your instructor directs you there.&lt;/p&gt;
+&lt;/div&gt;</pre></section><section class='card'><h2>Chapter 4 Canvas block</h2><pre>&lt;div class=&quot;ebb-canvas-activity&quot;&gt;
+  &lt;h2&gt;Chapter 4: Systems, Emergence, SAGE, and Responsibility&lt;/h2&gt;
+  &lt;p&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Help students understand responsibility in systems where outcomes emerge from feedback, incentives, thresholds, and institutional design.&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://rmertzman-tech.github.io/capability-lab-public-studio/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Open public tool: Schelling + Coordination Under Heat&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/teaching/cross-case-integration.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Optional extension: Higher Education IPS or 2008 Financial Crisis&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Prompt note:&lt;/strong&gt; Note: Your instructor will tell you which questions, if any, you should answer for class. The prompts below are examples for reflection and discussion.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Privacy reminder:&lt;/strong&gt; Do not enter private personal, family, medical, legal, employment, or other sensitive information into public case pages. Public tools are for shared classroom analysis. Personal application belongs in a private course notebook, journal, or Navigator route when your instructor directs you there.&lt;/p&gt;
+&lt;/div&gt;</pre></section><section class='card'><h2>Chapter 5 Canvas block</h2><pre>&lt;div class=&quot;ebb-canvas-activity&quot;&gt;
+  &lt;h2&gt;Chapter 5: Social Contract, Justice, and the Moral Commons&lt;/h2&gt;
+  &lt;p&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; Connect Rawls, Nussbaum, John Hope Franklin, functional equivalence, Maathai-style shared task coordination, and the moral commons.&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://rmertzman-tech.github.io/capability-lab-public-studio/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Open public tool: Civic coordination route with Repair preset&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://rmertzman-tech.github.io/empirical-ethics-case-simulation-library/cases/geo-florida-prison.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Optional extension: GEO Florida + Higher Education IPS&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Prompt note:&lt;/strong&gt; Note: Your instructor will tell you which questions, if any, you should answer for class. The prompts below are examples for reflection and discussion.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Privacy reminder:&lt;/strong&gt; Do not enter private personal, family, medical, legal, employment, or other sensitive information into public case pages. Public tools are for shared classroom analysis. Personal application belongs in a private course notebook, journal, or Navigator route when your instructor directs you there.&lt;/p&gt;
+&lt;/div&gt;</pre></section>
+
+</main>
+</body>
+</html>
