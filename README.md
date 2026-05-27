@@ -1,4 +1,4 @@
-# EECSL Phase O — Fall Classroom Readiness Patch
+# EECSL Fall Classroom Readiness Version
 
 This package restores and patches the functional EECSL site for Fall classroom use.
 

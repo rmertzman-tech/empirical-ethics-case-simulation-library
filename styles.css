@@ -128,7 +128,7 @@ main{max-width:1200px;margin:0 auto;padding:24px 18px 84px}
 .fall-table td,.fall-table th{vertical-align:top}
 
 
-/* Phase O — Fall Classroom Readiness Patch */
+/* Fall Classroom Readiness Version */
 .readiness-card{border-left:6px solid var(--accent)}
 .terms-box,.static-fallback,.prompt-fallback,.evidence-taxonomy,.privacy-box,.classroom-move{
   background:#fff;
