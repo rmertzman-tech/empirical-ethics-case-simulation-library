@@ -147,7 +147,7 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
       <button class="tab-btn" data-tab="teaching">Teaching Prompts / Reflection Opportunities</button>
       <button class="tab-btn" data-tab="evidence">Evidence Status</button>
       <button class="tab-btn" data-tab="navigator">Navigator Bridge</button>
-      <button class="tab-btn" data-tab="export">Copy Summary</button>
+      <button class="tab-btn" data-tab="export">Copy Guidance</button>
     </div>
 
     <div id="tab-overview" class="tab-panel active">
@@ -176,22 +176,23 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
 
     <div id="tab-ips" class="tab-panel">
       <h2>IPS Parameters</h2>
-      <p>Each parameter is presented as a structural question, not a personnel judgment. The point is to ask where institutional architecture absorbs or routes coordination capacity.</p>
+      <p>Each parameter is presented as a structural question, not a personnel judgment. The point is to ask where institutional architecture absorbs or routes coordination capacity. Values are rounded classroom teaching-proxy comparisons derived from the source app and should not be treated as certified audit scores.</p>
       <table class="table">
         <thead><tr><th>Parameter</th><th>SPC</th><th>U. Phoenix</th><th>Gap</th><th>Teaching meaning</th></tr></thead>
+        
         <tbody id="ipsTable">
-          <tr><td>ε Extraction</td><td>0.275</td><td>0.732</td><td>0.457</td><td>Static fallback: instructional-vs-administrative allocation and extraction pressure proxy.</td></tr>
-          <tr><td>φ Entropy</td><td>0.011</td><td>0.305</td><td>0.294</td><td>Static fallback: debt, earnings, repayment, and downstream student-burden proxy.</td></tr>
-          <tr><td>ρ Regulatory burden</td><td>0.271</td><td>0.767</td><td>0.496</td><td>Static fallback: administrative routing and federal-loan dependency proxy.</td></tr>
-          <tr><td>σ Morphic residue</td><td>0.104</td><td>0.352</td><td>0.248</td><td>Static fallback: legacy effects, tuition inflation, and repayment-deficit proxy.</td></tr>
-          <tr><td>μ Misalignment</td><td>0.412</td><td>0.500</td><td>0.088</td><td>Static fallback: enrollment growth versus completion/support alignment proxy.</td></tr>
+          <tr><td>ε Extraction</td><td>~0.28</td><td>~0.65</td><td>~0.37</td><td>Source-app / teaching-proxy comparison: revenue routing toward shareholder return versus instruction and student support.</td></tr>
+          <tr><td>φ Physical entropy</td><td>~0.18</td><td>~0.52</td><td>~0.34</td><td>Teaching-proxy comparison: dropout, loan default, repayment stress, and student harm rates.</td></tr>
+          <tr><td>ρ Regulatory burden</td><td>~0.35</td><td>~0.58</td><td>~0.23</td><td>Teaching-proxy comparison: compliance activity that documents conditions without necessarily changing access conditions.</td></tr>
+          <tr><td>σ Morphic residue</td><td>~0.22</td><td>~0.64</td><td>~0.42</td><td>Teaching-proxy comparison: normalized expectations of debt load, credential inflation, and inherited institutional habits.</td></tr>
+          <tr><td>μ Misalignment</td><td>~0.31</td><td>~0.71</td><td>~0.40</td><td>Teaching-proxy comparison: revenue tied to enrollment volume rather than graduate outcomes and durable capability.</td></tr>
         </tbody>
       </table>
     </div>
 
     <div id="tab-psage" class="tab-panel">
       <h2>P-SAGE: Formal Structural Analysis</h2>
-      <div class=\"notice\"><strong>P-SAGE note:</strong><p>P-SAGE is the structural application of the SAGE framework students learn in EBB. It analyzes the institution or system rather than only one individual decision-maker.</p></div>
+      <div class="notice"><strong>P-SAGE note:</strong><p>P-SAGE is the structural application of the SAGE framework students learn in EBB. It analyzes the institution or system rather than only one individual decision-maker.</p></div>
       <div class="tool-grid">
         <div class="tool-box"><strong>Sign intact</strong><p>Colleges operate. Degrees are awarded. Accreditation is maintained. Students enroll and classes meet.</p></div>
         <div class="tool-box"><strong>Signal accessed</strong><p>The source app identifies the tuition revenue allocation channel and the 1992 HEA amendments expanding Title IV access for for-profit institutions.</p></div>
@@ -217,7 +218,7 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
         <button class="button primary" id="runBtn">Run teaching proxy</button>
         <button class="button" id="resetSPC">Load SPC</button>
         <button class="button" id="resetPhoenix">Load University of Phoenix</button>
-        <button class="button" id="exportBtn">Generate optional copy summary</button>
+        <a class="button" href="#copy-guidance">Open copy guidance</a>
       </div>
       <div id="simOutput"></div>
     </div>
@@ -229,7 +230,7 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
 <div class="prompt-fallback">
   <h3>Static teaching prompts / reflection opportunities</h3>
   <p>These are examples and opportunities, not automatic graded assignments. Instructors decide what to assign, adapt, omit, or grade.</p>
-  <ol class="clean-list"><li>Which IPS parameter most clearly separates SPC from the high-extraction comparison case, and what does that difference mean ethically?</li><li>Where is the gap between formal access and real capability most visible in this case?</li><li>What would count as T1 repair in this case? What would count as T2 repair?</li><li>How should students distinguish a Type 1 public-data claim from a Type 3 framework interpretation on this page?</li></ol>
+  <ol class="clean-list"><li>The SPC / UF comparison shows near-equivalent FHRI_max scores at very different student costs. Which IPS parameter most explains that cost gap? What structural change would address it specifically?</li><li>The Exit Option Finding suggests exit cost modulates how low FHRI_max can fall. Name one way exit costs—credits not transferring, debt already incurred, employer tuition restrictions, or opportunity costs—can affect a student’s relationship to an institution. Keep the public analysis structural; move personal application to the Navigator or course notebook.</li><li>The P-SAGE analysis suggests that the Interpretant of tuition can shift from “investment in educational capacity” to “enrollment as revenue unit.” Where would you look in public financial or institutional data to test whether that replacement has occurred?</li><li>Which claim on this page is a public-source claim, and which claim is a framework interpretation? Why does that distinction matter for ethical reasoning?</li><li>What would count as a T1 parameter repair in this case, and what would count as a T2 architecture repair?</li></ol>
 </div>
 
     </div>
@@ -257,17 +258,22 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
       </div>
     </div>
 
-    <div id="tab-export" class="tab-panel">
-      <h2>Copy / Export Guidance</h2>
-      <button class="button primary" onclick="exportSummary()">Generate optional copy summary</button>
-      <pre id="exportBox">Optional public summary:
-Case: Higher Education IPS
-Route: Week 1–2 preview; Chapters 8 and 11
-Teaching focus: Chapter 8 institutional design and Chapter 11 education/institutional capability; early preview for invisible institutional ledgers.
-OS1 to OS2 bridge: OS1: I may feel confident that higher education is either empowering or exploitative. OS2: I can support a more public claim by naming the data input, the framework interpretation, and the repair proposal separately.
+    
+<div id="tab-export" class="tab-panel">
+  <h2 id="copy-guidance">Copy Guidance</h2>
+  <div class="notice"><strong>No automatic export required:</strong><p>Use this static guide instead of relying on a browser-generated export. Copy only public analysis into your notebook or instructor-approved course space. Do not enter private personal information on this public site.</p></div>
+  <table class="table">
+    <thead><tr><th>Move</th><th>What to write</th></tr></thead>
+    <tbody>
+      <tr><td>Public claim</td><td>Name one claim that should be traceable to public records or source-app data.</td></tr>
+      <tr><td>Framework interpretation</td><td>Name one claim that depends on IPS, FHRI-style reasoning, P-SAGE, visible-ledger analysis, or another EBB framework.</td></tr>
+      <tr><td>Hidden burden</td><td>Identify whose cost, risk, vulnerability, or care labor may be hidden by ordinary institutional language.</td></tr>
+      <tr><td>Repair direction</td><td>State one T1 repair and one T2 repair, or explain why the distinction is unclear.</td></tr>
+      <tr><td>Private reflection boundary</td><td>Move personal application to the Navigator, notebook, or instructor-approved course space.</td></tr>
+    </tbody>
+  </table>
+</div>
 
-Reminder: Prompts are examples/opportunities. Private reflection belongs in a private Navigator, notebook, or instructor-approved course space.</pre>
-    </div>
   </section>
 
   
@@ -408,12 +414,12 @@ const DATA = {
     }
   ],
   "journalQuestions": [
-    "SPC\u2019s FHRI_max is 58.6 \u2014 close to the Functional / Mission-Aligned threshold. From your experience as a student, which parameter feels most present as a structural constraint: \u03b5, \u03c6, or \u03bc? What would a small improvement look like in practice?",
-    "The exit-option modulator says students can leave extractive higher-education institutions, although often at high cost. From the perspective of a student who has already borrowed money, how free is the exit option actually?",
-    "Miami Dade and SPC have similar public missions but an 8.1-point FHRI_max gap in the source app. What data would you request first if you were asked to investigate this gap as a governance consultant?",
-    "The source app treats the 1992 HEA amendments as a P-adic access mechanism for higher education Interpretant replacement. What would a T1 structural intervention change if it addressed the access condition rather than only regulating downstream symptoms?",
-    "Looking toward your future sector, what institutional signals would suggest that an employer or professional setting is shifting from mission to extraction?"
-  ],
+    "The SPC / UF comparison shows near-equivalent FHRI_max scores at very different student costs. Which IPS parameter most explains that cost gap? What structural change would address it specifically?",
+    "The Exit Option Finding suggests exit cost modulates how low FHRI_max can fall. Name one way exit costs—credits not transferring, debt already incurred, employer tuition restrictions, or opportunity costs—can affect a student’s relationship to an institution. Keep the public analysis structural; move personal application to the Navigator or course notebook.",
+    "The P-SAGE analysis suggests that the Interpretant of tuition can shift from “investment in educational capacity” to “enrollment as revenue unit.” Where would you look in public financial or institutional data to test whether that replacement has occurred?",
+    "Which claim on this page is a public-source claim, and which claim is a framework interpretation? Why does that distinction matter for ethical reasoning?",
+    "What would count as a T1 parameter repair in this case, and what would count as a T2 architecture repair?"
+],
   "evidenceStatus": {
     "Public data sources named in source app": "College Scorecard API, IPEDS Finance survey, prior IPS audits for cross-sector benchmarks.",
     "Date / run note from source app": "Higher-education values described as live April 2026 API runs; IPEDS Finance values described as embedded 2022\u201323 where used.",
@@ -577,15 +583,14 @@ function renderEvidence(){
 }
 
 function renderIPS(){
-  const spc=institution("spc").params, phx=institution("phoenix").params;
   const rows=[
-    ["ε Extraction",spc.epsilon,phx.epsilon,"Instructional vs. administrative expenditure proxy."],
-    ["φ Entropy",spc.phi,phx.phi,"Median debt relative to earnings proxy."],
-    ["ρ Regulatory burden",spc.rho,phx.rho,"Administrative fraction plus federal-loan dependency proxy."],
-    ["σ Morphic residue",spc.sigma,phx.sigma,"Tuition inflation and repayment-deficit proxy."],
-    ["μ Misalignment",spc.mu,phx.mu,"Enrollment growth vs. completion alignment proxy."]
+    ["ε Extraction","~0.28","~0.65","~0.37","Source-app / teaching-proxy comparison: revenue routing toward shareholder return versus instruction and student support."],
+    ["φ Physical entropy","~0.18","~0.52","~0.34","Teaching-proxy comparison: dropout, loan default, repayment stress, and student harm rates."],
+    ["ρ Regulatory burden","~0.35","~0.58","~0.23","Teaching-proxy comparison: compliance activity that documents conditions without necessarily changing access conditions."],
+    ["σ Morphic residue","~0.22","~0.64","~0.42","Teaching-proxy comparison: normalized expectations of debt load, credential inflation, and inherited institutional habits."],
+    ["μ Misalignment","~0.31","~0.71","~0.40","Teaching-proxy comparison: revenue tied to enrollment volume rather than graduate outcomes and durable capability."]
   ];
-  document.getElementById("ipsTable").innerHTML=rows.map(r=>`<tr><td>${esc(r[0])}</td><td>${r[1].toFixed(3)}</td><td>${r[2].toFixed(3)}</td><td>${(r[2]-r[1]).toFixed(3)}</td><td>${esc(r[3])}</td></tr>`).join("");
+  document.getElementById("ipsTable").innerHTML=rows.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td>${esc(r[3])}</td><td>${esc(r[4])}</td></tr>`).join("");
 }
 
 function renderJournal(){
@@ -593,30 +598,6 @@ function renderJournal(){
 }
 
 function exportSummary(){
-  const r=state.lastResult||compute();
-  const inst=institution(state.selectedInstitution);
-  const text=[
-    "EECSL — Higher Education IPS Case Summary",
-    "Case: Higher Education IPS — The Telescope on Your Own Institution",
-    "Active institution: "+inst.name,
-    "",
-    "Current parameters:",
-    ...Object.entries(state.params).map(([k,v])=>"- "+k+": "+Number(v).toFixed(3)),
-    "",
-    "Computed teaching-proxy output:",
-    "- Label: "+r.label,
-    "- FHRI teaching proxy: "+r.fhri.toFixed(1),
-    "- Extraction floor: "+r.extractionFloor.toFixed(1),
-    "- Routing ceiling: "+r.routingCeiling.toFixed(1),
-    "- Interpretant-replacement risk: "+r.interpretantRisk.toFixed(1),
-    "",
-    "Governance reminder:",
-    "The interactive simulation is a teaching proxy. Use the source-app values and replicated formulas for reviewer-facing empirical claims.",
-    "",
-    "Navigator bridge:",
-    "Use this public institutional case privately: what formal mission or promise exists, which structural parameters support or block it, and what small governance change would improve actual capability?"
-  ].join("\n");
-  document.getElementById("exportBox").textContent=text;
   showTab("export");
 }
 

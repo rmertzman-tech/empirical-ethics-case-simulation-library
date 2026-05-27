@@ -2,7 +2,7 @@
   "slug": "higher-education-ips",
   "title": "Higher Education IPS",
   "subtitle": "The Telescope on Your Own Institution",
-  "chapter": "Chapter 11 \u00b7 Economics \u00b7 Higher Education Case Study",
+  "chapter": "Week 1–2 preview · Chapters 8 and 11 · Higher Education IPS",
   "status": "Phase D migrated case",
   "sourceUrl": "https://rmertzman-tech.github.io/Three-Scenario-Sims/he-ips-analysis-app.html",
   "institutions": [
@@ -120,7 +120,7 @@
     }
   ],
   "journalQuestions": [
-    "SPC\u2019s FHRI_max is 58.6 \u2014 close to the Functional / Mission-Aligned threshold. From your experience as a student, which parameter feels most present as a structural constraint: \u03b5, \u03c6, or \u03bc? What would a small improvement look like in practice?",
+    "SPC’s FHRI_max is 58.6 — close to the Functional / Mission-Aligned threshold. From your experience as a student, which parameter feels most present as a structural constraint: ε, φ, or μ? What would a small improvement look like in practice?",
     "The exit-option modulator says students can leave extractive higher-education institutions, although often at high cost. From the perspective of a student who has already borrowed money, how free is the exit option actually?",
     "Miami Dade and SPC have similar public missions but an 8.1-point FHRI_max gap in the source app. What data would you request first if you were asked to investigate this gap as a governance consultant?",
     "The source app treats the 1992 HEA amendments as a P-adic access mechanism for higher education Interpretant replacement. What would a T1 structural intervention change if it addressed the access condition rather than only regulating downstream symptoms?",
@@ -128,9 +128,9 @@
   ],
   "evidenceStatus": {
     "Public data sources named in source app": "College Scorecard API, IPEDS Finance survey, prior IPS audits for cross-sector benchmarks.",
-    "Date / run note from source app": "Higher-education values described as live April 2026 API runs; IPEDS Finance values described as embedded 2022\u201323 where used.",
+    "Date / run note from source app": "Higher-education values described as live April 2026 API runs; IPEDS Finance values described as embedded 2022–23 where used.",
     "Directly measured or source-reported": "Institutional spending categories, median debt, median earnings, repayment, completion and enrollment-related fields, where available.",
-    "Computed model output": "FHRI_max and IPS parameters \u03b5, \u03c6, \u03c1, \u03c3, \u03bc.",
+    "Computed model output": "FHRI_max and IPS parameters ε, φ, ρ, σ, μ.",
     "Interpretive model claim": "Mission alignment, extraction floor, exit-option modulator, and Interpretant replacement.",
     "Verification needed": "Replicate exact API pulls, formula implementation, missing-data handling, and cross-sector benchmark derivation before using as reviewer-facing empirical proof."
   }

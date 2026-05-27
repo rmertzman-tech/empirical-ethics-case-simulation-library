@@ -2,7 +2,7 @@
   "slug": "geo-florida-prison",
   "title": "GEO Group Florida",
   "subtitle": "From Parasite to Commonwealth",
-  "chapter": "Chapter 5 extension \u00b7 Justice \u00b7 Moral Commons \u00b7 Capstone case",
+  "chapter": "Chapters 8 and 11 · GEO Group Florida Lab · BioBond / Capstone Bridge",
   "status": "Phase F migrated case",
   "sourceUrl": "https://rmertzman-tech.github.io/Three-Scenario-Sims/geo-florida-prison-app.html",
   "coreQuestion": "What would it take to move a captive-population institution from extraction architecture toward moral-commons repair?",
@@ -100,25 +100,25 @@
   "maathaiPathway": [
     {
       "phase": "Phase 1",
-      "years": "Years 1\u20133",
+      "years": "Years 1–3",
       "title": "Measurement infrastructure + ACP support",
       "detail": "Build public FHRI measurement, family/advocate lookup tools, and regulatory comments supporting beneficial ownership disclosure."
     },
     {
       "phase": "Phase 2",
-      "years": "Years 3\u20136",
+      "years": "Years 3–6",
       "title": "Pilot BioBond for low-epsilon alternatives",
       "detail": "Capitalize an already functioning alternative such as Unchained Industries and measure recidivism, employment, staff stability, and FHRI improvement."
     },
     {
       "phase": "Phase 3",
-      "years": "Years 6\u201312",
+      "years": "Years 6–12",
       "title": "Market pressure and contract renegotiation",
       "detail": "Use measured alternatives to create a public evidence basis for contract standards and FHRI floors."
     }
   ],
   "journalQuestions": [
-    "The correctional officer at a GEO Group Florida facility with 43% annual turnover probability experiences a Boisjoly-like dynamic: anomaly reports can be structurally absorbed without response. Where does your moral sympathy instinctively go in this case \u2014 and does P-SAGE change who you identify as the responsible party?",
+    "The correctional officer at a GEO Group Florida facility with 43% annual turnover probability experiences a Boisjoly-like dynamic: anomaly reports can be structurally absorbed without response. Where does your moral sympathy instinctively go in this case — and does P-SAGE change who you identify as the responsible party?",
     "The source app argues that an ACA 100% accreditation score can be consistent with FHRI_max = 10.9 because ACA measures the Sign, not the Interpretant. Identify another institution where high scores on surface compliance could conceal replaced purpose.",
     "The BioBond margin ratchet makes FHRI_max improvement financially rational. Design one element of a BioBond for a different institution or sector. What is the improvement trigger, and what structural change does it require?",
     "Maathai planted trees. Unchained Industries employs formerly incarcerated workers at living wages. In your own structural position, what is the equivalent low-epsilon alternative you could help build, tend, or scale?",
@@ -127,7 +127,7 @@
   "evidenceStatus": {
     "Public source app": "The original Three-Scenario-Sims GEO Florida page, migrated into the EECSL case shell.",
     "Case domain": "Private correctional facilities, Florida DOC contracting, programming budget allocation, rehabilitation capacity, staffing, recidivism, and public accountability.",
-    "Directly stated source-app values": "FHRI_max = 10.9; \u03b5=.650, \u03c6=.720, \u03c1=.550, \u03c3=.780, \u03bc=.840; staff turnover 43%; programming 0.6% of revenue; debt service + management approximately 65%; long-term debt $1.9B; recidivism increase +6.5 to +8.6%; cross-sector FHRI comparisons.",
+    "Directly stated source-app values": "FHRI_max = 10.9; ε=.650, φ=.720, ρ=.550, σ=.780, μ=.840; staff turnover 43%; programming 0.6% of revenue; debt service + management approximately 65%; long-term debt $1.9B; recidivism increase +6.5 to +8.6%; cross-sector FHRI comparisons.",
     "Data-source categories named in source app": "GEO Group 10-K filings, Florida DOC inspection reports, OSHA findings, AFSC Investigate, Bloomberg private-prison violence analysis, Mukherjee 2016, and In the Public Interest research briefs.",
     "Computed model output": "FHRI_max, extraction/entropy/misalignment indicators, BioBond recovery path, scale-free comparison, and repair leverage.",
     "Interpretive model claim": "Triadic Overwrite, P-adic access through ownership architecture, programming-budget signal capture, Sign/Interpretant gap, moral-commons repair, and Maathai bottom-up alternative-building.",

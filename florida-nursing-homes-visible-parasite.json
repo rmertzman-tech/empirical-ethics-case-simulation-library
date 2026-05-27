@@ -2,7 +2,7 @@
   "slug": "florida-nursing-homes-visible-parasite",
   "title": "Florida Nursing Homes and the Visible Parasite",
   "subtitle": "Public Care, Structural Risk, and National Benchmark Evidence",
-  "chapter": "Chapter 12/15 \u00b7 Care Ethics \u00b7 Governance \u00b7 Capstone case",
+  "chapter": "Chapters 8, 11, and 13 · Care Ethics · Visible Parasite Lab",
   "status": "Phase G migrated case",
   "sourceUrl": "https://rmertzman-tech.github.io/Three-Scenario-Sims/chapter15-visible-parasite-app.html",
   "coreQuestion": "How can a care institution formally organized around resident protection become structurally capable of shifting risk, cost, and vulnerability onto residents, workers, families, and public systems?",
@@ -155,7 +155,7 @@
     {
       "name": "Ownership type change: for-profit to non-profit",
       "type": "T1",
-      "effect": "Changes \u03b5 directly and raises the structural ceiling in the source-app example."
+      "effect": "Changes ε directly and raises the structural ceiling in the source-app example."
     },
     {
       "name": "BioBond financial instrument",
@@ -165,7 +165,7 @@
     {
       "name": "Beneficial ownership disclosure mandate",
       "type": "T1",
-      "effect": "Makes \u03b5 computable by revealing the entity controlling debt and budget decisions."
+      "effect": "Makes ε computable by revealing the entity controlling debt and budget decisions."
     },
     {
       "name": "Staffing mandate / care-floor requirement",
@@ -175,15 +175,15 @@
   ],
   "journalQuestions": [
     "Describe a real institution in your life without technical language. What does it feel like to operate inside it? Where do you feel a structural ceiling?",
-    "Apply the IPS lens. Which parameter seems highest in that institution \u2014 \u03b5 extraction, \u03c6 physical entropy, \u03c1 regulatory burden, \u03c3 normalized deviance, or \u03bc incentive misalignment? What evidence points to it?",
+    "Apply the IPS lens. Which parameter seems highest in that institution — ε extraction, φ physical entropy, ρ regulatory burden, σ normalized deviance, or μ incentive misalignment? What evidence points to it?",
     "Boisjoly filed repeated warnings. Maria files incident reports. Have you ever seen an institution absorb clear knowledge without acting? What happened?",
     "Given your current structural position, which leverage levels can you actually reach? What is your honest T1/T2 inventory?",
-    "The parasite is visible. Visibility is not victory, but visibility is the precondition for immunity. Name one specific structural action \u2014 T1 if possible \u2014 that could be taken in the next six months."
+    "The parasite is visible. Visibility is not victory, but visibility is the precondition for immunity. Name one specific structural action — T1 if possible — that could be taken in the next six months."
   ],
   "evidenceStatus": {
     "Public source app": "The original Three-Scenario-Sims Visible Parasite / nursing-home page, migrated into the EECSL case shell.",
     "Case domain": "Private-equity acquired nursing homes, home-health incentive programs, ownership opacity, staffing, care-floor degradation, family information asymmetry, and regulatory T1/T2 repair.",
-    "Directly stated source-app values": "\u03b5=.636, \u03c6=.520, \u03c1=.700, \u03c3=.620, \u03bc=.820; agent capacity 82.0; FHRI_max 14.3 in the opening T4 configuration; PE-acquired nursing home FHRI_max 13.6 in later panels; non-profit alternative 55.1; 33 fewer minutes of daily care; 11% increased mortality; HHVBP 12,239 agencies, +0.30% average payment adjustment, 27.7% penalized, 44% in penalty zone, 7% at full benchmark, approximately $1,500/year typical adjustment.",
+    "Directly stated source-app values": "ε=.636, φ=.520, ρ=.700, σ=.620, μ=.820; agent capacity 82.0; FHRI_max 14.3 in the opening T4 configuration; PE-acquired nursing home FHRI_max 13.6 in later panels; non-profit alternative 55.1; 33 fewer minutes of daily care; 11% increased mortality; HHVBP 12,239 agencies, +0.30% average payment adjustment, 27.7% penalized, 44% in penalty zone, 7% at full benchmark, approximately $1,500/year typical adjustment.",
     "Data-source categories named or implied in source app": "CMS public datasets, HHVBP performance data, ownership records, staffing HPRD, deficiency citations, PE-acquisition research, and public benchmark data.",
     "Computed model output": "FHRI_max, absorbed care-capacity gap, PE/non-profit gap, T1/T2 classification, scale-free signature, and repair leverage.",
     "Interpretive model claim": "Visible Parasite, Triadic Hack, ownership opacity as camouflage, T2 trap, True Solvency Accounting, capability-based structural obligation, and Maathai-style low-IPS alternative building.",

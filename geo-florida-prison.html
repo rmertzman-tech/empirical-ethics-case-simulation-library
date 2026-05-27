@@ -140,12 +140,12 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
       <button class="tab-btn" data-tab="teaching">Teaching Prompts / Reflection Opportunities</button>
       <button class="tab-btn" data-tab="evidence">Evidence Status</button>
       <button class="tab-btn" data-tab="navigator">Navigator Bridge</button>
-      <button class="tab-btn" data-tab="export">Copy Summary</button>
+      <button class="tab-btn" data-tab="export">Copy Guidance</button>
     </div>
 
     <div id="tab-psage" class="tab-panel active">
       <h2>P-SAGE: The Structural Finding</h2>
-      <div class=\"notice\"><strong>P-SAGE note:</strong><p>P-SAGE is the structural application of the SAGE framework students learn in EBB. It analyzes the institution or system rather than only one individual decision-maker.</p></div>
+      <div class="notice"><strong>P-SAGE note:</strong><p>P-SAGE is the structural application of the SAGE framework students learn in EBB. It analyzes the institution or system rather than only one individual decision-maker.</p></div>
       <div class="tool-grid">
         <div class="tool-box"><strong>Sign intact</strong><p>Facilities operate. Inmates are housed. Staff are employed. DOC contracts are fulfilled. Accreditation can remain high at the Sign level.</p></div>
         <div class="tool-box"><strong>Signal accessed</strong><p>The programming budget allocation channel is accessed through ownership structure, REIT-era dividend logic, debt inheritance, and contract architecture.</p></div>
@@ -175,7 +175,7 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
           <div class="actions">
             <button class="button primary" id="runBtn">Run repair simulation</button>
             <button class="button" id="resetGeo">Reset GEO current</button>
-            <button class="button" id="exportBtn">Generate optional copy summary</button>
+            <a class="button" href="#copy-guidance">Open copy guidance</a>
           </div>
         </div>
       </div>
@@ -225,8 +225,8 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
 
 <div class="prompt-fallback">
   <h3>Static teaching prompts / reflection opportunities</h3>
-  <p>These are examples and opportunities, not automatic graded assignments. Instructors decide what to assign, adapt, omit, or grade.</p>
-  <ol class="clean-list"><li>Which single structural parameter would you change first, and why would that change matter ethically?</li><li>How does captive vulnerability change the ethical standard for institutional accountability?</li><li>What would a Type 1 public-record claim look like in this case, and what would be a Type 3 framework interpretation?</li><li>What repair would protect voice rather than merely improve public relations?</li></ol>
+  <p>These are examples, suggestions, and reflection opportunities—not automatic graded assignments. Instructors decide what to assign, adapt, omit, or grade.</p>
+  <ol class="clean-list"><li>Which structural parameter would you change first if the goal were to protect agency rather than merely improve institutional appearance?</li><li>How does captive vulnerability change the ethical standard for evidence, voice, and accountability?</li><li>Identify one public-record claim and one framework interpretation. What would need verification before the case could become reviewer-facing empirical evidence?</li><li>What repair would protect the voice of affected persons rather than merely improve compliance language?</li><li>How should students distinguish criticism of institutional architecture from blame directed at frontline workers or affected persons?</li></ol>
 </div>
 
     </div>
@@ -254,17 +254,22 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
       </div>
     </div>
 
-    <div id="tab-export" class="tab-panel">
-      <h2>Copy / Export Guidance</h2>
-      <button class="button primary" onclick="exportSummary()">Generate optional copy summary</button>
-      <pre id="exportBox">Optional public summary:
-Case: GEO Group Florida
-Route: Chapters 8 and 11; BioBond / capstone connection
-Teaching focus: Public-private institutional design, captive vulnerability, accountability, and repair.
-OS1 to OS2 bridge: OS1: I may feel that privatized confinement is wrong or efficient. OS2: I can name the public responsibility, the affected vulnerability, the evidence type, and the repair condition.
+    
+<div id="tab-export" class="tab-panel">
+  <h2 id="copy-guidance">Copy Guidance</h2>
+  <div class="notice"><strong>No automatic export required:</strong><p>Use this static guide instead of relying on a browser-generated export. Copy only public analysis into your notebook or instructor-approved course space. Do not enter private personal information on this public site.</p></div>
+  <table class="table">
+    <thead><tr><th>Move</th><th>What to write</th></tr></thead>
+    <tbody>
+      <tr><td>Public claim</td><td>Name one claim that should be traceable to public records or source-app data.</td></tr>
+      <tr><td>Framework interpretation</td><td>Name one claim that depends on IPS, FHRI-style reasoning, P-SAGE, visible-ledger analysis, or another EBB framework.</td></tr>
+      <tr><td>Hidden burden</td><td>Identify whose cost, risk, vulnerability, or care labor may be hidden by ordinary institutional language.</td></tr>
+      <tr><td>Repair direction</td><td>State one T1 repair and one T2 repair, or explain why the distinction is unclear.</td></tr>
+      <tr><td>Private reflection boundary</td><td>Move personal application to the Navigator, notebook, or instructor-approved course space.</td></tr>
+    </tbody>
+  </table>
+</div>
 
-Reminder: Prompts are examples/opportunities. Private reflection belongs in a private Navigator, notebook, or instructor-approved course space.</pre>
-    </div>
   </section>
 
   
@@ -403,12 +408,12 @@ const DATA = {
     }
   ],
   "journalQuestions": [
-    "The correctional officer at a GEO Group Florida facility with 43% annual turnover probability experiences a Boisjoly-like dynamic: anomaly reports can be structurally absorbed without response. Where does your moral sympathy instinctively go in this case \u2014 and does P-SAGE change who you identify as the responsible party?",
-    "The source app argues that an ACA 100% accreditation score can be consistent with FHRI_max = 10.9 because ACA measures the Sign, not the Interpretant. Identify another institution where high scores on surface compliance could conceal replaced purpose.",
-    "The BioBond margin ratchet makes FHRI_max improvement financially rational. Design one element of a BioBond for a different institution or sector. What is the improvement trigger, and what structural change does it require?",
-    "Maathai planted trees. Unchained Industries employs formerly incarcerated workers at living wages. In your own structural position, what is the equivalent low-epsilon alternative you could help build, tend, or scale?",
-    "The scale-free law says the IPS mechanism can recur across sectors. In a professional field you may enter, what is the likely access mechanism through which an extraction architecture could replace the original mission?"
-  ],
+    "Which structural parameter would you change first if the goal were to protect agency rather than merely improve institutional appearance?",
+    "How does captive vulnerability change the ethical standard for evidence, voice, and accountability?",
+    "Identify one public-record claim and one framework interpretation. What would need verification before the case could become reviewer-facing empirical evidence?",
+    "What repair would protect the voice of affected persons rather than merely improve compliance language?",
+    "How should students distinguish criticism of institutional architecture from blame directed at frontline workers or affected persons?"
+],
   "evidenceStatus": {
     "Public source app": "The original Three-Scenario-Sims GEO Florida page, migrated into the EECSL case shell.",
     "Case domain": "Private correctional facilities, Florida DOC contracting, programming budget allocation, rehabilitation capacity, staffing, recidivism, and public accountability.",
@@ -595,34 +600,6 @@ function resetGeo(){
 }
 
 function exportSummary(){
-  const r=compute();
-  const text=[
-    "EECSL — GEO Group Florida Case Summary",
-    "Case: GEO Group Florida — From Parasite to Commonwealth",
-    "Active profile: "+profile(state.profileId).name,
-    "",
-    "Parameters:",
-    ...Object.entries(state.params).map(([k,v])=>"- "+k+": "+Number(v).toFixed(2)),
-    "",
-    "Repair controls:",
-    ...Object.entries(state.repair).map(([k,v])=>"- "+k+": "+(v?"on":"off")),
-    "",
-    "Computed teaching output:",
-    "- RQ_ceiling: "+r.rq.toFixed(3),
-    "- EE_floor: "+r.ee.toFixed(3),
-    "- FHRI teaching output: "+r.fhri.toFixed(1),
-    "- Programming signal: "+(r.programmingSignal*100).toFixed(1),
-    "- Harm load: "+(r.harmLoad*100).toFixed(1),
-    "- Repair leverage: "+(r.repairLeverage*100).toFixed(1),
-    "- Label: "+r.label,
-    "",
-    "Claim governance reminder:",
-    "Separate source-app values, computed teaching output, interpretive P-SAGE claims, and reviewer-verified empirical claims.",
-    "",
-    "Navigator bridge:",
-    "Use this public justice case privately: identify one institution where formal mission differs from actual capability. What low-epsilon alternative could be built, supported, or scaled?"
-  ].join("\n");
-  document.getElementById("exportBox").textContent=text;
   showTab("export");
 }
 

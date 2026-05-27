@@ -141,7 +141,7 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
       <button class="tab-btn" data-tab="teaching">Teaching Prompts / Reflection Opportunities</button>
       <button class="tab-btn" data-tab="evidence">Evidence Status</button>
       <button class="tab-btn" data-tab="navigator">Navigator Bridge</button>
-      <button class="tab-btn" data-tab="export">Copy Summary</button>
+      <button class="tab-btn" data-tab="export">Copy Guidance</button>
     </div>
 
     <div id="tab-measurement" class="tab-panel active">
@@ -173,7 +173,7 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
           <div class="actions">
             <button class="button primary" id="runBtn">Run repair simulation</button>
             <button class="button" id="resetPE">Reset PE profile</button>
-            <button class="button" id="exportBtn">Generate optional copy summary</button>
+            <a class="button" href="#copy-guidance">Open copy guidance</a>
           </div>
         </div>
       </div>
@@ -202,7 +202,15 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
         <div class="tool-box"><strong>Type 2 — Agent / Process</strong><p>Improves agents, incentives, or processes inside unchanged structural parameters. Valuable, but cannot exceed FHRI_max.</p></div>
       </div>
       <h3>Known classification examples</h3>
-      <table class="table"><thead><tr><th>Intervention</th><th>Type</th><th>Effect</th></tr></thead><tbody id="interventionRows"></tbody></table>
+      <table class="table"><thead><tr><th>Intervention</th><th>Type</th><th>Effect</th></tr></thead>
+<tbody id="interventionRows">
+  <tr><td><strong>Minimum staffing / care-floor requirement</strong></td><td><span class="pill">T1</span></td><td>Changes a direct operating condition that affects care capacity.</td></tr>
+  <tr><td><strong>Ownership transparency requirement</strong></td><td><span class="pill">T2</span></td><td>Changes visibility and accountability architecture so extraction can be detected and governed.</td></tr>
+  <tr><td><strong>HHVBP-style incentive program</strong></td><td><span class="pill">T2</span></td><td>Changes feedback around quality and payment, but may be too small if ownership architecture remains unchanged.</td></tr>
+  <tr><td><strong>Family voice / ombuds channel</strong></td><td><span class="pill">T1 moving toward T2</span></td><td>Begins as a direct reporting channel; becomes T2 when it changes durable accountability architecture.</td></tr>
+  <tr><td><strong>BioBond-style repair finance</strong></td><td><span class="pill">T1/T2 bridge</span></td><td>Can change capital incentives while also creating an architecture for visible repair accountability.</td></tr>
+</tbody>
+</table>
       <h3>Classify an intervention</h3>
       <textarea id="classifyInput" style="width:100%;min-height:90px;border:1px solid var(--line);border-radius:14px;padding:12px;font:inherit" placeholder="Describe an ethical action, policy proposal, or personal decision..."></textarea>
       <div class="actions"><button class="button primary" id="classifyBtn">Classify</button><button class="button" id="exampleBtn">Show example</button></div>
@@ -231,8 +239,8 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
 
 <div class="prompt-fallback">
   <h3>Static teaching prompts / reflection opportunities</h3>
-  <p>These are examples and opportunities, not automatic graded assignments. Instructors decide what to assign, adapt, omit, or grade.</p>
-  <ol class="clean-list"><li>What does the visible-ledger approach reveal that ordinary compliance language may hide?</li><li>How does dependency change the ethical duty owed to residents and families?</li><li>Which repair would be merely T1, and which would move toward T2 institutional redesign?</li><li>How could Chapter 13 sympathy help students understand this case without reducing it to sentiment?</li></ol>
+  <p>These are examples, suggestions, and reflection opportunities—not automatic graded assignments. Instructors decide what to assign, adapt, omit, or grade.</p>
+  <ol class="clean-list"><li>What does the visible-ledger approach reveal that ordinary compliance language may hide?</li><li>How does dependency change the ethical duty owed to residents, families, workers, and the public?</li><li>Which intervention would be T1 repair, and which would move toward T2 institutional redesign?</li><li>How can Chapter 13 sympathy help students understand this case without reducing ethical analysis to sentiment?</li><li>In the Maria / Mrs. Rodriguez scenario, what is the difference between Maria’s private moral courage and the institution’s public repair obligation?</li></ol>
 </div>
 
     </div>
@@ -260,17 +268,22 @@ pre{white-space:pre-wrap;background:#fff;border:1px solid var(--line);border-rad
       </div>
     </div>
 
-    <div id="tab-export" class="tab-panel">
-      <h2>Copy / Export Guidance</h2>
-      <button class="button primary" onclick="exportSummary()">Generate optional copy summary</button>
-      <pre id="exportBox">Optional public summary:
-Case: Florida Nursing Homes and the Visible Parasite
-Route: Chapters 8, 11, and 13
-Teaching focus: Institutional design, education/development, care, sympathy, dependency, and visible ledgers.
-OS1 to OS2 bridge: OS1: I may feel protective anger or sadness. OS2: I can translate that response into claims about dependency, evidence, institutional design, and repair.
+    
+<div id="tab-export" class="tab-panel">
+  <h2 id="copy-guidance">Copy Guidance</h2>
+  <div class="notice"><strong>No automatic export required:</strong><p>Use this static guide instead of relying on a browser-generated export. Copy only public analysis into your notebook or instructor-approved course space. Do not enter private personal information on this public site.</p></div>
+  <table class="table">
+    <thead><tr><th>Move</th><th>What to write</th></tr></thead>
+    <tbody>
+      <tr><td>Public claim</td><td>Name one claim that should be traceable to public records or source-app data.</td></tr>
+      <tr><td>Framework interpretation</td><td>Name one claim that depends on IPS, FHRI-style reasoning, P-SAGE, visible-ledger analysis, or another EBB framework.</td></tr>
+      <tr><td>Hidden burden</td><td>Identify whose cost, risk, vulnerability, or care labor may be hidden by ordinary institutional language.</td></tr>
+      <tr><td>Repair direction</td><td>State one T1 repair and one T2 repair, or explain why the distinction is unclear.</td></tr>
+      <tr><td>Private reflection boundary</td><td>Move personal application to the Navigator, notebook, or instructor-approved course space.</td></tr>
+    </tbody>
+  </table>
+</div>
 
-Reminder: Prompts are examples/opportunities. Private reflection belongs in a private Navigator, notebook, or instructor-approved course space.</pre>
-    </div>
   </section>
 
   
@@ -465,12 +478,12 @@ const DATA = {
     }
   ],
   "journalQuestions": [
-    "Describe a real institution in your life without technical language. What does it feel like to operate inside it? Where do you feel a structural ceiling?",
-    "Apply the IPS lens. Which parameter seems highest in that institution \u2014 \u03b5 extraction, \u03c6 physical entropy, \u03c1 regulatory burden, \u03c3 normalized deviance, or \u03bc incentive misalignment? What evidence points to it?",
-    "Boisjoly filed repeated warnings. Maria files incident reports. Have you ever seen an institution absorb clear knowledge without acting? What happened?",
-    "Given your current structural position, which leverage levels can you actually reach? What is your honest T1/T2 inventory?",
-    "The parasite is visible. Visibility is not victory, but visibility is the precondition for immunity. Name one specific structural action \u2014 T1 if possible \u2014 that could be taken in the next six months."
-  ],
+    "What does the visible-ledger approach reveal that ordinary compliance language may hide?",
+    "How does dependency change the ethical duty owed to residents, families, workers, and the public?",
+    "Which intervention would be T1 repair, and which would move toward T2 institutional redesign?",
+    "How can Chapter 13 sympathy help students understand this case without reducing ethical analysis to sentiment?",
+    "In the Maria / Mrs. Rodriguez scenario, what is the difference between Maria’s private moral courage and the institution’s public repair obligation?"
+],
   "evidenceStatus": {
     "Public source app": "The original Three-Scenario-Sims Visible Parasite / nursing-home page, migrated into the EECSL case shell.",
     "Case domain": "Private-equity acquired nursing homes, home-health incentive programs, ownership opacity, staffing, care-floor degradation, family information asymmetry, and regulatory T1/T2 repair.",
@@ -684,34 +697,6 @@ function resetPE(){
 }
 
 function exportSummary(){
-  const r=compute();
-  const text=[
-    "EECSL — Florida Nursing Homes and the Visible Parasite Case Summary",
-    "Case: Florida Nursing Homes and the Visible Parasite — Public Care, Structural Risk, and National Benchmark Evidence",
-    "Active profile: "+profile(state.profileId).name,
-    "",
-    "Parameters:",
-    ...Object.entries(state.params).map(([k,v])=>"- "+k+": "+Number(v).toFixed(2)),
-    "",
-    "Repair controls:",
-    ...Object.entries(state.repair).map(([k,v])=>"- "+k+": "+(v?"on":"off")),
-    "",
-    "Computed teaching output:",
-    "- RQ_ceiling: "+r.rq.toFixed(3),
-    "- EE_floor: "+r.ee.toFixed(3),
-    "- FHRI teaching output: "+r.fhri.toFixed(1),
-    "- Care floor: "+(r.careFloor*100).toFixed(1),
-    "- Visible-parasite signal: "+(r.visibleParasite*100).toFixed(1),
-    "- Repair leverage: "+(r.repairLeverage*100).toFixed(1),
-    "- Label: "+r.label,
-    "",
-    "Claim governance reminder:",
-    "Separate source-app values, public data, computed teaching output, interpretive IPS/P-SAGE claims, and reviewer-verified empirical claims.",
-    "",
-    "Navigator bridge:",
-    "Use this public care case privately: identify one institution where care, service, or safety is promised. What structural parameter might prevent that promise from becoming actual capability?"
-  ].join("\n");
-  document.getElementById("exportBox").textContent=text;
   showTab("export");
 }
 
